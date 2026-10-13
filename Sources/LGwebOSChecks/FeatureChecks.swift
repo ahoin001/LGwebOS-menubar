@@ -20,9 +20,10 @@ public enum FeatureChecks {
         try await testCancelledHomeDoesNotSendAnotherCommand()
         try testHomePresentationSurvivesRepeatedUnderlyingAppReports()
         try testConnectionAcceptsOnlyLocalIPv4Addresses()
+        try await testClosedPortDoesNotCountAsAwake()
         try testCertificateTrustRequiresApprovalAndRejectsChangedPins()
         try testFreshConfigurationHasNoDeviceIdentityAndLoadsCustomParameters()
-        print("PASS: packaged registration, catalog and images; basic and advanced pairing manifests; usage persistence, midnight clipping, sleep exclusion; HTTP GET/HEAD/Range/404/416; XML escaping; pointer ordering, closure/reconnection, preflight recovery, cancellation, no duplicate clicks, full drag motion; Home closes user apps once, preserves HDMI/system apps, respects cancellation; Home presentation survives polling and clears on navigation/app changes; local IPv4 boundaries, certificate trust, fresh configuration and custom parameters.")
+        print("PASS: packaged registration, catalog and images; basic and advanced pairing manifests; usage persistence, midnight clipping, sleep exclusion; HTTP GET/HEAD/Range/404/416; XML escaping; pointer ordering, closure/reconnection, preflight recovery, cancellation, no duplicate clicks, full drag motion; Home closes user apps once, preserves HDMI/system apps, respects cancellation; Home presentation survives polling and clears on navigation/app changes; local IPv4 boundaries, closed-port wake probe, certificate trust, fresh configuration and custom parameters.")
     }
 
     static func testPackagedResourcesLoadWithoutDeviceConfiguration() throws {
@@ -91,6 +92,12 @@ public enum FeatureChecks {
             try truth(!HostAddress.isLocalIPv4(host))
         }
     }
+
+    static func testClosedPortDoesNotCountAsAwake() async throws {
+        let open = await TVDiscovery.serviceIsReachable("10.255.255.1", port: 3001, timeout: 0.3)
+        try truth(!open)
+    }
+
     static func testCertificateTrustRequiresApprovalAndRejectsChangedPins() throws {
         try equal(TVCertificatePolicy.decide(expected: "saved-pin", received: "saved-pin", canApprove: false), .matched)
         try equal(TVCertificatePolicy.decide(expected: "saved-pin", received: "saved-pin", canApprove: true), .matched)

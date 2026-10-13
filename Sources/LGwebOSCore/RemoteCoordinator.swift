@@ -86,7 +86,7 @@ public final class RemoteCoordinator {
         case .addTV: return "Add a TV"
         }
     }
-    public var powerTitle: String { session.reach == .waking ? "Waiting" : linkActionTitle }
+    public var powerTitle: String { session.reach == .waking ? "Turning on" : linkActionTitle }
     public var linkSymbol: String {
         if session.pairing { return "checkmark.shield" }
         if session.reach == .held { return "link" }
@@ -94,8 +94,8 @@ public final class RemoteCoordinator {
         return "wifi"
     }
     public var connectionDetail: String {
+        if session.reach == .waking { return "The TV is starting. The remote connects as soon as it answers." }
         if session.pairing { return "Accept “LG Remote App” on your TV." }
-        if session.reach == .waking { return "This can take a minute. Leave the app open." }
         if session.error != nil, !session.connecting, !session.connected { return "The TV did not accept the connection." }
         if session.reach == .held { return "The TV may still be on. Connect to use the remote." }
         if identity.host.isEmpty { return "Add your TV to get started." }
@@ -107,9 +107,9 @@ public final class RemoteCoordinator {
         return "Connect when the TV is on."
     }
     public var statusText: String {
+        if session.reach == .waking { return "Turning on" }
         if session.pairing { return "Accept the connection on your TV" }
         if session.connecting { return "Connecting…" }
-        if session.reach == .waking { return "Waiting for your TV" }
         if session.connected { return "Connected" }
         if session.error != nil { return "Couldn't connect" }
         if identity.host.isEmpty { return "No TV yet" }
@@ -180,7 +180,6 @@ public final class RemoteCoordinator {
             return
         }
         session.beginWaitingForWake()
-        session.connect(allowFirstUseTrust: false)
     }
 
     public func saveWakeAddress(_ raw: String) -> Bool {

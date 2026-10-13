@@ -59,7 +59,13 @@ struct RootView: View {
                 default: model.performLinkAction()
                 }
             } label: {
-                Text(model.powerTitle)
+                if model.session.reach == .waking {
+                    ProgressView()
+                        .controlSize(.small)
+                        .accessibilityLabel("Turning on")
+                } else {
+                    Text(model.powerTitle)
+                }
             }
             .disabled(model.session.reach == .waking)
         }
@@ -130,7 +136,7 @@ struct ConnectionBanner: View {
     var body: some View {
         RemoteCard {
             VStack(alignment: .leading, spacing: 10) {
-                Label(model.statusText, systemImage: model.linkSymbol).fontWeight(.semibold)
+                RemoteActivityMark(model.statusText, symbol: model.linkSymbol, busy: model.session.reach == .waking)
                 Text(model.connectionDetail)
                     .font(.subheadline).foregroundStyle(RemotePalette.muted)
                 Button(model.linkActionTitle) {

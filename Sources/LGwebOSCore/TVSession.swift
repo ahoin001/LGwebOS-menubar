@@ -36,6 +36,7 @@ public final class TVSession: TVCommanding {
     private var connectTask: Task<Void, Never>?
     private var reconnectTask: Task<Void, Never>?
     private var refreshTask: Task<Void, Never>?
+    private var wakeTask: Task<Void, Never>?
     private var autoReconnect = false
     private var retryUnreachable = true
     private var wakeDeadline: Date?
@@ -161,7 +162,25 @@ public final class TVSession: TVCommanding {
                 self.connected = false
                 self.connecting = false
                 self.pairing = false
+                if self.reach == .waking, !Self.tvAnswered(error) {
+                    if self.wakeWindowExpired {
+                        self.log("Connection failed", error.localizedDescription)
+                        self.finishWakeUnanswered()
+                    } else {
+                        self.error = nil
+                        self.notice = nil
+                        self.watchForWake(pause: 1.5)
+                    }
+                    return
+                }
                 self.log("Connection failed", error.localizedDescription)
+                if self.reach == .waking {
+                    self.reach = .unknown
+                    self.wakeDeadline = nil
+                    self.autoReconnect = false
+                    self.error = error.localizedDescription
+                    return
+                }
                 if Self.isUnreachable(error) {
                     self.noteUnreachable()
                     return
@@ -177,9 +196,10 @@ public final class TVSession: TVCommanding {
 
     public func beginWaitingForWake() {
         reach = .waking
-        wakeDeadline = Date().addingTimeInterval(60)
+        wakeDeadline = Date().addingTimeInterval(20)
         error = nil
         notice = nil
+        watchForWake(pause: 2)
     }
 
     public func markTurnedOff() {
@@ -205,6 +225,8 @@ public final class TVSession: TVCommanding {
         connectTask?.cancel()
         reconnectTask?.cancel()
         refreshTask?.cancel()
+        wakeTask?.cancel()
+        wakeTask = nil
         volume.cancelPending()
         connection?.close()
         connection = nil
@@ -269,25 +291,64 @@ public final class TVSession: TVCommanding {
         }
     }
 
+    private var wakeWindowExpired: Bool {
+        wakeDeadline.map { Date() >= $0 } ?? true
+    }
+
+    /// Poll port 3001 until the TV is listening, then open the real connection. A refused socket while the set is booting is not a failure.
+    private func watchForWake(pause: TimeInterval) {
+        wakeTask?.cancel()
+        let host = identity.host
+        wakeTask = Task { [weak self] in
+            try? await Task.sleep(nanoseconds: UInt64(pause * 1_000_000_000))
+            while !Task.isCancelled {
+                guard let self, self.reach == .waking else { return }
+                if self.wakeWindowExpired {
+                    self.finishWakeUnanswered()
+                    return
+                }
+                if await TVDiscovery.serviceIsReachable(host) {
+                    guard !Task.isCancelled, self.reach == .waking else { return }
+                    self.connect(allowFirstUseTrust: false)
+                    return
+                }
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
+            }
+        }
+    }
+
+    private func finishWakeUnanswered() {
+        reach = .off
+        wakeDeadline = nil
+        autoReconnect = false
+        connecting = false
+        error = nil
+        notice = "The TV didn't answer. On the TV, turn on Turn on via Wi-Fi."
+    }
+
     private func noteUnreachable() {
-        let wakeExpired = reach == .waking && (wakeDeadline.map { Date() >= $0 } ?? true)
-        if wakeExpired {
-            reach = .off
-            wakeDeadline = nil
-            autoReconnect = false
-            error = nil
-            notice = "The TV didn't answer. On the TV, turn on Turn on via Wi-Fi."
+        if reach == .waking {
+            if wakeWindowExpired { finishWakeUnanswered() }
             return
         }
-        if reach != .waking { reach = .off }
+        reach = .off
         error = nil
         notice = nil
         if retryUnreachable { scheduleReconnect() }
         else { autoReconnect = false }
     }
 
+    private static func tvAnswered(_ error: Error) -> Bool {
+        let lower = error.localizedDescription.lowercased()
+        return lower.contains("certificate") || lower.contains("pairing") || lower.contains("403") || lower.contains("blacklist") || lower.contains("rejected")
+    }
+
     private static func isUnreachable(_ error: Error) -> Bool {
         let ns = error as NSError
+        if ns.domain == NSPOSIXErrorDomain {
+            let code = Int32(ns.code)
+            return [ECONNREFUSED, ETIMEDOUT, EHOSTUNREACH, EHOSTDOWN, ENETUNREACH, ENETDOWN, ECONNRESET].contains(code)
+        }
         if ns.domain == NSURLErrorDomain {
             return [
                 NSURLErrorTimedOut,

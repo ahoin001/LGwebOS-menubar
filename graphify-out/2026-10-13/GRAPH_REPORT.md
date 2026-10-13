@@ -1,12 +1,12 @@
 # Graph Report - LGwebOS-menubar  (2026-10-13)
 
 ## Corpus Check
-- 72 files · ~127,354 words
+- 72 files · ~127,612 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 843 nodes · 1776 edges · 92 communities (24 shown, 68 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 171 edges (avg confidence: 0.8)
+- 850 nodes · 1787 edges · 94 communities (26 shown, 68 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 168 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
@@ -32,8 +32,10 @@
 - iOS home and remote
 - Remote chrome styling
 - TV session lifecycle
+- .save
 - Shared remote pads
 - Usage journal persistence
+- .run
 - Usage tracker
 - Connection teardown
 - Now playing card
@@ -109,7 +111,7 @@
 - tv-hero illustration
 
 ## God Nodes (most connected - your core abstractions)
-1. `RemoteCoordinator` - 58 edges
+1. `RemoteCoordinator` - 60 edges
 2. `View` - 51 edges
 3. `TVSession` - 40 edges
 4. `Color` - 39 edges
@@ -135,55 +137,55 @@
 ## Import Cycles
 - None detected.
 
-## Communities (92 total, 68 thin omitted)
+## Communities (94 total, 68 thin omitted)
 
 ### Community 0 - "Certificate approval prompts"
-Cohesion: 0.15
-Nodes (14): ActivityScreen, Date, String, TimeInterval, URL, UsageJournal, UsageSlice, UsageTotal (+6 more)
+Cohesion: 0.14
+Nodes (15): ActivityScreen, Date, String, TimeInterval, URL, UsageJournal, UsageSlice, UsageTotal (+7 more)
 
 ### Community 1 - "Address and keychain"
-Cohesion: 0.50
-Nodes (3): ConnectionBanner, String, Void
+Cohesion: 0.30
+Nodes (5): Security, PairingKey, Any, String, TVCertificatePin
 
 ### Community 2 - "Menu bar app shell"
-Cohesion: 0.13
-Nodes (11): SettingsScreen, SetupWizard, Bool, String, AppsScreen, CastScreen, SettingsScreen, Void (+3 more)
+Cohesion: 0.20
+Nodes (6): CastScreen, SettingsScreen, Void, RemoteCoordinator, Bool, String
 
 ### Community 3 - "Cast session playback"
-Cohesion: 0.08
-Nodes (21): Darwin, NSObject, HostAddress, Bool, String, MediaHTTP, Bool, String (+13 more)
+Cohesion: 0.09
+Nodes (19): Darwin, HostAddress, Bool, String, MediaHTTP, Bool, String, UInt64 (+11 more)
 
 ### Community 5 - "Pointer channel transport"
-Cohesion: 0.06
-Nodes (35): AnyObject, Factory, PictureController, Int, String, PingResult, PointerChannel, PointerMessage (+27 more)
+Cohesion: 0.09
+Nodes (20): AnyObject, Factory, PingResult, PointerChannel, PointerMessage, PointerMotion, PointerTransport, Bool (+12 more)
 
 ### Community 6 - "SSAP command catalog"
-Cohesion: 0.07
-Nodes (28): RegistrationManifest, RegistrationRepair, Any, Bool, String, UserDefaults, Any, Void (+20 more)
+Cohesion: 0.08
+Nodes (26): RegistrationManifest, RegistrationRepair, Any, Bool, String, UserDefaults, Audio, IME (+18 more)
 
 ### Community 7 - "Core feature tests"
 Cohesion: 0.50
 Nodes (4): RootView, Binding, Bool, ToolbarContent
 
 ### Community 8 - "Certificate trust policy"
-Cohesion: 0.11
-Nodes (22): Sendable, BrandIdentity, RGBColor, Bool, Double, String, async, Bool (+14 more)
+Cohesion: 0.13
+Nodes (18): CryptoKit, Sendable, async, Bool, CheckedContinuation, Error, HTTPURLResponse, Int (+10 more)
 
 ### Community 9 - "iOS feature screens"
-Cohesion: 0.17
-Nodes (16): ScreenColumn, Content, ActivityScreen, AppsScreen, CastScreen, HomeScreen, Bool, String (+8 more)
+Cohesion: 0.15
+Nodes (17): ConnectionBanner, ScreenColumn, Content, Void, ActivityScreen, AppsScreen, CastScreen, HomeScreen (+9 more)
 
 ### Community 10 - "Project docs and limits"
 Cohesion: 0.10
 Nodes (19): Build and run, Compatibility and limits, Connect your TV, Contributing, Controls, Diagnostics, Find your TV, iOS (+11 more)
 
 ### Community 11 - "iOS app sources"
-Cohesion: 0.12
-Nodes (12): AppKit, Combine, LGwebOSChecks, LGwebOSCore, LGwebOSUI, BundledImage, URL, RemoteBackground (+4 more)
+Cohesion: 0.10
+Nodes (14): AppKit, Combine, CoreGraphics, ImageIO, LGwebOSChecks, LGwebOSCore, LGwebOSUI, RemoteBackground (+6 more)
 
 ### Community 12 - "Shared session models"
-Cohesion: 0.07
-Nodes (22): CryptoKit, Foundation, Observation, Security, HomeNavigation, Bool, Set, String (+14 more)
+Cohesion: 0.05
+Nodes (35): Equatable, Foundation, Observation, BrandIdentity, RGBColor, Bool, Double, String (+27 more)
 
 ### Community 13 - "Privacy check script"
 Cohesion: 0.23
@@ -194,24 +196,32 @@ Cohesion: 0.11
 Nodes (17): HomeScreen, Bool, String, Void, RemoteView, Int, String, CaseIterable (+9 more)
 
 ### Community 16 - "TV session lifecycle"
-Cohesion: 0.05
-Nodes (30): HomePresentation, String, PointerMotion, Int, RemoteController, Bool, Int, Never (+22 more)
+Cohesion: 0.07
+Nodes (27): Any, async, Bool, Date, Error, MainActor, Never, String (+19 more)
+
+### Community 17 - ".save"
+Cohesion: 0.25
+Nodes (4): SettingsScreen, SetupWizard, Bool, String
 
 ### Community 18 - "Shared remote pads"
 Cohesion: 0.05
-Nodes (46): BrandAccent, Bundle, ButtonStyle, Configuration, CoreGraphics, Image, ImageIO, AppResources (+38 more)
+Nodes (45): BrandAccent, AppsScreen, Bundle, ButtonStyle, Configuration, Image, AppResources, BundledImage (+37 more)
 
 ### Community 19 - "Usage journal persistence"
-Cohesion: 0.07
-Nodes (32): LogDayGroup, LogEmptyState, LogEntryRow, LogKind, LogScope, all, commands, connection (+24 more)
+Cohesion: 0.09
+Nodes (27): LogDayGroup, LogEmptyState, LogEntryRow, LogKind, LogScope, all, commands, connection (+19 more)
+
+### Community 20 - ".run"
+Cohesion: 0.36
+Nodes (5): HomeNavigation, Bool, Set, String, Void
 
 ### Community 21 - "Usage tracker"
-Cohesion: 0.11
-Nodes (14): ActivityLog, String, URL, Void, URL, UserDefaults, String, UserDefaults (+6 more)
+Cohesion: 0.06
+Nodes (30): Codable, TVApp, PictureController, Int, String, RemoteController, Any, Bool (+22 more)
 
 ### Community 23 - "Connection teardown"
-Cohesion: 0.11
-Nodes (16): LocalizedError, FakePointerTransport, FeatureChecks, imageIsValid(), Bool, String, URL, Void (+8 more)
+Cohesion: 0.12
+Nodes (14): LocalizedError, FakePointerTransport, FeatureChecks, imageIsValid(), Bool, String, URL, Void (+6 more)
 
 ### Community 25 - "Picture controller"
 Cohesion: 0.12
@@ -222,8 +232,8 @@ Cohesion: 0.67
 Nodes (3): PictureScreen, Int, String
 
 ### Community 29 - "Menu bar remote screen"
-Cohesion: 0.11
-Nodes (19): Data, FileHandle, Network, NWConnection, NWListener, CastSession, String, URL (+11 more)
+Cohesion: 0.10
+Nodes (21): Data, FileHandle, Network, NSObject, NWConnection, NWListener, CastSession, String (+13 more)
 
 ### Community 30 - "iOS picture screen"
 Cohesion: 0.24
@@ -234,24 +244,24 @@ Cohesion: 0.20
 Nodes (9): 1. Check the Mac, 2. Build the app, 3. Collect the TV details, 4. Check compatibility, 5. Check the TV is reachable, 6. Run the offline checks, 7. Connect and pair, LGwebOS-menubar: setup guide for Claude (+1 more)
 
 ## Knowledge Gaps
-- **116 isolated node(s):** `connection`, `commands`, `all`, `Combine`, `PackageDescription` (+111 more)
+- **123 isolated node(s):** `connection`, `commands`, `all`, `Combine`, `PackageDescription` (+118 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **68 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `RemoteCoordinator` connect `Menu bar app shell` to `Certificate approval prompts`, `Address and keychain`, `Cast session playback`, `Pointer channel transport`, `Core feature tests`, `iOS feature screens`, `Shared session models`, `Privacy check script`, `iOS home and remote`, `TV session lifecycle`, `Shared remote pads`, `Usage journal persistence`, `Usage tracker`, `Now playing card`, `Picture controller`, `PointerMotion`, `Menu bar remote screen`?**
-  _High betweenness centrality (0.237) - this node is a cross-community bridge._
-- **Why does `TVSession` connect `TV session lifecycle` to `Menu bar app shell`, `Pointer channel transport`, `Shared session models`, `Usage journal persistence`, `Usage tracker`, `Menu bar remote screen`?**
+- **Why does `RemoteCoordinator` connect `Menu bar app shell` to `Certificate approval prompts`, `Cast session playback`, `Core feature tests`, `iOS feature screens`, `Shared session models`, `Privacy check script`, `iOS home and remote`, `TV session lifecycle`, `.save`, `Shared remote pads`, `Usage journal persistence`, `Usage tracker`, `Now playing card`, `Picture controller`, `PointerMotion`, `Menu bar remote screen`?**
+  _High betweenness centrality (0.243) - this node is a cross-community bridge._
+- **Why does `TVSession` connect `TV session lifecycle` to `Menu bar app shell`, `Shared session models`, `Usage journal persistence`, `Usage tracker`, `Menu bar remote screen`?**
   _High betweenness centrality (0.098) - this node is a cross-community bridge._
-- **Why does `WebOSConnection` connect `Pointer channel transport` to `TV session lifecycle`, `Certificate trust policy`, `Usage journal persistence`, `Connection teardown`?**
+- **Why does `WebOSConnection` connect `TV session lifecycle` to `Pointer channel transport`, `Certificate trust policy`, `Shared session models`, `Usage tracker`, `Connection teardown`?**
   _High betweenness centrality (0.088) - this node is a cross-community bridge._
 - **Are the 7 inferred relationships involving `RemoteCoordinator` (e.g. with `.channel()` and `.send()`) actually correct?**
   _`RemoteCoordinator` has 7 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `connection`, `commands`, `all` to the rest of the system?**
-  _116 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Menu bar app shell` be split into smaller, more focused modules?**
-  _Cohesion score 0.13105413105413105 - nodes in this community are weakly interconnected._
+  _123 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Certificate approval prompts` be split into smaller, more focused modules?**
+  _Cohesion score 0.1402116402116402 - nodes in this community are weakly interconnected._
 - **Should `Cast session playback` be split into smaller, more focused modules?**
-  _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08912655971479501 - nodes in this community are weakly interconnected._

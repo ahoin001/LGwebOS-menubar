@@ -47,6 +47,32 @@ public struct RemoteButtonStyle: ButtonStyle {
     }
 }
 
+public struct RemoteActivityMark: View {
+    private let title: String
+    private let symbol: String
+    private let busy: Bool
+
+    public init(_ title: String, symbol: String, busy: Bool) {
+        self.title = title
+        self.symbol = symbol
+        self.busy = busy
+    }
+
+    public var body: some View {
+        HStack(spacing: 8) {
+            if busy {
+                ProgressView()
+                    .controlSize(.small)
+            } else {
+                Image(systemName: symbol)
+            }
+            Text(title)
+                .fontWeight(.semibold)
+        }
+        .accessibilityElement(children: .combine)
+    }
+}
+
 public struct RemoteSectionTitle: View {
     private let title: String
     private let busy: Bool

@@ -95,6 +95,40 @@ public enum TVDiscovery {
         }.value
     }
 
+    /// A short TCP check for port 3001. This stays off the WebSocket path so a TV that is still booting does not look like a failed connection.
+    public static func serviceIsReachable(_ host: String, port: UInt16 = 3001, timeout: TimeInterval = 1) async -> Bool {
+        guard HostAddress.isLocalIPv4(host), timeout > 0 else { return false }
+        let milliseconds = Int32(min(timeout, 5) * 1000)
+        return await Task.detached(priority: .utility) {
+            let fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+            guard fd >= 0 else { return false }
+            defer { Darwin.close(fd) }
+            let flags = fcntl(fd, F_GETFL, 0)
+            guard flags >= 0, fcntl(fd, F_SETFL, flags | O_NONBLOCK) >= 0 else { return false }
+            var address = sockaddr_in()
+            address.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
+            address.sin_family = sa_family_t(AF_INET)
+            address.sin_port = port.bigEndian
+            guard inet_pton(AF_INET, host, &address.sin_addr) == 1 else { return false }
+            var connectError: Int32 = 0
+            let started = withUnsafePointer(to: &address) { pointer in
+                pointer.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+                    let result = connect(fd, $0, socklen_t(MemoryLayout<sockaddr_in>.size))
+                    connectError = errno
+                    return result
+                }
+            }
+            if started == 0 { return true }
+            guard connectError == EINPROGRESS else { return false }
+            var descriptor = pollfd(fd: fd, events: Int16(POLLOUT), revents: 0)
+            guard poll(&descriptor, 1, milliseconds) > 0 else { return false }
+            var failure: Int32 = 0
+            var length = socklen_t(MemoryLayout<Int32>.size)
+            guard getsockopt(fd, SOL_SOCKET, SO_ERROR, &failure, &length) == 0 else { return false }
+            return failure == 0
+        }.value
+    }
+
     public static func wake(mac: String, host: String) throws {
         guard HostAddress.isLocalIPv4(host) else { throw RemoteError.message("Enter the TV's local IPv4 address.") }
         guard HostAddress.isMAC(mac) else { throw RemoteError.message("Invalid MAC address.") }

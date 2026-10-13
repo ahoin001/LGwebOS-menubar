@@ -21,16 +21,20 @@
   "19": "Usage journal persistence",
   "20": ".run",
   "21": "Usage tracker",
+  "22": "UsageJournal",
   "23": "Connection teardown",
   "24": "Now playing card",
   "25": "Picture controller",
   "26": "PointerMotion",
+  "27": "TVCatalog",
+  "28": "CastSession",
   "29": "Menu bar remote screen",
   "30": "iOS picture screen",
   "31": "Bundled image loader",
   "32": "Swift package manifest",
   "33": "Local build script",
   "34": "PyWebOSTV registration",
+  "35": ".disconnect",
   "36": "README.md",
   "37": "Local build script",
   "38": "Do not guess TV identity",
@@ -92,5 +96,6 @@
   "94": "TV hero illustration",
   "95": "Bundled app icons",
   "96": "Simple Icons",
-  "97": "tv-hero illustration"
+  "97": "tv-hero illustration",
+  "98": ".request"
 }

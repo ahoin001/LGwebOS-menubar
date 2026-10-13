@@ -92,16 +92,22 @@ struct RemoteView: View {
                 switch model.linkAction {
                 case .turnOff: Button("Turn off") { model.performLinkAction() }
                 case .turnOn: Button("Turn on") { model.performLinkAction() }
-                case .cancel: Button("Waiting for your TV") { model.performLinkAction() }
+                case .cancel: Button(model.session.reach == .waking ? "Turning on" : "Cancel") { model.performLinkAction() }
                 case .connect: Button("Connect") { model.performLinkAction() }
                 case .setUpWake: Button("Set up turning the TV on") { settings = true }
                 case .addTV: Button("Add a TV") { settings = true }
                 }
             } label: {
-                Image(systemName: "power").font(.system(size: 17))
-                    .foregroundStyle(model.linkAction == .turnOff || model.linkAction == .turnOn ? Color.white : RemotePalette.muted)
-                    .frame(width: 34, height: 34)
-                    .background(Circle().fill(Color.white.opacity(0.06)))
+                Group {
+                    if model.session.reach == .waking {
+                        ProgressView().controlSize(.small)
+                    } else {
+                        Image(systemName: "power").font(.system(size: 17))
+                            .foregroundStyle(model.linkAction == .turnOff || model.linkAction == .turnOn ? Color.white : RemotePalette.muted)
+                    }
+                }
+                .frame(width: 34, height: 34)
+                .background(Circle().fill(Color.white.opacity(0.06)))
             }
             .menuStyle(.borderlessButton).menuIndicator(.hidden).fixedSize().help(model.statusText)
         }
@@ -128,7 +134,7 @@ struct RemoteView: View {
     private var connectionPanel: some View {
         RemoteCard {
             VStack(alignment: .leading, spacing: 10) {
-                Label(model.statusText, systemImage: model.linkSymbol).fontWeight(.semibold)
+                RemoteActivityMark(model.statusText, symbol: model.linkSymbol, busy: model.session.reach == .waking)
                 Text(model.connectionDetail)
                     .font(.system(size: 11)).foregroundStyle(RemotePalette.muted)
                 Button(model.linkActionTitle) {
@@ -159,7 +165,7 @@ struct RemoteView: View {
 
     private var footer: some View {
         HStack(spacing: 6) {
-            Circle().fill(model.session.connected ? .green : model.session.connecting ? .orange : RemotePalette.muted).frame(width: 5, height: 5)
+            Circle().fill(model.session.connected ? .green : model.session.connecting || model.session.reach == .waking ? .orange : RemotePalette.muted).frame(width: 5, height: 5)
             Text(model.statusText).font(.system(size: 10)).foregroundStyle(RemotePalette.muted)
             Spacer()
             Text(model.identity.model).font(.system(size: 8, weight: .semibold)).tracking(1).foregroundStyle(Color.white.opacity(0.27))
