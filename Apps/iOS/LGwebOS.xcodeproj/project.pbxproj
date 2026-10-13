@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B10000000000000000000001 /* LGwebOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000001 /* LGwebOSApp.swift */; };
+		B10000000000000000000002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000002 /* RootView.swift */; };
+		B10000000000000000000003 /* CertificateApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000003 /* CertificateApproval.swift */; };
+		B10000000000000000000004 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000004 /* SettingsScreen.swift */; };
+		B10000000000000000000005 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000005 /* HomeScreen.swift */; };
+		B10000000000000000000006 /* RemoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000006 /* RemoteScreen.swift */; };
+		B10000000000000000000007 /* AppsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000007 /* AppsScreen.swift */; };
+		B10000000000000000000008 /* CastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000008 /* CastScreen.swift */; };
+		B10000000000000000000009 /* ActivityScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000009 /* ActivityScreen.swift */; };
+		B1000000000000000000000A /* PictureScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000A /* PictureScreen.swift */; };
+		B1000000000000000000000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000B /* Assets.xcassets */; };
+		B1000000000000000000000C /* LGwebOSCore in Frameworks */ = {isa = PBXBuildFile; productRef = D10000000000000000000001 /* LGwebOSCore */; };
+		B1000000000000000000000D /* LGwebOSUI in Frameworks */ = {isa = PBXBuildFile; productRef = D10000000000000000000002 /* LGwebOSUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F10000000000000000000001 /* LGwebOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGwebOSApp.swift; sourceTree = "<group>"; };
+		F10000000000000000000002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F10000000000000000000003 /* CertificateApproval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateApproval.swift; sourceTree = "<group>"; };
+		F10000000000000000000004 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000005 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000006 /* RemoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000007 /* AppsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000008 /* CastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000009 /* ActivityScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScreen.swift; sourceTree = "<group>"; };
+		F1000000000000000000000A /* PictureScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureScreen.swift; sourceTree = "<group>"; };
+		F1000000000000000000000B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1000000000000000000000C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1000000000000000000000D /* LGwebOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LGwebOS.entitlements; sourceTree = "<group>"; };
+		F1000000000000000000000E /* LGwebOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGwebOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		P10000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1000000000000000000000C /* LGwebOSCore in Frameworks */,
+				B1000000000000000000000D /* LGwebOSUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G10000000000000000000002 /* LGwebOS */,
+				G1000000000000000000000F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G10000000000000000000002 /* LGwebOS */ = {
+			isa = PBXGroup;
+			children = (
+				G10000000000000000000003 /* App */,
+				G10000000000000000000004 /* Features */,
+				F1000000000000000000000B /* Assets.xcassets */,
+				F1000000000000000000000C /* Info.plist */,
+				F1000000000000000000000D /* LGwebOS.entitlements */,
+			);
+			path = LGwebOS;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000001 /* LGwebOSApp.swift */,
+				F10000000000000000000002 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000004 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				G10000000000000000000005 /* Home */,
+				G10000000000000000000006 /* Remote */,
+				G10000000000000000000007 /* Apps */,
+				G10000000000000000000008 /* Cast */,
+				G10000000000000000000009 /* Activity */,
+				G1000000000000000000000A /* Picture */,
+				G1000000000000000000000B /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000005 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000005 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000006 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000006 /* RemoteScreen.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000007 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000007 /* AppsScreen.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000008 /* Cast */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000008 /* CastScreen.swift */,
+			);
+			path = Cast;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000009 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000009 /* ActivityScreen.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000A /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000A /* PictureScreen.swift */,
+			);
+			path = Picture;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000003 /* CertificateApproval.swift */,
+				F10000000000000000000004 /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000E /* LGwebOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T10000000000000000000001 /* LGwebOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C10000000000000000000002 /* Build configuration list for PBXNativeTarget "LGwebOS" */;
+			buildPhases = (
+				P10000000000000000000001 /* Sources */,
+				P10000000000000000000002 /* Frameworks */,
+				P10000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGwebOS;
+			packageProductDependencies = (
+				D10000000000000000000001 /* LGwebOSCore */,
+				D10000000000000000000002 /* LGwebOSUI */,
+			);
+			productName = LGwebOS;
+			productReference = F1000000000000000000000E /* LGwebOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P1000000000000000000000A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					T10000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = C10000000000000000000001 /* Build configuration list for PBXProject "LGwebOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G10000000000000000000001;
+			packageReferences = (
+				R10000000000000000000001 /* XCLocalSwiftPackageReference "../.." */,
+			);
+			productRefGroup = G1000000000000000000000F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T10000000000000000000001 /* LGwebOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		P10000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1000000000000000000000B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		P10000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000001 /* LGwebOSApp.swift in Sources */,
+				B10000000000000000000002 /* RootView.swift in Sources */,
+				B10000000000000000000003 /* CertificateApproval.swift in Sources */,
+				B10000000000000000000004 /* SettingsScreen.swift in Sources */,
+				B10000000000000000000005 /* HomeScreen.swift in Sources */,
+				B10000000000000000000006 /* RemoteScreen.swift in Sources */,
+				B10000000000000000000007 /* AppsScreen.swift in Sources */,
+				B10000000000000000000008 /* CastScreen.swift in Sources */,
+				B10000000000000000000009 /* ActivityScreen.swift in Sources */,
+				B1000000000000000000000A /* PictureScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C10000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C10000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C10000000000000000000013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
+				CODE_SIGN_ENTITLEMENTS = LGwebOS/LGwebOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LGwebOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.local.LGRemote.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C10000000000000000000014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
+				CODE_SIGN_ENTITLEMENTS = LGwebOS/LGwebOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LGwebOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.local.LGRemote.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C10000000000000000000001 /* Build configuration list for PBXProject "LGwebOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10000000000000000000011 /* Debug */,
+				C10000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C10000000000000000000002 /* Build configuration list for PBXNativeTarget "LGwebOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10000000000000000000013 /* Debug */,
+				C10000000000000000000014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		R10000000000000000000001 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D10000000000000000000001 /* LGwebOSCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = R10000000000000000000001 /* XCLocalSwiftPackageReference "../.." */;
+			productName = LGwebOSCore;
+		};
+		D10000000000000000000002 /* LGwebOSUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = R10000000000000000000001 /* XCLocalSwiftPackageReference "../.." */;
+			productName = LGwebOSUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = P1000000000000000000000A /* Project object */;
+}

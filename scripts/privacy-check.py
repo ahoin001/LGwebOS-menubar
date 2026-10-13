@@ -12,7 +12,7 @@ import re
 import subprocess
 import sys
 
-PUBLIC_ROOTS = ("Sources", "Tests", "scripts")
+PUBLIC_ROOTS = ("Sources", "Tests", "scripts", "Apps")
 PRIVATE_ROOTS = {".git", ".build", ".swiftpm", "dist", "research", "node_modules", "__pycache__"}
 LEGACY_FILES = {
     "package.json", "package-lock.json", "scripts/probe.mjs",

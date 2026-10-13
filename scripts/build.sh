@@ -18,7 +18,18 @@ swift build --package-path "$BUILD_ROOT" --scratch-path "$BUILD_ROOT/.build" -c 
 APP="$PROJECT_ROOT/dist/LGwebOS-menubar.app"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 cp "$BUILD_ROOT/.build/release/LGwebOSMenubar" "$APP/Contents/MacOS/LGwebOSMenubar"
-cp -R "$BUILD_ROOT/.build/release/LGwebOSMenubar_LGwebOSMenubar.bundle" "$APP/Contents/Resources/"
+BUNDLE=""
+for candidate in \
+  "$BUILD_ROOT/.build/release/LGwebOSCore_LGwebOSCore.bundle" \
+  "$BUILD_ROOT/.build/release/LGwebOSMenubar_LGwebOSCore.bundle"
+do
+  if [ -d "$candidate" ]; then BUNDLE="$candidate"; break; fi
+done
+if [ -z "$BUNDLE" ]; then
+  echo "The shared resource bundle was not produced." >&2
+  exit 1
+fi
+cp -R "$BUNDLE" "$APP/Contents/Resources/"
 strip -S "$APP/Contents/MacOS/LGwebOSMenubar"
 cat > "$APP/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>

@@ -35,6 +35,18 @@ open "dist/LGwebOS-menubar.app"
 
 The script builds in a temporary directory, removes debug symbols, and creates a locally signed app bundle. It does not connect to a TV. Locally built apps are not notarized, so macOS may ask you to confirm the first time you open it.
 
+## iOS
+
+The iPhone and iPad app lives in `Apps/iOS` and uses the same TV session, pairing, and visual language as the menu bar. Open `Apps/iOS/LGwebOS.xcodeproj` in Xcode 15 or later, select your team, and run the LGwebOS scheme. It requires iOS 17.
+
+- The iPhone uses a tab bar. The iPad uses a sidebar, with the remote kept to a readable width.
+- Pairing is stored in that device's Keychain. It is not shared with the Mac app.
+- Enter an IPv4 address or use Find TVs. Discovery on a physical device needs the multicast entitlement in the Apple developer account. A typed address still works without it.
+- iOS suspends the app in the background, which drops the TV socket. Coming back reconnects with the saved certificate and does not ask you to trust the TV again.
+- Casting serves the selected file only while the app stays open.
+
+The tested-models table above applies to both apps. Other TVs are still unverified.
+
 ## Find your TV
 
 - **Model:** the model number is on the TV's info screen and on the label on the back of the TV.
