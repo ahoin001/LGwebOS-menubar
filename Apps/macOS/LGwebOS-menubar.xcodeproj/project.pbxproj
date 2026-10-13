@@ -18,6 +18,7 @@
 		B20000000000000000000009 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000009 /* SettingsScreen.swift */; };
 		B2000000000000000000000A /* LGwebOSCore in Frameworks */ = {isa = PBXBuildFile; productRef = D20000000000000000000001 /* LGwebOSCore */; };
 		B2000000000000000000000B /* LGwebOSUI in Frameworks */ = {isa = PBXBuildFile; productRef = D20000000000000000000002 /* LGwebOSUI */; };
+		B2000000000000000000000C /* LGwebOSChecks in Frameworks */ = {isa = PBXBuildFile; productRef = D20000000000000000000003 /* LGwebOSChecks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			files = (
 				B2000000000000000000000A /* LGwebOSCore in Frameworks */,
 				B2000000000000000000000B /* LGwebOSUI in Frameworks */,
+				B2000000000000000000000C /* LGwebOSChecks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +67,7 @@
 				G20000000000000000000003 /* Screens */,
 			);
 			name = LGwebOSMenubar;
-			path = ../../Sources/LGwebOSMenubar;
+			path = LGwebOSMenubar;
 			sourceTree = "<group>";
 		};
 		G20000000000000000000003 /* Screens */ = {
@@ -108,6 +110,7 @@
 			packageProductDependencies = (
 				D20000000000000000000001 /* LGwebOSCore */,
 				D20000000000000000000002 /* LGwebOSUI */,
+				D20000000000000000000003 /* LGwebOSChecks */,
 			);
 			productName = "LGwebOS-menubar";
 			productReference = F2000000000000000000000E /* LGwebOS-menubar.app */;
@@ -319,6 +322,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = R20000000000000000000001 /* XCLocalSwiftPackageReference "../.." */;
 			productName = LGwebOSUI;
+		};
+		D20000000000000000000003 /* LGwebOSChecks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = R20000000000000000000001 /* XCLocalSwiftPackageReference "../.." */;
+			productName = LGwebOSChecks;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,4 +1,5 @@
 import AppKit
+import LGwebOSChecks
 import LGwebOSCore
 
 let app = NSApplication.shared

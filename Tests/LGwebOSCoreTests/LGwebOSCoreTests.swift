@@ -1,4 +1,5 @@
 import XCTest
+import LGwebOSChecks
 import LGwebOSCore
 
 final class LGwebOSCoreTests: XCTestCase {

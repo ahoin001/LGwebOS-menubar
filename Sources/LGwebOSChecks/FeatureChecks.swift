@@ -1,5 +1,6 @@
 import Foundation
 import ImageIO
+import LGwebOSCore
 
 public enum FeatureChecks {
     public static func equal<T: Equatable>(_ a: T, _ b: T) throws { guard a == b else { throw RemoteError.message("Check failed: \(a) != \(b)") } }
@@ -284,15 +285,15 @@ private func imageIsValid(at url: URL) -> Bool {
     var failSend = false
     var failPing = false
     var closed = false
-    func send(_ message: String) async throws {
+    package func send(_ message: String) async throws {
         sendAttempts += 1
         guard !closed, !failSend else { throw RemoteError.message("Simulated send failure") }
         messages.append(message)
     }
-    func receive() async throws {
+    package func receive() async throws {
         while !closed { try await Task.sleep(nanoseconds: 5_000_000) }
         throw RemoteError.message("Simulated server closure")
     }
-    func ping() async throws { if closed || failPing { throw RemoteError.message("Simulated failed ping") } }
-    func close() { closed = true }
+    package func ping() async throws { if closed || failPing { throw RemoteError.message("Simulated failed ping") } }
+    package func close() { closed = true }
 }

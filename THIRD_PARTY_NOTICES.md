@@ -2,7 +2,7 @@
 
 ## LG registration manifest and PyWebOSTV
 
-`Sources/LGwebOSMenubar/registration.json` contains the public LG test-client registration manifest distributed by [PyWebOSTV](https://github.com/supersaiyanmode/PyWebOSTV). Its signed client metadata, serial field, and signature are protocol constants, not a user's TV serial number or pairing credentials. The signed block includes LG-provided localized names. It is kept intact because translating it would invalidate the signature. All project-authored text is English.
+`Sources/LGwebOSCore/registration.json` contains the public LG test-client registration manifest distributed by [PyWebOSTV](https://github.com/supersaiyanmode/PyWebOSTV). Its signed client metadata, serial field, and signature are protocol constants, not a user's TV serial number or pairing credentials. The signed block includes LG-provided localized names. It is kept intact because translating it would invalidate the signature. All project-authored text is English.
 
 PyWebOSTV is distributed under the [MIT License](https://github.com/supersaiyanmode/PyWebOSTV/blob/master/LICENSE):
 

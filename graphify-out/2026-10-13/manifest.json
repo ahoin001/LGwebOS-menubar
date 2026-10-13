@@ -1,0 +1,547 @@
+{
+  "Apps/iOS/LGwebOS/App/LGwebOSApp.swift": {
+    "mtime": 1791907334.7785447,
+    "ast_hash": "309ccf352360d94c2881b32b8e49ee42",
+    "semantic_hash": "309ccf352360d94c2881b32b8e49ee42"
+  },
+  "Apps/iOS/LGwebOS/App/RootView.swift": {
+    "mtime": 1791907334.7788153,
+    "ast_hash": "972c395cadd6b904fccb389692fca6cc",
+    "semantic_hash": "972c395cadd6b904fccb389692fca6cc"
+  },
+  "Apps/iOS/LGwebOS/Assets.xcassets/Contents.json": {
+    "mtime": 1791907334.7790782,
+    "ast_hash": "9deb2ada1cc834bbebf8bbad9c8978a1",
+    "semantic_hash": "9deb2ada1cc834bbebf8bbad9c8978a1"
+  },
+  "Apps/iOS/LGwebOS/Features/Activity/ActivityScreen.swift": {
+    "mtime": 1791907334.7794113,
+    "ast_hash": "67e4eafe028034d55c91b1861691529c",
+    "semantic_hash": "67e4eafe028034d55c91b1861691529c"
+  },
+  "Apps/iOS/LGwebOS/Features/Apps/AppsScreen.swift": {
+    "mtime": 1791907334.7796712,
+    "ast_hash": "5fb43d8c97ed6f072586c1d8f6fa3638",
+    "semantic_hash": "5fb43d8c97ed6f072586c1d8f6fa3638"
+  },
+  "Apps/iOS/LGwebOS/Features/Cast/CastScreen.swift": {
+    "mtime": 1791907334.7799313,
+    "ast_hash": "c087803d7d258e450e3eb06725da8f84",
+    "semantic_hash": "c087803d7d258e450e3eb06725da8f84"
+  },
+  "Apps/iOS/LGwebOS/Features/Home/HomeScreen.swift": {
+    "mtime": 1791907334.780193,
+    "ast_hash": "6528b6a14c0ab9f4b3bb2eb5dcf43f96",
+    "semantic_hash": "6528b6a14c0ab9f4b3bb2eb5dcf43f96"
+  },
+  "Apps/iOS/LGwebOS/Features/Picture/PictureScreen.swift": {
+    "mtime": 1791907334.7804425,
+    "ast_hash": "7c193968e9a0391c028fe9d3890a743f",
+    "semantic_hash": "7c193968e9a0391c028fe9d3890a743f"
+  },
+  "Apps/iOS/LGwebOS/Features/Remote/RemoteScreen.swift": {
+    "mtime": 1791907334.780699,
+    "ast_hash": "a51f32dd53b55ba5bf1c5191652d27a8",
+    "semantic_hash": "a51f32dd53b55ba5bf1c5191652d27a8"
+  },
+  "Apps/iOS/LGwebOS/Features/Settings/CertificateApproval.swift": {
+    "mtime": 1791907334.7809649,
+    "ast_hash": "2724331e4f7380c326ea5d438b69b476",
+    "semantic_hash": "2724331e4f7380c326ea5d438b69b476"
+  },
+  "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift": {
+    "mtime": 1791907334.7811742,
+    "ast_hash": "a04ece33083a4188b8fdb7ab5f68e930",
+    "semantic_hash": "a04ece33083a4188b8fdb7ab5f68e930"
+  },
+  "Package.swift": {
+    "mtime": 1791907334.781859,
+    "ast_hash": "69bb648c87173effa7471c63d3fcf3b0",
+    "semantic_hash": "69bb648c87173effa7471c63d3fcf3b0"
+  },
+  "Sources/LGwebOSCore/ActivityLog.swift": {
+    "mtime": 1791907334.7827356,
+    "ast_hash": "14e4d9ae8860cb190bbf27ebc17dfcbe",
+    "semantic_hash": "14e4d9ae8860cb190bbf27ebc17dfcbe"
+  },
+  "Sources/LGwebOSCore/AppResources.swift": {
+    "mtime": 1791907334.800682,
+    "ast_hash": "d2e3e599138f49a0fc20f9e69021e9a4",
+    "semantic_hash": "d2e3e599138f49a0fc20f9e69021e9a4"
+  },
+  "Sources/LGwebOSCore/BrandIdentity.swift": {
+    "mtime": 1791907334.800998,
+    "ast_hash": "4942d57887f6a7d8a2064c980681b5fe",
+    "semantic_hash": "4942d57887f6a7d8a2064c980681b5fe"
+  },
+  "Sources/LGwebOSCore/CastSession.swift": {
+    "mtime": 1791907334.8012283,
+    "ast_hash": "dd8f537ffc984f38dbd010e93ff634e0",
+    "semantic_hash": "dd8f537ffc984f38dbd010e93ff634e0"
+  },
+  "Sources/LGwebOSCore/DLNATransport.swift": {
+    "mtime": 1791907334.8015423,
+    "ast_hash": "f925fd2d51524c9bc5e15dc9736f2a20",
+    "semantic_hash": "f925fd2d51524c9bc5e15dc9736f2a20"
+  },
+  "Sources/LGwebOSCore/FeatureChecks.swift": {
+    "mtime": 1791907334.801967,
+    "ast_hash": "1986a9ee33dad50b21b187add96d7c16",
+    "semantic_hash": "1986a9ee33dad50b21b187add96d7c16"
+  },
+  "Sources/LGwebOSCore/HomeNavigation.swift": {
+    "mtime": 1791907334.8022592,
+    "ast_hash": "c46fd6eebfb1bd78c95a94a16ac51854",
+    "semantic_hash": "c46fd6eebfb1bd78c95a94a16ac51854"
+  },
+  "Sources/LGwebOSCore/HomePresentation.swift": {
+    "mtime": 1791907334.80249,
+    "ast_hash": "77e6196e7e9a3ac4af419183d38ec659",
+    "semantic_hash": "77e6196e7e9a3ac4af419183d38ec659"
+  },
+  "Sources/LGwebOSCore/HostAddress.swift": {
+    "mtime": 1791907334.8027186,
+    "ast_hash": "6f4ca4c04e26a69050a1cd2fb21148bc",
+    "semantic_hash": "6f4ca4c04e26a69050a1cd2fb21148bc"
+  },
+  "Sources/LGwebOSCore/Keychain.swift": {
+    "mtime": 1791907334.8030512,
+    "ast_hash": "ae37463ff775f787a778603d9489033c",
+    "semantic_hash": "ae37463ff775f787a778603d9489033c"
+  },
+  "Sources/LGwebOSCore/MediaFileServer.swift": {
+    "mtime": 1791907334.8034015,
+    "ast_hash": "d11612b8d4e8a69723fbde666d9b5b9c",
+    "semantic_hash": "d11612b8d4e8a69723fbde666d9b5b9c"
+  },
+  "Sources/LGwebOSCore/MediaHTTP.swift": {
+    "mtime": 1791907334.8037248,
+    "ast_hash": "64076560b0fe3fa11455c66ce5d8abd9",
+    "semantic_hash": "64076560b0fe3fa11455c66ce5d8abd9"
+  },
+  "Sources/LGwebOSCore/Models.swift": {
+    "mtime": 1791907334.8039784,
+    "ast_hash": "33e4eba40632d908868cb89b1935f2d7",
+    "semantic_hash": "33e4eba40632d908868cb89b1935f2d7"
+  },
+  "Sources/LGwebOSCore/PictureController.swift": {
+    "mtime": 1791907334.8042018,
+    "ast_hash": "6ef1d3c8f2e64cbffd2d1d634e331d9f",
+    "semantic_hash": "6ef1d3c8f2e64cbffd2d1d634e331d9f"
+  },
+  "Sources/LGwebOSCore/PointerChannel.swift": {
+    "mtime": 1791907334.8044734,
+    "ast_hash": "7e7cf57b92c45bf13d83cfe015da5555",
+    "semantic_hash": "7e7cf57b92c45bf13d83cfe015da5555"
+  },
+  "Sources/LGwebOSCore/RemoteController.swift": {
+    "mtime": 1791907334.8047485,
+    "ast_hash": "c7fad101bb4b920d98950c64e95d21f1",
+    "semantic_hash": "c7fad101bb4b920d98950c64e95d21f1"
+  },
+  "Sources/LGwebOSCore/RemoteCoordinator.swift": {
+    "mtime": 1791907334.8050194,
+    "ast_hash": "327337203e216f93da2311403f32665f",
+    "semantic_hash": "327337203e216f93da2311403f32665f"
+  },
+  "Sources/LGwebOSCore/RemoteError.swift": {
+    "mtime": 1791907334.805226,
+    "ast_hash": "806e277479e8886e0733b15a8c89c880",
+    "semantic_hash": "806e277479e8886e0733b15a8c89c880"
+  },
+  "Sources/LGwebOSCore/SSAP.swift": {
+    "mtime": 1791907334.8055038,
+    "ast_hash": "634e251c7e50e3670afb9da27b16563f",
+    "semantic_hash": "634e251c7e50e3670afb9da27b16563f"
+  },
+  "Sources/LGwebOSCore/TVCatalog.swift": {
+    "mtime": 1791907334.8057249,
+    "ast_hash": "6847cb1908fac3033eeec534e9a35b6c",
+    "semantic_hash": "6847cb1908fac3033eeec534e9a35b6c"
+  },
+  "Sources/LGwebOSCore/TVCertificatePolicy.swift": {
+    "mtime": 1791907334.8059392,
+    "ast_hash": "4339e1f42d810c5d79d11c62f0c676b1",
+    "semantic_hash": "4339e1f42d810c5d79d11c62f0c676b1"
+  },
+  "Sources/LGwebOSCore/TVCertificateTrust.swift": {
+    "mtime": 1791907334.8062103,
+    "ast_hash": "27f7a5ff28bc39857550fc0ec9af80e0",
+    "semantic_hash": "27f7a5ff28bc39857550fc0ec9af80e0"
+  },
+  "Sources/LGwebOSCore/TVConfiguration.swift": {
+    "mtime": 1791907334.8064184,
+    "ast_hash": "b6718349cbbd3eb1546b2c651cf76a4c",
+    "semantic_hash": "b6718349cbbd3eb1546b2c651cf76a4c"
+  },
+  "Sources/LGwebOSCore/TVDiscovery.swift": {
+    "mtime": 1791907334.8066983,
+    "ast_hash": "b68376896f1d264ef5a81e2f8979d3c2",
+    "semantic_hash": "b68376896f1d264ef5a81e2f8979d3c2"
+  },
+  "Sources/LGwebOSCore/TVIdentity.swift": {
+    "mtime": 1791907334.80692,
+    "ast_hash": "f35561f1189a8d3f80ce2b4fbb0f230a",
+    "semantic_hash": "f35561f1189a8d3f80ce2b4fbb0f230a"
+  },
+  "Sources/LGwebOSCore/TVSession.swift": {
+    "mtime": 1791907334.8071544,
+    "ast_hash": "a15f7d548bc9618ec44af54fc2ef7526",
+    "semantic_hash": "a15f7d548bc9618ec44af54fc2ef7526"
+  },
+  "Sources/LGwebOSCore/UsageJournal.swift": {
+    "mtime": 1791907334.8073792,
+    "ast_hash": "c9c82662a1a5785b5e8fca8eab801a94",
+    "semantic_hash": "c9c82662a1a5785b5e8fca8eab801a94"
+  },
+  "Sources/LGwebOSCore/UsageTracker.swift": {
+    "mtime": 1791907334.8076026,
+    "ast_hash": "e84096ec54b3f036960f35673e686bd6",
+    "semantic_hash": "e84096ec54b3f036960f35673e686bd6"
+  },
+  "Sources/LGwebOSCore/VolumeController.swift": {
+    "mtime": 1791907334.8078146,
+    "ast_hash": "818ce16cd3a21829fe90cb6eb05c5f8f",
+    "semantic_hash": "818ce16cd3a21829fe90cb6eb05c5f8f"
+  },
+  "Sources/LGwebOSCore/WebOSConnection.swift": {
+    "mtime": 1791907334.8081956,
+    "ast_hash": "1ee0fd1b4513a6c314b88c3222280a0b",
+    "semantic_hash": "1ee0fd1b4513a6c314b88c3222280a0b"
+  },
+  "Sources/LGwebOSCore/app-catalog.json": {
+    "mtime": 1791907334.8085418,
+    "ast_hash": "9e6677ebe6019ca70e0e61dd558e91d0",
+    "semantic_hash": "9e6677ebe6019ca70e0e61dd558e91d0"
+  },
+  "Sources/LGwebOSCore/registration.json": {
+    "mtime": 1791907334.808723,
+    "ast_hash": "7a100ed5f80fd2cc9d3f6760b97194a0",
+    "semantic_hash": "7a100ed5f80fd2cc9d3f6760b97194a0"
+  },
+  "Sources/LGwebOSMenubar/ConnectionTrustPrompt.swift": {
+    "mtime": 1791906910.8162494,
+    "ast_hash": "d9185640b974e4dbe27071ec2fb42423",
+    "semantic_hash": "d9185640b974e4dbe27071ec2fb42423"
+  },
+  "Sources/LGwebOSMenubar/MenuBarController.swift": {
+    "mtime": 1791907334.8091726,
+    "ast_hash": "791711ab266ae36403618febaae0880b",
+    "semantic_hash": "791711ab266ae36403618febaae0880b"
+  },
+  "Sources/LGwebOSMenubar/Screens/AppsScreen.swift": {
+    "mtime": 1791907334.8099723,
+    "ast_hash": "8fcf0727df7fb5284b337eaa36057659",
+    "semantic_hash": "8fcf0727df7fb5284b337eaa36057659"
+  },
+  "Sources/LGwebOSMenubar/Screens/CastScreen.swift": {
+    "mtime": 1791907334.810268,
+    "ast_hash": "9ab037f36e13f3034ee422449fc1fd8a",
+    "semantic_hash": "9ab037f36e13f3034ee422449fc1fd8a"
+  },
+  "Sources/LGwebOSMenubar/Screens/HomeScreen.swift": {
+    "mtime": 1791907334.810619,
+    "ast_hash": "7d7d2d00c650cdb7afafe402b690ae44",
+    "semantic_hash": "7d7d2d00c650cdb7afafe402b690ae44"
+  },
+  "Sources/LGwebOSMenubar/Screens/RemoteControlScreen.swift": {
+    "mtime": 1791907334.8108976,
+    "ast_hash": "79d239ca7d83fc760a63ab4e59cb1d38",
+    "semantic_hash": "79d239ca7d83fc760a63ab4e59cb1d38"
+  },
+  "Sources/LGwebOSMenubar/Screens/RemoteView.swift": {
+    "mtime": 1791907334.8111494,
+    "ast_hash": "1df42769f3f3875b9c794fb718069980",
+    "semantic_hash": "1df42769f3f3875b9c794fb718069980"
+  },
+  "Sources/LGwebOSMenubar/Screens/SettingsScreen.swift": {
+    "mtime": 1791907334.8114176,
+    "ast_hash": "ea08d62f8024f9803534de2f58e72be7",
+    "semantic_hash": "ea08d62f8024f9803534de2f58e72be7"
+  },
+  "Sources/LGwebOSMenubar/main.swift": {
+    "mtime": 1791907334.8117568,
+    "ast_hash": "2180c0c823b08a505afd37070d3454e3",
+    "semantic_hash": "2180c0c823b08a505afd37070d3454e3"
+  },
+  "Sources/LGwebOSUI/AppMark.swift": {
+    "mtime": 1791907334.8120327,
+    "ast_hash": "0c746e0ea6a919e309d414f67f0efb1d",
+    "semantic_hash": "0c746e0ea6a919e309d414f67f0efb1d"
+  },
+  "Sources/LGwebOSUI/BrandTheme.swift": {
+    "mtime": 1791907334.8122866,
+    "ast_hash": "7a241ec19779c5e6110f20c497b0ef06",
+    "semantic_hash": "7a241ec19779c5e6110f20c497b0ef06"
+  },
+  "Sources/LGwebOSUI/NowPlayingCard.swift": {
+    "mtime": 1791907334.8125846,
+    "ast_hash": "6d3714194be0bdcb4486005ae0c1d832",
+    "semantic_hash": "6d3714194be0bdcb4486005ae0c1d832"
+  },
+  "Sources/LGwebOSUI/PictureEditor.swift": {
+    "mtime": 1791907334.8128593,
+    "ast_hash": "cb3c93ae421d423fe10bbcc8deb455f8",
+    "semantic_hash": "cb3c93ae421d423fe10bbcc8deb455f8"
+  },
+  "Sources/LGwebOSUI/RemoteChrome.swift": {
+    "mtime": 1791907334.813072,
+    "ast_hash": "c40f3ba73729332c98fdf65a9a88750a",
+    "semantic_hash": "c40f3ba73729332c98fdf65a9a88750a"
+  },
+  "Sources/LGwebOSUI/RemotePad.swift": {
+    "mtime": 1791907334.8133414,
+    "ast_hash": "4ea9eef46755f3dcd5a10355c4e94129",
+    "semantic_hash": "4ea9eef46755f3dcd5a10355c4e94129"
+  },
+  "Sources/LGwebOSUI/VolumeCard.swift": {
+    "mtime": 1791907334.8135543,
+    "ast_hash": "dcf4a2171df095725aff42daf8cff3c8",
+    "semantic_hash": "dcf4a2171df095725aff42daf8cff3c8"
+  },
+  "Tests/LGwebOSCoreTests/LGwebOSCoreTests.swift": {
+    "mtime": 1791907334.8139222,
+    "ast_hash": "eb1852654a3584bb70e717161c6b4609",
+    "semantic_hash": "eb1852654a3584bb70e717161c6b4609"
+  },
+  "scripts/build.sh": {
+    "mtime": 1791907334.8147137,
+    "ast_hash": "8e9671192d939e043b0ebb0e5862c07d",
+    "semantic_hash": "8e9671192d939e043b0ebb0e5862c07d"
+  },
+  "scripts/privacy-check.py": {
+    "mtime": 1791907334.8150814,
+    "ast_hash": "29dae167eff736801997c4bb8259137b",
+    "semantic_hash": "29dae167eff736801997c4bb8259137b"
+  },
+  "CLAUDE.md": {
+    "mtime": 1791906910.79979,
+    "ast_hash": "43d8830c108cb59632380c24f21980bd",
+    "semantic_hash": "43d8830c108cb59632380c24f21980bd"
+  },
+  "README.md": {
+    "mtime": 1791907334.7824469,
+    "ast_hash": "c25811ba2ae1d4ce250cd60770adf1c2",
+    "semantic_hash": "c25811ba2ae1d4ce250cd60770adf1c2"
+  },
+  "Sources/LGwebOSMenubar/README.md": {
+    "mtime": 1791907334.8095634,
+    "ast_hash": "43379dfe1d0b6866ff76a8721f612f6f",
+    "semantic_hash": "43379dfe1d0b6866ff76a8721f612f6f"
+  },
+  "THIRD_PARTY_NOTICES.md": {
+    "mtime": 1791906910.8192737,
+    "ast_hash": "48b79cf207845022247b3664b338268b",
+    "semantic_hash": "48b79cf207845022247b3664b338268b"
+  },
+  "Sources/LGwebOSCore/AppAssets/03eaf5a591c43139f8.png": {
+    "mtime": 1791907334.7830634,
+    "ast_hash": "81428178a5f1209e214fcb1d7d9e06bf",
+    "semantic_hash": "81428178a5f1209e214fcb1d7d9e06bf"
+  },
+  "Sources/LGwebOSCore/AppAssets/06f16e28ffec86908c.png": {
+    "mtime": 1791907334.7832873,
+    "ast_hash": "707f6958c71dbfd173600436687b169b",
+    "semantic_hash": "707f6958c71dbfd173600436687b169b"
+  },
+  "Sources/LGwebOSCore/AppAssets/0b5e0f3f66b1e238b3.png": {
+    "mtime": 1791907334.7835193,
+    "ast_hash": "573a08f5c2dc791ae5f603de50120154",
+    "semantic_hash": "573a08f5c2dc791ae5f603de50120154"
+  },
+  "Sources/LGwebOSCore/AppAssets/0e182343ea1a32f49d.png": {
+    "mtime": 1791907334.7837427,
+    "ast_hash": "c9f0006c358d6aeb21cf8242088445dd",
+    "semantic_hash": "c9f0006c358d6aeb21cf8242088445dd"
+  },
+  "Sources/LGwebOSCore/AppAssets/1d26c8b0129acf19d8.png": {
+    "mtime": 1791907334.783888,
+    "ast_hash": "a9393516ca65ebb1b40d60129d1cd1aa",
+    "semantic_hash": "a9393516ca65ebb1b40d60129d1cd1aa"
+  },
+  "Sources/LGwebOSCore/AppAssets/1f28f48f4e8eb3b488.png": {
+    "mtime": 1791907334.7841022,
+    "ast_hash": "7aba3d89ee8c2251a321da9d05b4a824",
+    "semantic_hash": "7aba3d89ee8c2251a321da9d05b4a824"
+  },
+  "Sources/LGwebOSCore/AppAssets/22eba3dd1efdc5871d.png": {
+    "mtime": 1791907334.7843091,
+    "ast_hash": "7b481a5e7a7dfcaed6782fda7f811811",
+    "semantic_hash": "7b481a5e7a7dfcaed6782fda7f811811"
+  },
+  "Sources/LGwebOSCore/AppAssets/3823c0359f3bb213c2.png": {
+    "mtime": 1791907334.784465,
+    "ast_hash": "7be0bcd4889df1160df3534b029051cd",
+    "semantic_hash": "7be0bcd4889df1160df3534b029051cd"
+  },
+  "Sources/LGwebOSCore/AppAssets/54505f56ff1c3587d9.png": {
+    "mtime": 1791907334.7846854,
+    "ast_hash": "95cdd7d911585bc8806906cb779b4ada",
+    "semantic_hash": "95cdd7d911585bc8806906cb779b4ada"
+  },
+  "Sources/LGwebOSCore/AppAssets/580a3fdcb1bdc01e23.png": {
+    "mtime": 1791907334.784899,
+    "ast_hash": "d1146093b2504872b104ce3274b769c3",
+    "semantic_hash": "d1146093b2504872b104ce3274b769c3"
+  },
+  "Sources/LGwebOSCore/AppAssets/5945b5daea17fc3741.png": {
+    "mtime": 1791907334.7850971,
+    "ast_hash": "e07631d8bec78cd12c0dde43b1fd9d91",
+    "semantic_hash": "e07631d8bec78cd12c0dde43b1fd9d91"
+  },
+  "Sources/LGwebOSCore/AppAssets/6851b57a3afdbd7ec7.png": {
+    "mtime": 1791907334.7853112,
+    "ast_hash": "070f7fbfeb574f2ea7f96a59fbaf8010",
+    "semantic_hash": "070f7fbfeb574f2ea7f96a59fbaf8010"
+  },
+  "Sources/LGwebOSCore/AppAssets/69f556867cf76a18ee.png": {
+    "mtime": 1791907334.7855465,
+    "ast_hash": "682e2d31064deaeb9b3bacd0e78e6c01",
+    "semantic_hash": "682e2d31064deaeb9b3bacd0e78e6c01"
+  },
+  "Sources/LGwebOSCore/AppAssets/74cfc191d1d88a2200.png": {
+    "mtime": 1791907334.7857625,
+    "ast_hash": "ac8c54cdf0648240b888210d619fb170",
+    "semantic_hash": "ac8c54cdf0648240b888210d619fb170"
+  },
+  "Sources/LGwebOSCore/AppAssets/7a4ebb4321d5aa022e.png": {
+    "mtime": 1791907334.785957,
+    "ast_hash": "10fae175f9fe41e072020e7c61dad6a1",
+    "semantic_hash": "10fae175f9fe41e072020e7c61dad6a1"
+  },
+  "Sources/LGwebOSCore/AppAssets/7f0ccf32df3f6e3227.png": {
+    "mtime": 1791907334.7861643,
+    "ast_hash": "7c7bf8595776f91aa56d3e1d8a64aec9",
+    "semantic_hash": "7c7bf8595776f91aa56d3e1d8a64aec9"
+  },
+  "Sources/LGwebOSCore/AppAssets/824c85229b555be76b.png": {
+    "mtime": 1791907334.78638,
+    "ast_hash": "66d04fd000dfbc3edbed83f9b80919c3",
+    "semantic_hash": "66d04fd000dfbc3edbed83f9b80919c3"
+  },
+  "Sources/LGwebOSCore/AppAssets/85d4d556d1de51f9f3.png": {
+    "mtime": 1791907334.7866328,
+    "ast_hash": "d8d3b8dcab939e852e69d25522f4b2c6",
+    "semantic_hash": "d8d3b8dcab939e852e69d25522f4b2c6"
+  },
+  "Sources/LGwebOSCore/AppAssets/88ece2033bd67c4051.png": {
+    "mtime": 1791907334.7868533,
+    "ast_hash": "88d38f84f846a25e2cc4cda9fb7004d1",
+    "semantic_hash": "88d38f84f846a25e2cc4cda9fb7004d1"
+  },
+  "Sources/LGwebOSCore/AppAssets/8c43158a8851c7e2ba.png": {
+    "mtime": 1791907334.7870185,
+    "ast_hash": "713c7032b375a7f507089d4486b8e41c",
+    "semantic_hash": "713c7032b375a7f507089d4486b8e41c"
+  },
+  "Sources/LGwebOSCore/AppAssets/96dd253a037cc39503.png": {
+    "mtime": 1791907334.7871666,
+    "ast_hash": "75750d41b458322fe95017ca51314239",
+    "semantic_hash": "75750d41b458322fe95017ca51314239"
+  },
+  "Sources/LGwebOSCore/AppAssets/a2f831ceef57ba6e10.png": {
+    "mtime": 1791907334.7873805,
+    "ast_hash": "8e784e6291c0c7b1220efa325f35f48f",
+    "semantic_hash": "8e784e6291c0c7b1220efa325f35f48f"
+  },
+  "Sources/LGwebOSCore/AppAssets/ac82491cfde1417113.png": {
+    "mtime": 1791907334.787543,
+    "ast_hash": "49ca803048fd66470974754c0754cf23",
+    "semantic_hash": "49ca803048fd66470974754c0754cf23"
+  },
+  "Sources/LGwebOSCore/AppAssets/b0b6bad3c93e806eb6.png": {
+    "mtime": 1791907334.787763,
+    "ast_hash": "078fd2b95766fd222402eb04253b7e4e",
+    "semantic_hash": "078fd2b95766fd222402eb04253b7e4e"
+  },
+  "Sources/LGwebOSCore/AppAssets/b350eaa6e92a9c9158.png": {
+    "mtime": 1791907334.787978,
+    "ast_hash": "076a714bc2723f595b7b9be13d8f9b51",
+    "semantic_hash": "076a714bc2723f595b7b9be13d8f9b51"
+  },
+  "Sources/LGwebOSCore/AppAssets/b4f8bd6c17b379dde0.png": {
+    "mtime": 1791907334.788178,
+    "ast_hash": "21fab6edecaa3039a4a524e1669b3b4d",
+    "semantic_hash": "21fab6edecaa3039a4a524e1669b3b4d"
+  },
+  "Sources/LGwebOSCore/AppAssets/bb4e1793f131484c53.png": {
+    "mtime": 1791907334.7883992,
+    "ast_hash": "285087ca1cae48cb97acc11c5b384efd",
+    "semantic_hash": "285087ca1cae48cb97acc11c5b384efd"
+  },
+  "Sources/LGwebOSCore/AppAssets/be52d62a081d49bba3.png": {
+    "mtime": 1791907334.788624,
+    "ast_hash": "0a8d7762968bcd937141b35ad299aa5e",
+    "semantic_hash": "0a8d7762968bcd937141b35ad299aa5e"
+  },
+  "Sources/LGwebOSCore/AppAssets/c59735751955b11464.png": {
+    "mtime": 1791907334.7888012,
+    "ast_hash": "116a5f80c22856f5ece553402ad88377",
+    "semantic_hash": "116a5f80c22856f5ece553402ad88377"
+  },
+  "Sources/LGwebOSCore/AppAssets/ce52403cc158a7b8a4.png": {
+    "mtime": 1791907334.7889988,
+    "ast_hash": "b9be6a1e82bf3f9c7600ed98ebbe4b86",
+    "semantic_hash": "b9be6a1e82bf3f9c7600ed98ebbe4b86"
+  },
+  "Sources/LGwebOSCore/AppAssets/d43aa0ce85cafddc18.png": {
+    "mtime": 1791907334.7892032,
+    "ast_hash": "d46819a1da3190339ec51a662bb0424c",
+    "semantic_hash": "d46819a1da3190339ec51a662bb0424c"
+  },
+  "Sources/LGwebOSCore/AppAssets/dcea2785897f7c3cea.png": {
+    "mtime": 1791907334.7894328,
+    "ast_hash": "f97190592df2a539b7753b9c9da17147",
+    "semantic_hash": "f97190592df2a539b7753b9c9da17147"
+  },
+  "Sources/LGwebOSCore/AppAssets/e59f18ab482984f409.png": {
+    "mtime": 1791907334.789646,
+    "ast_hash": "6bf42b99b92308f9bf624c677de0a970",
+    "semantic_hash": "6bf42b99b92308f9bf624c677de0a970"
+  },
+  "Sources/LGwebOSCore/AppAssets/e7c8e0f65e992edd66.png": {
+    "mtime": 1791907334.789857,
+    "ast_hash": "f636990dcb70890fa9ca686ae0da32bd",
+    "semantic_hash": "f636990dcb70890fa9ca686ae0da32bd"
+  },
+  "Sources/LGwebOSCore/AppAssets/eaecc4d9b3595197c8.png": {
+    "mtime": 1791907334.79008,
+    "ast_hash": "308d86a60915a594692d3154aaaf5a3e",
+    "semantic_hash": "308d86a60915a594692d3154aaaf5a3e"
+  },
+  "Sources/LGwebOSCore/AppAssets/eb159a9d122d86830a.png": {
+    "mtime": 1791907334.7903128,
+    "ast_hash": "0105e0898793dd8286a836468cfdba1f",
+    "semantic_hash": "0105e0898793dd8286a836468cfdba1f"
+  },
+  "Sources/LGwebOSCore/AppAssets/f7ab6f6def3864c5e4.png": {
+    "mtime": 1791907334.7905354,
+    "ast_hash": "a71e15af588b4d74bbaa233573ff7a38",
+    "semantic_hash": "a71e15af588b4d74bbaa233573ff7a38"
+  },
+  "Sources/LGwebOSCore/AppAssets/f8d1682b97552c73ea.png": {
+    "mtime": 1791907334.7907436,
+    "ast_hash": "10bdd05f18c385f9eea4fe90b584583f",
+    "semantic_hash": "10bdd05f18c385f9eea4fe90b584583f"
+  },
+  "Sources/LGwebOSCore/AppAssets/googlecast.png": {
+    "mtime": 1791907334.7909694,
+    "ast_hash": "aba40ede406f580f15996d8cc03bbe3a",
+    "semantic_hash": "aba40ede406f580f15996d8cc03bbe3a"
+  },
+  "Sources/LGwebOSCore/AppAssets/lg.png": {
+    "mtime": 1791907334.7911637,
+    "ast_hash": "0e5852c46d24d5b3c304fc9b67242b7e",
+    "semantic_hash": "0e5852c46d24d5b3c304fc9b67242b7e"
+  },
+  "Sources/LGwebOSCore/AppAssets/playstation.png": {
+    "mtime": 1791907334.7913735,
+    "ast_hash": "c0748f88a4d3c17ce20a668128b9de8c",
+    "semantic_hash": "c0748f88a4d3c17ce20a668128b9de8c"
+  },
+  "Sources/LGwebOSCore/AppAssets/tv-hero.png": {
+    "mtime": 1791907334.8002415,
+    "ast_hash": "073cd64a0adf45be4929f014e077ab5e",
+    "semantic_hash": "073cd64a0adf45be4929f014e077ab5e"
+  }
+}

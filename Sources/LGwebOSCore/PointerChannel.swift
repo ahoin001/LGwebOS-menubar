@@ -1,7 +1,7 @@
 import Foundation
 
 @MainActor
-protocol PointerTransport: AnyObject {
+package protocol PointerTransport: AnyObject {
     func send(_ message: String) async throws
     func receive() async throws
     func ping() async throws
@@ -22,12 +22,12 @@ private final class PingResult: @unchecked Sendable {
 }
 
 @MainActor
-final class WebSocketPointerTransport: PointerTransport {
+package final class WebSocketPointerTransport: PointerTransport {
     let task: URLSessionWebSocketTask
     init(task: URLSessionWebSocketTask) { self.task = task }
-    func send(_ message: String) async throws { try await task.send(.string(message)) }
-    func receive() async throws { _ = try await task.receive() }
-    func ping() async throws {
+    package func send(_ message: String) async throws { try await task.send(.string(message)) }
+    package func receive() async throws { _ = try await task.receive() }
+    package func ping() async throws {
         try await withCheckedThrowingContinuation { continuation in
             let result = PingResult(continuation)
             task.sendPing { error in result.finish(error) }
@@ -37,7 +37,7 @@ final class WebSocketPointerTransport: PointerTransport {
             }
         }
     }
-    func close() { task.cancel(with: .goingAway, reason: nil) }
+    package func close() { task.cancel(with: .goingAway, reason: nil) }
 }
 
 public enum PointerMessage {
@@ -49,8 +49,8 @@ public enum PointerMessage {
 /// One ordered writer, with a receive loop that observes server-side closure.
 /// A failed health check may reconnect; an actual input is never blindly replayed.
 @MainActor
-final class PointerChannel {
-    typealias Factory = @MainActor () async throws -> any PointerTransport
+package final class PointerChannel {
+    package typealias Factory = @MainActor () async throws -> any PointerTransport
     private let factory: Factory
     private var wire: (any PointerTransport)?
     private var reader: Task<Void, Never>?
@@ -59,9 +59,9 @@ final class PointerChannel {
     private var closed = false
     private var lastPing: TimeInterval = 0
     var onState: ((Bool) -> Void)?
-    init(factory: @escaping Factory) { self.factory = factory }
-    func send(_ message: String) async throws { try await enqueue(message: message) }
-    func check() async throws { try await enqueue(message: nil) }
+    package init(factory: @escaping Factory) { self.factory = factory }
+    package func send(_ message: String) async throws { try await enqueue(message: message) }
+    package func check() async throws { try await enqueue(message: nil) }
 
     private func enqueue(message: String?) async throws {
         guard !closed else { throw CancellationError() }
@@ -124,7 +124,7 @@ final class PointerChannel {
         onState?(false)
     }
 
-    func close() {
+    package func close() {
         closed = true
         tail?.cancel()
         tail = nil
