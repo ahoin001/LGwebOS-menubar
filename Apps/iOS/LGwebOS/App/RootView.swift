@@ -8,6 +8,7 @@ struct RootView: View {
     @Environment(\.horizontalSizeClass) private var sizeClass
     @State private var section: RemoteSection? = .home
     @State private var settings = false
+    @State private var setup = false
 
     var body: some View {
         Group {
@@ -33,6 +34,8 @@ struct RootView: View {
             }
         }
         .sheet(isPresented: $settings) { SettingsScreen(model: model) }
+        .sheet(isPresented: $setup) { SetupWizard(model: model, allowsDismiss: !model.identity.host.isEmpty) }
+        .onAppear { if model.identity.host.isEmpty { setup = true } }
         .sheet(isPresented: certificatePresented) {
             if let prompt = approval.pending { CertificateSheet(prompt: prompt, resolve: approval.resolve) }
         }
@@ -58,7 +61,11 @@ struct RootView: View {
 
     private func page(_ item: RemoteSection) -> some View {
         ScreenColumn {
-            if !model.session.connected { ConnectionBanner(model: model) { settings = true } }
+            if !model.session.connected {
+                ConnectionBanner(model: model) {
+                    if model.identity.host.isEmpty { setup = true } else { settings = true }
+                }
+            }
             switch item {
             case .home: HomeScreen(model: model)
             case .remote: RemoteScreen(model: model)

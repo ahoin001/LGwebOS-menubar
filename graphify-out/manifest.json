@@ -5,9 +5,9 @@
     "semantic_hash": ""
   },
   "Apps/iOS/LGwebOS/App/RootView.swift": {
-    "mtime": 1791907334.7788153,
-    "ast_hash": "972c395cadd6b904fccb389692fca6cc",
-    "semantic_hash": "972c395cadd6b904fccb389692fca6cc"
+    "mtime": 1791910615.7691898,
+    "ast_hash": "784a78f32ad3d6fbbb488cc160e153de",
+    "semantic_hash": ""
   },
   "Apps/iOS/LGwebOS/Assets.xcassets/Contents.json": {
     "mtime": 1791907334.7790782,
@@ -50,9 +50,9 @@
     "semantic_hash": "2724331e4f7380c326ea5d438b69b476"
   },
   "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift": {
-    "mtime": 1791907334.7811742,
-    "ast_hash": "a04ece33083a4188b8fdb7ab5f68e930",
-    "semantic_hash": "a04ece33083a4188b8fdb7ab5f68e930"
+    "mtime": 1791910615.768989,
+    "ast_hash": "45a560a1bdb7d46d98e5bd2b3039a962",
+    "semantic_hash": ""
   },
   "Package.swift": {
     "mtime": 1791908806.8786185,
@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1791908126.150982,
-    "ast_hash": "be55bb8abd1782d15b6a393b788276cd",
+    "mtime": 1791910618.266654,
+    "ast_hash": "ab17d4d29e06d3515acc4e83db337c1c",
     "semantic_hash": ""
   },
   "THIRD_PARTY_NOTICES.md": {
@@ -542,6 +542,11 @@
   "Apps/macOS/LGwebOSMenubar/README.md": {
     "mtime": 1791908817.4331083,
     "ast_hash": "84342bfd6ccf8ae2348ca77c4a2a8627",
+    "semantic_hash": ""
+  },
+  "Apps/iOS/LGwebOS/Features/Settings/SetupWizard.swift": {
+    "mtime": 1791910606.21332,
+    "ast_hash": "2eae9b804d48993e1f7190c2facffc78",
     "semantic_hash": ""
   }
 }

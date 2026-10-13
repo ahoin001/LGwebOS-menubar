@@ -50,7 +50,7 @@ The iPhone and iPad app lives in `Apps/iOS` and uses the same TV session, pairin
 
 - The iPhone uses a tab bar. The iPad uses a sidebar, with the remote kept to a readable width.
 - Pairing is stored in that device's Keychain. It is not shared with the Mac app.
-- Enter an IPv4 address or use Find TVs. Discovery on a physical device needs the multicast entitlement in the Apple developer account. A typed address still works without it.
+- Enter the TV’s IPv4 address. This iOS build does not search the network, because that scan needs a paid Apple Developer account. The Mac app can still find TVs.
 - iOS suspends the app in the background, which drops the TV socket. Coming back reconnects with the saved certificate and does not ask you to trust the TV again.
 - Casting serves the selected file only while the app stays open.
 

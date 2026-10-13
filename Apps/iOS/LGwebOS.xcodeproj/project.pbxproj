@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		B10000000000000000000002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000002 /* RootView.swift */; };
 		B10000000000000000000003 /* CertificateApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000003 /* CertificateApproval.swift */; };
 		B10000000000000000000004 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000004 /* SettingsScreen.swift */; };
+		B10000000000000000000010 /* SetupWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000010 /* SetupWizard.swift */; };
 		B10000000000000000000005 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000005 /* HomeScreen.swift */; };
 		B10000000000000000000006 /* RemoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000006 /* RemoteScreen.swift */; };
 		B10000000000000000000007 /* AppsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000007 /* AppsScreen.swift */; };
@@ -27,6 +28,7 @@
 		F10000000000000000000002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		F10000000000000000000003 /* CertificateApproval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateApproval.swift; sourceTree = "<group>"; };
 		F10000000000000000000004 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000010 /* SetupWizard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizard.swift; sourceTree = "<group>"; };
 		F10000000000000000000005 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F10000000000000000000006 /* RemoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreen.swift; sourceTree = "<group>"; };
 		F10000000000000000000007 /* AppsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsScreen.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				F10000000000000000000003 /* CertificateApproval.swift */,
 				F10000000000000000000004 /* SettingsScreen.swift */,
+				F10000000000000000000010 /* SetupWizard.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				B10000000000000000000002 /* RootView.swift in Sources */,
 				B10000000000000000000003 /* CertificateApproval.swift in Sources */,
 				B10000000000000000000004 /* SettingsScreen.swift in Sources */,
+				B10000000000000000000010 /* SetupWizard.swift in Sources */,
 				B10000000000000000000005 /* HomeScreen.swift in Sources */,
 				B10000000000000000000006 /* RemoteScreen.swift in Sources */,
 				B10000000000000000000007 /* AppsScreen.swift in Sources */,
@@ -292,6 +296,7 @@
 				CODE_SIGN_ENTITLEMENTS = LGwebOS/LGwebOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6QX9FJK8N4;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = LGwebOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,6 +320,7 @@
 				CODE_SIGN_ENTITLEMENTS = LGwebOS/LGwebOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6QX9FJK8N4;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = LGwebOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

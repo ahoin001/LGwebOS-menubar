@@ -9,6 +9,7 @@ struct SettingsScreen: View {
     @State private var draftName = ""
     @State private var draftMAC = ""
     @State private var confirmForget = false
+    @State private var guide = false
 
     var body: some View {
         NavigationStack {
@@ -24,18 +25,9 @@ struct SettingsScreen: View {
                         .font(.footnote).foregroundStyle(.secondary)
                 }
                 Section {
-                    Button(model.discovering ? "Searching for TVs…" : "Find TVs on your network") { model.discover() }
-                        .disabled(model.discovering)
-                    ForEach(model.devices) { device in
-                        Button {
-                            model.select(device)
-                            dismiss()
-                        } label: {
-                            HStack { Text(device.name); Spacer(); Text(device.host).foregroundStyle(.secondary) }
-                        }
-                    }
+                    Button("How to find your TV") { guide = true }
                 } footer: {
-                    Text("To wake the TV, enable Wi-Fi wake in the TV settings. Discovery on a device needs the local network and multicast permissions.")
+                    Text("To wake the TV, enable Wi-Fi wake in the TV settings.")
                 }
                 if !model.identity.host.isEmpty {
                     Section {
@@ -64,12 +56,17 @@ struct SettingsScreen: View {
             } message: {
                 Text("The saved key and certificate for this TV will be removed from this device. You can connect and pair again.")
             }
-            .onAppear {
-                draftHost = model.identity.host
-                draftName = model.identity.name
-                draftMAC = model.identity.mac
+            .sheet(isPresented: $guide, onDismiss: loadDrafts) {
+                SetupWizard(model: model, allowsDismiss: true)
             }
+            .onAppear(perform: loadDrafts)
         }
+    }
+
+    private func loadDrafts() {
+        draftHost = model.identity.host
+        draftName = model.identity.name
+        draftMAC = model.identity.mac
     }
 
     private func save() {
