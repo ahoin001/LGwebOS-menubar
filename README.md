@@ -1,6 +1,6 @@
 # LGwebOS-menubar
 
-A native macOS menu bar remote for LG webOS TVs. Launch apps, switch HDMI inputs, navigate with a touchpad, and keep your TV controls a click away.
+A native macOS menu bar remote for LG webOS TVs, with an iPhone and iPad app in the same workspace. Launch apps, switch HDMI inputs, and use the direction pad from the menu bar. Pointer, text entry, and picture changes need full control, which depends on the TV's webOS version.
 
 The app is called **LGwebOS-menubar**. This is a community project, independent of LG.
 
@@ -25,6 +25,7 @@ The `CLAUDE.md` file in the root tells Claude how to build the app, find your TV
 - A Mac running macOS 14 or later.
 - Xcode 15 or later, with Swift 5.9 or later. Install the command line tools with `xcode-select --install` if `swift` is missing.
 - An LG TV with webOS, on the same Wi-Fi or Ethernet network as your Mac.
+- For the iPhone and iPad app: iOS 17 or later.
 
 ## Build and run
 
@@ -46,15 +47,41 @@ The script builds in a temporary directory, removes debug symbols, and creates a
 
 ## iOS
 
-The iPhone and iPad app lives in `Apps/iOS` and uses the same TV session, pairing, and visual language as the menu bar. From `LGwebOS.xcworkspace`, select the LGwebOS scheme. It requires iOS 17. On a physical device, select your team before you run it.
+The iPhone and iPad app is the **LGwebOS** scheme in `LGwebOS.xcworkspace`. Open that workspace file. Opening the repository folder loads the Swift package, which has no iPhone app scheme.
 
-- The iPhone uses a tab bar. The iPad uses a sidebar, with the remote kept to a readable width.
+1. Select the **LGwebOS** scheme.
+2. Select your iPhone or iPad as the destination. **Any iOS Device** compiles the app and does not install it.
+3. In **Signing & Capabilities**, set **Team** to your Apple ID.
+4. Press Run. Unlock the phone and keep it plugged in.
+
+The app requires iOS 17. The first launch may ask you to trust the developer certificate under **Settings → General → VPN & Device Management**, and to turn on **Developer Mode** under **Settings → Privacy & Security**.
+
+- The iPhone uses a tab bar. Picture, Activity, and Logs sit in the system **More** tab. The iPad uses a sidebar, with the remote kept to a readable width.
 - Pairing is stored in that device's Keychain. It is not shared with the Mac app.
 - Enter the TV’s IPv4 address. This iOS build does not search the network, because that scan needs a paid Apple Developer account. The Mac app can still find TVs.
 - iOS suspends the app in the background, which drops the TV socket. Coming back reconnects with the saved certificate and does not ask you to trust the TV again.
 - Casting serves the selected file only while the app stays open.
 
-The tested-models table above applies to both apps. Other TVs are still unverified.
+The control limits below apply to both apps. The tested-models table applies to both apps as well. Other TVs are still unverified.
+
+## Basic and full control
+
+Settings has an **Advanced controls** switch. It is off by default.
+
+**Basic control** pairs without LG’s public sample certificate. That is the control set available when the TV rejects the certificate:
+
+- Power, and wake when you have entered the TV’s MAC address
+- Volume and mute
+- Direction pad, Home, and Back
+- Launching apps
+- HDMI inputs
+- Cast
+
+**Full control** sends the sample certificate bundled with the app. On the tested **webOS 5.0** set (LG 50UN7310PSC), that certificate can be accepted. It adds the pointer pad, typing into a text field on the TV, and picture changes.
+
+**webOS 22** rejects that certificate. An LG C2 answers `403 Pairing rejected: blacklisted certificate detected`. LG does not publish a replacement key. The app turns Advanced controls off and stays on basic control. Turning the switch on again retries the same certificate and gets the same rejection.
+
+Switching between basic and full control pairs again. The saved TV certificate pin stays. The pairing key for that address is replaced.
 
 ## Find your TV
 
@@ -83,7 +110,7 @@ The project ships with no TV address, device name, model, MAC address, or pairin
 - **Screen time:** collected locally while the app is running, connected, and the Mac is awake. It cannot retrieve the TV's historical usage.
 - **Home status:** the TV may report the underlying app while its Home overlay is visible. Home presses from this app are tracked locally. Home presses from a physical remote may not be detectable.
 - **HDMI devices:** switching to a PlayStation or Chromecast switches the TV's input. It does not turn your Mac into a game controller.
-- **Picture settings:** reading and changing values depends on TV permissions. Some TVs allow reading but reject changes.
+- **Picture settings:** changing picture values is part of full control. webOS 22 rejects the certificate that grants it. See [Basic and full control](#basic-and-full-control).
 - **Media casting:** playback depends on the TV's supported codecs and DLNA service. Only the selected file is served, through a temporary URL reachable from the TV and this Mac only. H.264 MP4, MP3, and JPEG are the safest choices.
 - **AirPlay:** the app shows guidance for macOS Screen Mirroring. It does not start mirroring itself, and it does not capture the TV screen on the Mac.
 - **Logs:** activity logs describe this app's connections and commands. Internal TV system logs and Developer Mode access are not included.
