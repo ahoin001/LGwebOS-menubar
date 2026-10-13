@@ -113,7 +113,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_rootview",
-      "community": 9,
+      "community": 7,
       "norm_label": "rootview"
     },
     {
@@ -123,7 +123,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_swift_binding",
-      "community": 9,
+      "community": 7,
       "norm_label": "binding"
     },
     {
@@ -133,7 +133,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_swift_bool",
-      "community": 9,
+      "community": 7,
       "norm_label": "bool"
     },
     {
@@ -143,14 +143,14 @@
       "source_location": "",
       "_origin": "ast",
       "id": "toolbarcontent",
-      "community": 9,
+      "community": 7,
       "norm_label": "toolbarcontent"
     },
     {
       "label": ".page()",
       "file_type": "code",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L62",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_rootview_page",
       "community": 9,
@@ -160,7 +160,7 @@
       "label": ".screen()",
       "file_type": "code",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L70",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "community": 9,
@@ -170,7 +170,7 @@
       "label": "ScreenColumn",
       "file_type": "code",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L102",
+      "source_location": "L110",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_screencolumn",
       "community": 9,
@@ -190,10 +190,10 @@
       "label": "ConnectionBanner",
       "file_type": "code",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L115",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_connectionbanner",
-      "community": 9,
+      "community": 1,
       "norm_label": "connectionbanner"
     },
     {
@@ -203,8 +203,28 @@
       "source_location": "",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_app_rootview_swift_void",
-      "community": 9,
+      "community": 1,
       "norm_label": "void"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "apps_ios_lgwebos_app_rootview_swift_string",
+      "community": 1,
+      "norm_label": "string"
+    },
+    {
+      "label": ".buttonAction()",
+      "file_type": "code",
+      "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "apps_ios_lgwebos_app_rootview_connectionbanner_buttonaction",
+      "community": 1,
+      "norm_label": ".buttonaction()"
     },
     {
       "label": "ActivityScreen.swift",
@@ -223,7 +243,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_features_activity_activityscreen_activityscreen",
-      "community": 0,
+      "community": 9,
       "norm_label": "activityscreen"
     },
     {
@@ -344,7 +364,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_features_logs_logsscreen_logsscreen",
-      "community": 19,
+      "community": 9,
       "norm_label": "logsscreen"
     },
     {
@@ -578,6 +598,36 @@
       "norm_label": "int"
     },
     {
+      "label": "WakeSetupScreen.swift",
+      "file_type": "code",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_ios_lgwebos_features_power_wakesetupscreen",
+      "community": 11,
+      "norm_label": "wakesetupscreen.swift"
+    },
+    {
+      "label": "WakeSetupScreen",
+      "file_type": "code",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen",
+      "community": 9,
+      "norm_label": "wakesetupscreen"
+    },
+    {
+      "label": ".save()",
+      "file_type": "code",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen_save",
+      "community": 3,
+      "norm_label": ".save()"
+    },
+    {
       "label": "RemoteScreen.swift",
       "file_type": "code",
       "source_file": "Apps/iOS/LGwebOS/Features/Remote/RemoteScreen.swift",
@@ -675,7 +725,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "equatable",
-      "community": 0,
+      "community": 19,
       "norm_label": "equatable"
     },
     {
@@ -782,37 +832,17 @@
       "label": ".loadDrafts()",
       "file_type": "code",
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L72",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_loaddrafts",
       "community": 2,
       "norm_label": ".loaddrafts()"
     },
     {
-      "label": "Binding",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_ios_lgwebos_features_settings_settingsscreen_swift_binding",
-      "community": 2,
-      "norm_label": "binding"
-    },
-    {
-      "label": "Bool",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_ios_lgwebos_features_settings_settingsscreen_swift_bool",
-      "community": 2,
-      "norm_label": "bool"
-    },
-    {
       "label": ".save()",
       "file_type": "code",
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L82",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_save",
       "community": 2,
@@ -1237,7 +1267,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_appsscreen_appsscreen",
-      "community": 18,
+      "community": 2,
       "norm_label": "appsscreen"
     },
     {
@@ -1267,7 +1297,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_appsscreen_picturescreen",
-      "community": 9,
+      "community": 26,
       "norm_label": "picturescreen"
     },
     {
@@ -1277,7 +1307,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_appsscreen_swift_string",
-      "community": 9,
+      "community": 26,
       "norm_label": "string"
     },
     {
@@ -1287,7 +1317,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_appsscreen_swift_int",
-      "community": 9,
+      "community": 26,
       "norm_label": "int"
     },
     {
@@ -1464,7 +1494,7 @@
       "label": ".updateHeight()",
       "file_type": "code",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/RemoteView.swift",
-      "source_location": "L167",
+      "source_location": "L176",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_remoteview_remoteview_updateheight",
       "community": 14,
@@ -1487,7 +1517,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen",
-      "community": 26,
+      "community": 2,
       "norm_label": "settingsscreen"
     },
     {
@@ -1497,34 +1527,14 @@
       "source_location": "",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_settingsscreen_swift_void",
-      "community": 26,
+      "community": 2,
       "norm_label": "void"
-    },
-    {
-      "label": "Binding",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_macos_lgwebosmenubar_screens_settingsscreen_swift_binding",
-      "community": 26,
-      "norm_label": "binding"
-    },
-    {
-      "label": "Bool",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_macos_lgwebosmenubar_screens_settingsscreen_swift_bool",
-      "community": 26,
-      "norm_label": "bool"
     },
     {
       "label": ".save()",
       "file_type": "code",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L99",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_save",
       "community": 2,
@@ -1534,10 +1544,10 @@
       "label": ".forget()",
       "file_type": "code",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L111",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_forget",
-      "community": 26,
+      "community": 2,
       "norm_label": ".forget()"
     },
     {
@@ -1611,7 +1621,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "imageio",
-      "community": 11,
+      "community": 18,
       "norm_label": "imageio"
     },
     {
@@ -1811,7 +1821,7 @@
       "source_location": "L194",
       "_origin": "ast",
       "id": "sources_lgweboschecks_featurechecks_featurechecks_testhomepresentationsurvivesrepeatedunderlyingappreports",
-      "community": 23,
+      "community": 16,
       "norm_label": ".testhomepresentationsurvivesrepeatedunderlyingappreports()"
     },
     {
@@ -1951,7 +1961,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_activitylog_activitylog",
-      "community": 19,
+      "community": 21,
       "norm_label": "activitylog"
     },
     {
@@ -1961,7 +1971,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_activitylog_swift_string",
-      "community": 19,
+      "community": 21,
       "norm_label": "string"
     },
     {
@@ -1971,7 +1981,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_activitylog_swift_void",
-      "community": 19,
+      "community": 21,
       "norm_label": "void"
     },
     {
@@ -1981,7 +1991,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_activitylog_swift_url",
-      "community": 19,
+      "community": 21,
       "norm_label": "url"
     },
     {
@@ -1991,7 +2001,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "sources_lgweboscore_activitylog_activitylog_init",
-      "community": 19,
+      "community": 21,
       "norm_label": ".init()"
     },
     {
@@ -2001,7 +2011,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "sources_lgweboscore_activitylog_activitylog_clear",
-      "community": 19,
+      "community": 21,
       "norm_label": ".clear()"
     },
     {
@@ -2011,7 +2021,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "sources_lgweboscore_activitylog_activitylog_log",
-      "community": 19,
+      "community": 21,
       "norm_label": ".log()"
     },
     {
@@ -2061,7 +2071,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity",
-      "community": 0,
+      "community": 8,
       "norm_label": "brandidentity.swift"
     },
     {
@@ -2071,7 +2081,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_rgbcolor",
-      "community": 0,
+      "community": 8,
       "norm_label": "rgbcolor"
     },
     {
@@ -2081,7 +2091,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sendable",
-      "community": 0,
+      "community": 8,
       "norm_label": "sendable"
     },
     {
@@ -2091,7 +2101,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_swift_double",
-      "community": 0,
+      "community": 8,
       "norm_label": "double"
     },
     {
@@ -2101,7 +2111,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_rgbcolor_init",
-      "community": 0,
+      "community": 8,
       "norm_label": ".init()"
     },
     {
@@ -2111,7 +2121,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_brandidentity",
-      "community": 0,
+      "community": 8,
       "norm_label": "brandidentity"
     },
     {
@@ -2121,7 +2131,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_swift_string",
-      "community": 0,
+      "community": 8,
       "norm_label": "string"
     },
     {
@@ -2131,7 +2141,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_swift_bool",
-      "community": 0,
+      "community": 8,
       "norm_label": "bool"
     },
     {
@@ -2141,7 +2151,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_brandidentity_forapp",
-      "community": 0,
+      "community": 8,
       "norm_label": ".forapp()"
     },
     {
@@ -2151,7 +2161,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "sources_lgweboscore_brandidentity_brandidentity_known",
-      "community": 0,
+      "community": 8,
       "norm_label": ".known()"
     },
     {
@@ -2271,7 +2281,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "xmlparserdelegate",
-      "community": 29,
+      "community": 3,
       "norm_label": "xmlparserdelegate"
     },
     {
@@ -2461,7 +2471,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "sources_lgweboscore_homepresentation",
-      "community": 23,
+      "community": 16,
       "norm_label": "homepresentation.swift"
     },
     {
@@ -2471,7 +2481,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "sources_lgweboscore_homepresentation_homepresentation",
-      "community": 23,
+      "community": 16,
       "norm_label": "homepresentation"
     },
     {
@@ -2481,7 +2491,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "sources_lgweboscore_homepresentation_homepresentation_init",
-      "community": 23,
+      "community": 16,
       "norm_label": ".init()"
     },
     {
@@ -2491,7 +2501,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "sources_lgweboscore_homepresentation_homepresentation_didsendhome",
-      "community": 23,
+      "community": 16,
       "norm_label": ".didsendhome()"
     },
     {
@@ -2501,7 +2511,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_homepresentation_swift_string",
-      "community": 23,
+      "community": 16,
       "norm_label": "string"
     },
     {
@@ -2511,7 +2521,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "sources_lgweboscore_homepresentation_homepresentation_observe",
-      "community": 23,
+      "community": 16,
       "norm_label": ".observe()"
     },
     {
@@ -2521,7 +2531,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "sources_lgweboscore_homepresentation_homepresentation_dismiss",
-      "community": 23,
+      "community": 16,
       "norm_label": ".dismiss()"
     },
     {
@@ -2575,10 +2585,30 @@
       "norm_label": "bool"
     },
     {
-      "label": ".isLocalIPv4()",
+      "label": ".isMAC()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/HostAddress.swift",
       "source_location": "L11",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_hostaddress_hostaddress_ismac",
+      "community": 3,
+      "norm_label": ".ismac()"
+    },
+    {
+      "label": ".normalizedMAC()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac",
+      "community": 3,
+      "norm_label": ".normalizedmac()"
+    },
+    {
+      "label": ".isLocalIPv4()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "sources_lgweboscore_hostaddress_hostaddress_islocalipv4",
       "community": 3,
@@ -2591,7 +2621,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain",
-      "community": 1,
+      "community": 12,
       "norm_label": "keychain.swift"
     },
     {
@@ -2602,7 +2632,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "security",
-      "community": 1,
+      "community": 12,
       "norm_label": "security"
     },
     {
@@ -2612,7 +2642,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_pairingkey",
-      "community": 1,
+      "community": 23,
       "norm_label": "pairingkey"
     },
     {
@@ -2622,7 +2652,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_pairingkey_query",
-      "community": 1,
+      "community": 23,
       "norm_label": ".query()"
     },
     {
@@ -2632,7 +2662,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_swift_string",
-      "community": 1,
+      "community": 23,
       "norm_label": "string"
     },
     {
@@ -2642,7 +2672,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_swift_any",
-      "community": 1,
+      "community": 23,
       "norm_label": "any"
     },
     {
@@ -2652,7 +2682,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_pairingkey_read",
-      "community": 1,
+      "community": 23,
       "norm_label": ".read()"
     },
     {
@@ -2662,7 +2692,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_pairingkey_save",
-      "community": 1,
+      "community": 23,
       "norm_label": ".save()"
     },
     {
@@ -2672,7 +2702,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_pairingkey_deletekey",
-      "community": 1,
+      "community": 23,
       "norm_label": ".deletekey()"
     },
     {
@@ -2682,7 +2712,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_pairingkey_delete",
-      "community": 1,
+      "community": 23,
       "norm_label": ".delete()"
     },
     {
@@ -2692,7 +2722,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_tvcertificatepin",
-      "community": 1,
+      "community": 23,
       "norm_label": "tvcertificatepin"
     },
     {
@@ -2702,7 +2732,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_tvcertificatepin_query",
-      "community": 1,
+      "community": 23,
       "norm_label": ".query()"
     },
     {
@@ -2712,7 +2742,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_tvcertificatepin_read",
-      "community": 1,
+      "community": 23,
       "norm_label": ".read()"
     },
     {
@@ -2722,7 +2752,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_tvcertificatepin_save",
-      "community": 1,
+      "community": 23,
       "norm_label": ".save()"
     },
     {
@@ -2732,7 +2762,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "sources_lgweboscore_keychain_tvcertificatepin_delete",
-      "community": 1,
+      "community": 23,
       "norm_label": ".delete()"
     },
     {
@@ -3034,7 +3064,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "sources_lgweboscore_models_tvapp",
-      "community": 22,
+      "community": 19,
       "norm_label": "tvapp"
     },
     {
@@ -3174,7 +3204,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_picturecontroller_picturecontroller",
-      "community": 27,
+      "community": 5,
       "norm_label": "picturecontroller"
     },
     {
@@ -3184,7 +3214,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_picturecontroller_swift_string",
-      "community": 27,
+      "community": 5,
       "norm_label": "string"
     },
     {
@@ -3194,7 +3224,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_picturecontroller_swift_int",
-      "community": 27,
+      "community": 5,
       "norm_label": "int"
     },
     {
@@ -3204,7 +3234,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "sources_lgweboscore_picturecontroller_picturecontroller_init",
-      "community": 27,
+      "community": 5,
       "norm_label": ".init()"
     },
     {
@@ -3214,7 +3244,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "sources_lgweboscore_picturecontroller_picturecontroller_refresh",
-      "community": 27,
+      "community": 5,
       "norm_label": ".refresh()"
     },
     {
@@ -3224,7 +3254,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "sources_lgweboscore_picturecontroller_picturecontroller_apply",
-      "community": 27,
+      "community": 5,
       "norm_label": ".apply()"
     },
     {
@@ -3434,7 +3464,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_pointerchannel_swift_int",
-      "community": 17,
+      "community": 16,
       "norm_label": "int"
     },
     {
@@ -3584,7 +3614,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "sources_lgweboscore_pointerchannel_pointermotion",
-      "community": 17,
+      "community": 16,
       "norm_label": "pointermotion"
     },
     {
@@ -3594,7 +3624,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "sources_lgweboscore_pointerchannel_pointermotion_init",
-      "community": 17,
+      "community": 16,
       "norm_label": ".init()"
     },
     {
@@ -3604,7 +3634,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "sources_lgweboscore_pointerchannel_pointermotion_add",
-      "community": 17,
+      "community": 16,
       "norm_label": ".add()"
     },
     {
@@ -3614,7 +3644,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "sources_lgweboscore_pointerchannel_pointermotion_next",
-      "community": 17,
+      "community": 16,
       "norm_label": ".next()"
     },
     {
@@ -3734,7 +3764,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller",
-      "community": 17,
+      "community": 16,
       "norm_label": "remotecontroller"
     },
     {
@@ -3744,7 +3774,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_swift_task",
-      "community": 17,
+      "community": 16,
       "norm_label": "task"
     },
     {
@@ -3754,7 +3784,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_swift_void",
-      "community": 21,
+      "community": 6,
       "norm_label": "void"
     },
     {
@@ -3764,7 +3794,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_swift_never",
-      "community": 17,
+      "community": 16,
       "norm_label": "never"
     },
     {
@@ -3774,7 +3804,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_init",
-      "community": 22,
+      "community": 19,
       "norm_label": ".init()"
     },
     {
@@ -3784,7 +3814,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_dismisshome",
-      "community": 17,
+      "community": 16,
       "norm_label": ".dismisshome()"
     },
     {
@@ -3794,7 +3824,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_press",
-      "community": 17,
+      "community": 16,
       "norm_label": ".press()"
     },
     {
@@ -3804,7 +3834,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_swift_string",
-      "community": 17,
+      "community": 16,
       "norm_label": "string"
     },
     {
@@ -3814,7 +3844,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_gohome",
-      "community": 17,
+      "community": 16,
       "norm_label": ".gohome()"
     },
     {
@@ -3824,7 +3854,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_movepointer",
-      "community": 17,
+      "community": 16,
       "norm_label": ".movepointer()"
     },
     {
@@ -3834,7 +3864,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_swift_int",
-      "community": 17,
+      "community": 16,
       "norm_label": "int"
     },
     {
@@ -3844,7 +3874,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_clickpointer",
-      "community": 17,
+      "community": 16,
       "norm_label": ".clickpointer()"
     },
     {
@@ -3854,7 +3884,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_media",
-      "community": 17,
+      "community": 16,
       "norm_label": ".media()"
     },
     {
@@ -3864,7 +3894,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_sendtext",
-      "community": 17,
+      "community": 16,
       "norm_label": ".sendtext()"
     },
     {
@@ -3874,7 +3904,7 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_entertext",
-      "community": 17,
+      "community": 16,
       "norm_label": ".entertext()"
     },
     {
@@ -3884,7 +3914,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_noteforeground",
-      "community": 21,
+      "community": 6,
       "norm_label": ".noteforeground()"
     },
     {
@@ -3894,7 +3924,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_swift_any",
-      "community": 21,
+      "community": 6,
       "norm_label": "any"
     },
     {
@@ -3904,7 +3934,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_swift_bool",
-      "community": 7,
+      "community": 16,
       "norm_label": "bool"
     },
     {
@@ -3914,7 +3944,7 @@
       "source_location": "L149",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_markpointer",
-      "community": 7,
+      "community": 16,
       "norm_label": ".markpointer()"
     },
     {
@@ -3924,7 +3954,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_clearforeground",
-      "community": 7,
+      "community": 16,
       "norm_label": ".clearforeground()"
     },
     {
@@ -3934,7 +3964,7 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecontroller_remotecontroller_cancelpointer",
-      "community": 17,
+      "community": 16,
       "norm_label": ".cancelpointer()"
     },
     {
@@ -4011,7 +4041,7 @@
       "label": ".connect()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L68",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect",
       "community": 2,
@@ -4021,7 +4051,7 @@
       "label": ".disconnect()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L69",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect",
       "community": 2,
@@ -4031,7 +4061,7 @@
       "label": ".discover()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L71",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_discover",
       "community": 3,
@@ -4041,7 +4071,7 @@
       "label": ".select()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L84",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_select",
       "community": 2,
@@ -4051,7 +4081,7 @@
       "label": ".refresh()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L93",
+      "source_location": "L108",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_refresh",
       "community": 2,
@@ -4061,47 +4091,57 @@
       "label": ".power()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L98",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_power",
-      "community": 3,
+      "community": 2,
       "norm_label": ".power()"
     },
     {
-      "label": ".setAdvancedControls()",
+      "label": ".beginWake()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L115",
+      "source_location": "L124",
       "_origin": "ast",
-      "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_setadvancedcontrols",
+      "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_beginwake",
       "community": 2,
-      "norm_label": ".setadvancedcontrols()"
+      "norm_label": ".beginwake()"
+    },
+    {
+      "label": ".saveWakeAddress()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_savewakeaddress",
+      "community": 2,
+      "norm_label": ".savewakeaddress()"
     },
     {
       "label": ".forgetPairing()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L137",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_forgetpairing",
-      "community": 26,
+      "community": 2,
       "norm_label": ".forgetpairing()"
     },
     {
       "label": ".pauseForBackground()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L150",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_pauseforbackground",
-      "community": 2,
+      "community": 16,
       "norm_label": ".pauseforbackground()"
     },
     {
       "label": ".resumeAfterForeground()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L152",
+      "source_location": "L157",
       "_origin": "ast",
       "id": "sources_lgweboscore_remotecoordinator_remotecoordinator_resumeafterforeground",
       "community": 2,
@@ -4484,7 +4524,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog",
-      "community": 22,
+      "community": 19,
       "norm_label": "tvcatalog"
     },
     {
@@ -4494,7 +4534,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_swift_set",
-      "community": 22,
+      "community": 19,
       "norm_label": "set"
     },
     {
@@ -4504,7 +4544,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_swift_string",
-      "community": 22,
+      "community": 19,
       "norm_label": "string"
     },
     {
@@ -4514,7 +4554,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_swift_userdefaults",
-      "community": 22,
+      "community": 19,
       "norm_label": "userdefaults"
     },
     {
@@ -4524,7 +4564,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog_init",
-      "community": 22,
+      "community": 19,
       "norm_label": ".init()"
     },
     {
@@ -4534,7 +4574,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog_orderedinputs",
-      "community": 22,
+      "community": 19,
       "norm_label": ".orderedinputs()"
     },
     {
@@ -4544,7 +4584,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog_togglefavorite",
-      "community": 22,
+      "community": 19,
       "norm_label": ".togglefavorite()"
     },
     {
@@ -4554,7 +4594,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog_launch",
-      "community": 17,
+      "community": 19,
       "norm_label": ".launch()"
     },
     {
@@ -4564,7 +4604,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog_switchinput",
-      "community": 17,
+      "community": 16,
       "norm_label": ".switchinput()"
     },
     {
@@ -4574,17 +4614,27 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog_reload",
-      "community": 22,
+      "community": 19,
       "norm_label": ".reload()"
+    },
+    {
+      "label": ".knownApp()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVCatalog.swift",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvcatalog_tvcatalog_knownapp",
+      "community": 19,
+      "norm_label": ".knownapp()"
     },
     {
       "label": ".clearLiveData()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVCatalog.swift",
-      "source_location": "L84",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcatalog_tvcatalog_clearlivedata",
-      "community": 7,
+      "community": 16,
       "norm_label": ".clearlivedata()"
     },
     {
@@ -4594,7 +4644,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy",
-      "community": 8,
+      "community": 12,
       "norm_label": "tvcertificatepolicy.swift"
     },
     {
@@ -4604,7 +4654,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_tvcertificatedecision",
-      "community": 8,
+      "community": 12,
       "norm_label": "tvcertificatedecision"
     },
     {
@@ -4614,7 +4664,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_tvcertificatedecision_matched",
-      "community": 8,
+      "community": 12,
       "norm_label": "matched"
     },
     {
@@ -4624,7 +4674,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_tvcertificatedecision_approvalrequired",
-      "community": 8,
+      "community": 12,
       "norm_label": "approvalrequired"
     },
     {
@@ -4634,7 +4684,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_tvcertificatedecision_rejected",
-      "community": 8,
+      "community": 12,
       "norm_label": "rejected"
     },
     {
@@ -4644,7 +4694,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_tvcertificatepolicy",
-      "community": 8,
+      "community": 12,
       "norm_label": "tvcertificatepolicy"
     },
     {
@@ -4654,7 +4704,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_tvcertificatepolicy_decide",
-      "community": 8,
+      "community": 12,
       "norm_label": ".decide()"
     },
     {
@@ -4664,7 +4714,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_swift_string",
-      "community": 8,
+      "community": 12,
       "norm_label": "string"
     },
     {
@@ -4674,7 +4724,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvcertificatepolicy_swift_bool",
-      "community": 8,
+      "community": 12,
       "norm_label": "bool"
     },
     {
@@ -4945,7 +4995,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvconfiguration_tvconfiguration",
-      "community": 12,
+      "community": 19,
       "norm_label": "tvconfiguration"
     },
     {
@@ -4955,27 +5005,17 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvconfiguration_swift_string",
-      "community": 12,
+      "community": 19,
       "norm_label": "string"
-    },
-    {
-      "label": "Bool",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "sources_lgweboscore_tvconfiguration_swift_bool",
-      "community": 12,
-      "norm_label": "bool"
     },
     {
       "label": ".init()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L10",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvconfiguration_tvconfiguration_init",
-      "community": 12,
+      "community": 19,
       "norm_label": ".init()"
     },
     {
@@ -4985,14 +5025,14 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvconfiguration_swift_userdefaults",
-      "community": 12,
+      "community": 19,
       "norm_label": "userdefaults"
     },
     {
       "label": "AppSupport",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L19",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvconfiguration_appsupport",
       "community": 12,
@@ -5002,7 +5042,7 @@
       "label": ".directory()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L20",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvconfiguration_appsupport_directory",
       "community": 12,
@@ -5195,7 +5235,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvidentity_tvcommanding",
-      "community": 17,
+      "community": 16,
       "norm_label": "tvcommanding"
     },
     {
@@ -5205,7 +5245,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvidentity_tvidentity",
-      "community": 99,
+      "community": 21,
       "norm_label": "tvidentity"
     },
     {
@@ -5215,18 +5255,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvidentity_swift_string",
-      "community": 99,
+      "community": 21,
       "norm_label": "string"
-    },
-    {
-      "label": "Bool",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "sources_lgweboscore_tvidentity_swift_bool",
-      "community": 99,
-      "norm_label": "bool"
     },
     {
       "label": "UserDefaults",
@@ -5235,27 +5265,27 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvidentity_swift_userdefaults",
-      "community": 99,
+      "community": 21,
       "norm_label": "userdefaults"
     },
     {
       "label": ".init()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L27",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvidentity_tvidentity_init",
-      "community": 99,
+      "community": 21,
       "norm_label": ".init()"
     },
     {
       "label": ".save()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L37",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvidentity_tvidentity_save",
-      "community": 99,
+      "community": 21,
       "norm_label": ".save()"
     },
     {
@@ -5269,10 +5299,50 @@
       "norm_label": "tvsession.swift"
     },
     {
-      "label": "TVSession",
+      "label": "TVReach",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
       "source_location": "L4",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvreach",
+      "community": 12,
+      "norm_label": "tvreach"
+    },
+    {
+      "label": "unknown",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvreach_unknown",
+      "community": 12,
+      "norm_label": "unknown"
+    },
+    {
+      "label": "off",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvreach_off",
+      "community": 12,
+      "norm_label": "off"
+    },
+    {
+      "label": "waking",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvreach_waking",
+      "community": 12,
+      "norm_label": "waking"
+    },
+    {
+      "label": "TVSession",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession",
       "community": 16,
@@ -5349,40 +5419,70 @@
       "norm_label": "never"
     },
     {
+      "label": "Date",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_swift_date",
+      "community": 16,
+      "norm_label": "date"
+    },
+    {
       "label": ".init()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_init",
-      "community": 99,
+      "community": 21,
       "norm_label": ".init()"
     },
     {
       "label": ".connect()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L56",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_connect",
       "community": 16,
       "norm_label": ".connect()"
     },
     {
+      "label": ".beginWaitingForWake()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvsession_beginwaitingforwake",
+      "community": 16,
+      "norm_label": ".beginwaitingforwake()"
+    },
+    {
+      "label": ".markTurnedOff()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvsession_markturnedoff",
+      "community": 16,
+      "norm_label": ".markturnedoff()"
+    },
+    {
       "label": ".disconnect()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L160",
+      "source_location": "L187",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_disconnect",
-      "community": 7,
+      "community": 16,
       "norm_label": ".disconnect()"
     },
     {
       "label": ".refresh()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L181",
+      "source_location": "L212",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_refresh",
       "community": 16,
@@ -5392,7 +5492,7 @@
       "label": ".refreshState()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L187",
+      "source_location": "L218",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_refreshstate",
       "community": 16,
@@ -5402,7 +5502,7 @@
       "label": ".pauseUsage()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L199",
+      "source_location": "L230",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_pauseusage",
       "community": 16,
@@ -5412,7 +5512,7 @@
       "label": ".resetSoftwareIdentity()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L204",
+      "source_location": "L235",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_resetsoftwareidentity",
       "community": 16,
@@ -5422,7 +5522,7 @@
       "label": ".perform()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L209",
+      "source_location": "L240",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_perform",
       "community": 16,
@@ -5432,7 +5532,7 @@
       "label": ".reportError()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L221",
+      "source_location": "L252",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_reporterror",
       "community": 16,
@@ -5442,7 +5542,7 @@
       "label": ".clearError()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L222",
+      "source_location": "L253",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_clearerror",
       "community": 16,
@@ -5452,7 +5552,7 @@
       "label": ".reportNotice()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L223",
+      "source_location": "L254",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_reportnotice",
       "community": 16,
@@ -5462,7 +5562,7 @@
       "label": ".log()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L224",
+      "source_location": "L255",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_log",
       "community": 16,
@@ -5472,7 +5572,7 @@
       "label": ".applyForeground()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L226",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_applyforeground",
       "community": 16,
@@ -5489,10 +5589,40 @@
       "norm_label": "any"
     },
     {
+      "label": ".noteUnreachable()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L263",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvsession_noteunreachable",
+      "community": 16,
+      "norm_label": ".noteunreachable()"
+    },
+    {
+      "label": ".isUnreachable()",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L280",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_tvsession_isunreachable",
+      "community": 16,
+      "norm_label": ".isunreachable()"
+    },
+    {
+      "label": "Error",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "sources_lgweboscore_tvsession_swift_error",
+      "community": 16,
+      "norm_label": "error"
+    },
+    {
       "label": ".scheduleReconnect()",
       "file_type": "code",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L232",
+      "source_location": "L296",
       "_origin": "ast",
       "id": "sources_lgweboscore_tvsession_tvsession_schedulereconnect",
       "community": 16,
@@ -5775,7 +5905,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller",
-      "community": 20,
+      "community": 16,
       "norm_label": "volumecontroller"
     },
     {
@@ -5785,7 +5915,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_swift_double",
-      "community": 20,
+      "community": 16,
       "norm_label": "double"
     },
     {
@@ -5795,7 +5925,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_swift_task",
-      "community": 20,
+      "community": 16,
       "norm_label": "task"
     },
     {
@@ -5805,7 +5935,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_swift_void",
-      "community": 20,
+      "community": 16,
       "norm_label": "void"
     },
     {
@@ -5815,7 +5945,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_swift_never",
-      "community": 20,
+      "community": 16,
       "norm_label": "never"
     },
     {
@@ -5825,7 +5955,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller_init",
-      "community": 20,
+      "community": 16,
       "norm_label": ".init()"
     },
     {
@@ -5835,7 +5965,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller_apply",
-      "community": 20,
+      "community": 16,
       "norm_label": ".apply()"
     },
     {
@@ -5845,7 +5975,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_swift_string",
-      "community": 20,
+      "community": 16,
       "norm_label": "string"
     },
     {
@@ -5855,7 +5985,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_swift_any",
-      "community": 20,
+      "community": 16,
       "norm_label": "any"
     },
     {
@@ -5865,7 +5995,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller_change",
-      "community": 20,
+      "community": 16,
       "norm_label": ".change()"
     },
     {
@@ -5875,7 +6005,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller_step",
-      "community": 20,
+      "community": 16,
       "norm_label": ".step()"
     },
     {
@@ -5885,7 +6015,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_swift_bool",
-      "community": 20,
+      "community": 16,
       "norm_label": "bool"
     },
     {
@@ -5895,7 +6025,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller_togglemute",
-      "community": 20,
+      "community": 16,
       "norm_label": ".togglemute()"
     },
     {
@@ -5905,7 +6035,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller_reset",
-      "community": 7,
+      "community": 16,
       "norm_label": ".reset()"
     },
     {
@@ -5915,7 +6045,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "sources_lgweboscore_volumecontroller_volumecontroller_cancelpending",
-      "community": 7,
+      "community": 16,
       "norm_label": ".cancelpending()"
     },
     {
@@ -6075,7 +6205,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "sources_lgweboscore_webosconnection_webosconnection_connect",
-      "community": 5,
+      "community": 23,
       "norm_label": ".connect()"
     },
     {
@@ -6125,7 +6255,7 @@
       "source_location": "L142",
       "_origin": "ast",
       "id": "sources_lgweboscore_webosconnection_webosconnection_close",
-      "community": 7,
+      "community": 16,
       "norm_label": ".close()"
     },
     {
@@ -6155,7 +6285,7 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "sources_lgweboscore_webosconnection_webosconnection_request",
-      "community": 27,
+      "community": 5,
       "norm_label": ".request()"
     },
     {
@@ -6306,7 +6436,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "sources_lgwebosui_appmark_bundledimage",
-      "community": 18,
+      "community": 11,
       "norm_label": "bundledimage"
     },
     {
@@ -6316,7 +6446,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "sources_lgwebosui_appmark_bundledimage_make",
-      "community": 18,
+      "community": 11,
       "norm_label": ".make()"
     },
     {
@@ -6326,7 +6456,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgwebosui_appmark_swift_url",
-      "community": 18,
+      "community": 11,
       "norm_label": "url"
     },
     {
@@ -6346,7 +6476,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "sources_lgwebosui_brandtheme",
-      "community": 11,
+      "community": 18,
       "norm_label": "brandtheme.swift"
     },
     {
@@ -6357,7 +6487,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "coregraphics",
-      "community": 11,
+      "community": 18,
       "norm_label": "coregraphics"
     },
     {
@@ -6459,56 +6589,6 @@
       "id": "sources_lgwebosui_brandtheme_swift_cgfloat",
       "community": 18,
       "norm_label": "cgfloat"
-    },
-    {
-      "label": "ControlAccess.swift",
-      "file_type": "code",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "sources_lgwebosui_controlaccess",
-      "community": 11,
-      "norm_label": "controlaccess.swift"
-    },
-    {
-      "label": "ControlAccess",
-      "file_type": "code",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "sources_lgwebosui_controlaccess_controlaccess",
-      "community": 11,
-      "norm_label": "controlaccess"
-    },
-    {
-      "label": "ControlAccessNote",
-      "file_type": "code",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "sources_lgwebosui_controlaccess_controlaccessnote",
-      "community": 11,
-      "norm_label": "controlaccessnote"
-    },
-    {
-      "label": "Bool",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "sources_lgwebosui_controlaccess_swift_bool",
-      "community": 11,
-      "norm_label": "bool"
-    },
-    {
-      "label": ".init()",
-      "file_type": "code",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "sources_lgwebosui_controlaccess_controlaccessnote_init",
-      "community": 11,
-      "norm_label": ".init()"
     },
     {
       "label": "NowPlayingCard.swift",
@@ -6687,7 +6767,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "sources_lgwebosui_pictureeditor_usagechart",
-      "community": 18,
+      "community": 0,
       "norm_label": "usagechart"
     },
     {
@@ -6697,7 +6777,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgwebosui_pictureeditor_swift_anyview",
-      "community": 18,
+      "community": 0,
       "norm_label": "anyview"
     },
     {
@@ -6707,7 +6787,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "sources_lgwebosui_pictureeditor_usagechart_init",
-      "community": 18,
+      "community": 0,
       "norm_label": ".init()"
     },
     {
@@ -6717,7 +6797,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome",
-      "community": 15,
+      "community": 11,
       "norm_label": "remotechrome.swift"
     },
     {
@@ -6727,7 +6807,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotepalette",
-      "community": 15,
+      "community": 18,
       "norm_label": "remotepalette"
     },
     {
@@ -6737,7 +6817,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotebackground",
-      "community": 15,
+      "community": 11,
       "norm_label": "remotebackground"
     },
     {
@@ -6747,7 +6827,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotebackground_init",
-      "community": 15,
+      "community": 11,
       "norm_label": ".init()"
     },
     {
@@ -6787,7 +6867,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotebuttonstyle",
-      "community": 15,
+      "community": 18,
       "norm_label": "remotebuttonstyle"
     },
     {
@@ -6797,7 +6877,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "buttonstyle",
-      "community": 15,
+      "community": 18,
       "norm_label": "buttonstyle"
     },
     {
@@ -6807,7 +6887,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_swift_bool",
-      "community": 15,
+      "community": 18,
       "norm_label": "bool"
     },
     {
@@ -6817,7 +6897,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotebuttonstyle_init",
-      "community": 15,
+      "community": 18,
       "norm_label": ".init()"
     },
     {
@@ -6827,7 +6907,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotebuttonstyle_makebody",
-      "community": 15,
+      "community": 18,
       "norm_label": ".makebody()"
     },
     {
@@ -6837,7 +6917,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "configuration",
-      "community": 15,
+      "community": 18,
       "norm_label": "configuration"
     },
     {
@@ -6847,7 +6927,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotesectiontitle",
-      "community": 15,
+      "community": 18,
       "norm_label": "remotesectiontitle"
     },
     {
@@ -6857,7 +6937,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_swift_string",
-      "community": 15,
+      "community": 18,
       "norm_label": "string"
     },
     {
@@ -6867,7 +6947,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remotesectiontitle_init",
-      "community": 15,
+      "community": 18,
       "norm_label": ".init()"
     },
     {
@@ -6877,7 +6957,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remoteduration",
-      "community": 15,
+      "community": 18,
       "norm_label": "remoteduration"
     },
     {
@@ -6887,7 +6967,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_remoteduration_format",
-      "community": 15,
+      "community": 18,
       "norm_label": ".format()"
     },
     {
@@ -6897,7 +6977,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_swift_timeinterval",
-      "community": 15,
+      "community": 18,
       "norm_label": "timeinterval"
     },
     {
@@ -6917,7 +6997,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "sources_lgwebosui_remotechrome_view_remotehelp",
-      "community": 15,
+      "community": 18,
       "norm_label": ".remotehelp()"
     },
     {
@@ -7009,6 +7089,16 @@
       "id": "sources_lgwebosui_remotechrome_remotesection_logs",
       "community": 14,
       "norm_label": "logs"
+    },
+    {
+      "label": "wake",
+      "file_type": "code",
+      "source_file": "Sources/LGwebOSUI/RemoteChrome.swift",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "sources_lgwebosui_remotechrome_remotesection_wake",
+      "community": 14,
+      "norm_label": "wake"
     },
     {
       "label": "RemotePad.swift",
@@ -7563,7 +7653,7 @@
       "label": "Quick start with Claude",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "readme_quick_start_with_claude",
       "community": 10,
@@ -7573,7 +7663,7 @@
       "label": "Requirements",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "readme_requirements",
       "community": 10,
@@ -7583,7 +7673,7 @@
       "label": "Build and run",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "readme_build_and_run",
       "community": 10,
@@ -7593,27 +7683,27 @@
       "label": "iOS",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L48",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "readme_ios",
       "community": 10,
       "norm_label": "ios"
     },
     {
-      "label": "Basic and full control",
+      "label": "Controls",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "_origin": "ast",
-      "id": "readme_basic_and_full_control",
+      "id": "readme_controls",
       "community": 10,
-      "norm_label": "basic and full control"
+      "norm_label": "controls"
     },
     {
       "label": "Find your TV",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L77",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "readme_find_your_tv",
       "community": 10,
@@ -7623,7 +7713,7 @@
       "label": "Connect your TV",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L85",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "readme_connect_your_tv",
       "community": 10,
@@ -7633,7 +7723,7 @@
       "label": "Compatibility and limits",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "readme_compatibility_and_limits",
       "community": 10,
@@ -7643,7 +7733,7 @@
       "label": "Privacy and local storage",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L110",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "readme_privacy_and_local_storage",
       "community": 10,
@@ -7653,7 +7743,7 @@
       "label": "Offline checks",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L116",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "readme_offline_checks",
       "community": 10,
@@ -7663,7 +7753,7 @@
       "label": "Diagnostics",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L128",
+      "source_location": "L125",
       "_origin": "ast",
       "id": "readme_diagnostics",
       "community": 10,
@@ -7673,7 +7763,7 @@
       "label": "Contributing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L140",
+      "source_location": "L137",
       "_origin": "ast",
       "id": "readme_contributing",
       "community": 10,
@@ -7683,7 +7773,7 @@
       "label": "License",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L153",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "readme_license",
       "community": 10,
@@ -8708,6 +8798,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen",
+      "target": "swiftui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/Features/Remote/RemoteScreen.swift",
       "source_location": "L1",
       "weight": 1.0,
@@ -8851,17 +8952,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "sources_lgwebosui_controlaccess",
-      "target": "swiftui",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSUI/NowPlayingCard.swift",
       "source_location": "L1",
       "weight": 1.0,
@@ -8987,6 +9077,17 @@
       "source_location": "L2",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_features_picture_picturescreen",
+      "target": "lgweboscore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen",
       "target": "lgweboscore",
       "confidence_score": 1.0
     },
@@ -9280,6 +9381,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen",
+      "target": "lgwebosui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/Features/Remote/RemoteScreen.swift",
       "source_location": "L3",
       "weight": 1.0,
@@ -9476,7 +9588,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L115",
+      "source_location": "L123",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview",
       "target": "apps_ios_lgwebos_app_rootview_connectionbanner",
@@ -9486,7 +9598,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L5",
+      "source_location": "L166",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview",
       "target": "apps_ios_lgwebos_app_rootview_rootview",
@@ -9496,7 +9608,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L102",
+      "source_location": "L110",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview",
       "target": "apps_ios_lgwebos_app_rootview_screencolumn",
@@ -9506,7 +9618,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L62",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview",
       "target": "apps_ios_lgwebos_app_rootview_rootview_page",
@@ -9516,7 +9628,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L70",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview",
       "target": "apps_ios_lgwebos_app_rootview_rootview_screen",
@@ -9526,7 +9638,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L46",
+      "source_location": "L49",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_rootview",
@@ -9537,7 +9649,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L46",
+      "source_location": "L49",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "apps_ios_lgwebos_app_rootview_rootview",
@@ -9570,7 +9682,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L9",
+      "source_location": "L167",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_rootview",
@@ -9592,7 +9704,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L50",
+      "source_location": "L53",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_rootview",
@@ -9604,7 +9716,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L66",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_page",
       "target": "apps_ios_lgwebos_app_rootview_rootview_screen",
@@ -9616,7 +9728,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L64",
+      "source_location": "L71",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_page",
       "target": "apps_ios_lgwebos_features_logs_logsscreen_logsscreen"
@@ -9625,7 +9737,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L62",
+      "source_location": "L69",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "apps_ios_lgwebos_app_rootview_rootview_page",
@@ -9636,7 +9748,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L62",
+      "source_location": "L69",
       "weight": 1.0,
       "context": "return_type",
       "source": "apps_ios_lgwebos_app_rootview_rootview_page",
@@ -9648,7 +9760,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L73",
+      "source_location": "L80",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_app_rootview_connectionbanner",
@@ -9659,7 +9771,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L71",
+      "source_location": "L78",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_app_rootview_screencolumn",
@@ -9671,7 +9783,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L82",
+      "source_location": "L89",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_features_activity_activityscreen_activityscreen"
@@ -9682,7 +9794,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L80",
+      "source_location": "L87",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_features_apps_appsscreen_appsscreen"
@@ -9693,7 +9805,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L81",
+      "source_location": "L88",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_features_cast_castscreen_castscreen"
@@ -9704,7 +9816,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L78",
+      "source_location": "L85",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_features_home_homescreen_homescreen"
@@ -9715,7 +9827,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L83",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_features_picture_picturescreen_picturescreen"
@@ -9726,7 +9838,18 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L79",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
+      "target": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
+      "source_location": "L86",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "apps_ios_lgwebos_features_remote_remotescreen_remotescreen"
@@ -9737,7 +9860,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L89",
+      "source_location": "L97",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "image"
@@ -9748,7 +9871,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L87",
+      "source_location": "L95",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
       "target": "sources_lgwebosui_remotechrome_remotecard"
@@ -9757,7 +9880,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L70",
+      "source_location": "L77",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
@@ -9768,7 +9891,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L70",
+      "source_location": "L77",
       "weight": 1.0,
       "context": "return_type",
       "source": "apps_ios_lgwebos_app_rootview_rootview_screen",
@@ -9779,7 +9902,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L103",
+      "source_location": "L111",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_screencolumn",
@@ -9790,7 +9913,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L104",
+      "source_location": "L112",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_screencolumn",
@@ -9798,10 +9921,31 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_app_rootview_connectionbanner",
+      "target": "apps_ios_lgwebos_app_rootview_connectionbanner_buttonaction",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L117",
+      "source_location": "L144",
+      "weight": 1.0,
+      "context": "field",
+      "source": "apps_ios_lgwebos_app_rootview_connectionbanner",
+      "target": "apps_ios_lgwebos_app_rootview_swift_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
+      "source_location": "L126",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_connectionbanner",
@@ -9812,7 +9956,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L116",
+      "source_location": "L124",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_connectionbanner",
@@ -9823,12 +9967,45 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
-      "source_location": "L118",
+      "source_location": "L132",
       "weight": 1.0,
       "context": "field",
       "source": "apps_ios_lgwebos_app_rootview_connectionbanner",
       "target": "sources_lgwebosui_remotechrome_view",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
+      "source_location": "L161",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_app_rootview_connectionbanner_buttonaction",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_app_rootview_connectionbanner_buttonaction",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Apps/iOS/LGwebOS/App/RootView.swift",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_app_rootview_connectionbanner_buttonaction",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_power"
     },
     {
       "relation": "contains",
@@ -10424,7 +10601,7 @@
       "source_file": "Apps/iOS/LGwebOS/Features/Logs/LogsScreen.swift",
       "source_location": "L135",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "apps_ios_lgwebos_features_logs_logsscreen_logkind_symbol",
       "target": "apps_ios_lgwebos_features_logs_logsscreen_swift_string",
       "confidence_score": 1.0
@@ -10670,6 +10847,59 @@
       "source": "apps_ios_lgwebos_features_picture_picturescreen_picturescreen",
       "target": "sources_lgwebosui_remotechrome_view",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen",
+      "target": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen",
+      "target": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen_save",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "field",
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "field",
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen",
+      "target": "sources_lgwebosui_remotechrome_view",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Apps/iOS/LGwebOS/Features/Power/WakeSetupScreen.swift",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_features_power_wakesetupscreen_wakesetupscreen_save",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac"
     },
     {
       "relation": "contains",
@@ -11150,6 +11380,16 @@
     {
       "relation": "implements",
       "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvreach",
+      "target": "equatable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/UsageJournal.swift",
       "source_location": "L3",
       "weight": 1.0,
@@ -11278,7 +11518,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L72",
+      "source_location": "L66",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen",
       "target": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_loaddrafts",
@@ -11288,32 +11528,10 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L82",
+      "source_location": "L72",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen",
       "target": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_save",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L78",
-      "weight": 1.0,
-      "context": "field",
-      "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen",
-      "target": "apps_ios_lgwebos_features_settings_settingsscreen_swift_binding",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L78",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen",
-      "target": "apps_ios_lgwebos_features_settings_settingsscreen_swift_bool",
       "confidence_score": 1.0
     },
     {
@@ -11344,10 +11562,21 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L91",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_save",
       "target": "sources_lgweboscore_homepresentation_homepresentation_dismiss"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_save",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac"
     },
     {
       "relation": "references",
@@ -11355,7 +11584,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L85",
+      "source_location": "L75",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_save",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator"
@@ -11366,7 +11595,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L90",
+      "source_location": "L81",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_save",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect"
@@ -11377,7 +11606,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/iOS/LGwebOS/Features/Settings/SettingsScreen.swift",
-      "source_location": "L83",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "apps_ios_lgwebos_features_settings_settingsscreen_settingsscreen_save",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect"
@@ -11828,7 +12057,7 @@
       "source_file": "Apps/macOS/LGwebOSMenubar/MenuBarController.swift",
       "source_location": "L99",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "apps_macos_lgwebosmenubar_menubarcontroller_appdelegate_applicationshouldhandlereopen",
       "target": "apps_macos_lgwebosmenubar_menubarcontroller_swift_bool",
       "confidence_score": 1.0
@@ -12737,7 +12966,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/RemoteView.swift",
-      "source_location": "L167",
+      "source_location": "L176",
       "weight": 1.0,
       "source": "apps_macos_lgwebosmenubar_screens_remoteview_remoteview",
       "target": "apps_macos_lgwebosmenubar_screens_remoteview_remoteview_updateheight",
@@ -12758,7 +12987,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/RemoteView.swift",
-      "source_location": "L14",
+      "source_location": "L123",
       "weight": 1.0,
       "context": "field",
       "source": "apps_macos_lgwebosmenubar_screens_remoteview_remoteview",
@@ -12802,7 +13031,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/RemoteView.swift",
-      "source_location": "L153",
+      "source_location": "L162",
       "weight": 1.0,
       "context": "field",
       "source": "apps_macos_lgwebosmenubar_screens_remoteview_remoteview",
@@ -12823,7 +13052,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L111",
+      "source_location": "L100",
       "weight": 1.0,
       "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen",
       "target": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_forget",
@@ -12833,32 +13062,10 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L99",
+      "source_location": "L87",
       "weight": 1.0,
       "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen",
       "target": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_save",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L95",
-      "weight": 1.0,
-      "context": "field",
-      "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen",
-      "target": "apps_macos_lgwebosmenubar_screens_settingsscreen_swift_binding",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L95",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen",
-      "target": "apps_macos_lgwebosmenubar_screens_settingsscreen_swift_bool",
       "confidence_score": 1.0
     },
     {
@@ -12895,12 +13102,23 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_save",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac"
+    },
+    {
       "relation": "references",
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L102",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_save",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator"
@@ -12911,7 +13129,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L107",
+      "source_location": "L96",
       "weight": 1.0,
       "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_save",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect"
@@ -12922,7 +13140,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L100",
+      "source_location": "L88",
       "weight": 1.0,
       "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_save",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect"
@@ -12933,7 +13151,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift",
-      "source_location": "L118",
+      "source_location": "L107",
       "weight": 1.0,
       "source": "apps_macos_lgwebosmenubar_screens_settingsscreen_settingsscreen_forget",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_forgetpairing"
@@ -14258,6 +14476,17 @@
       "target": "sources_lgweboscore_tvcertificatepolicy_tvcertificatepolicy_decide"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Sources/LGwebOSChecks/FeatureChecks.swift",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "sources_lgweboschecks_featurechecks_featurechecks_testfreshconfigurationhasnodeviceidentityandloadscustomparameters",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac"
+    },
+    {
       "relation": "references",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -14879,7 +15108,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L24",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -14890,7 +15119,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
@@ -15461,7 +15690,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L22",
+      "source_location": "L29",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -15472,7 +15701,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
@@ -15628,7 +15857,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L163",
+      "source_location": "L194",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_castsession_castsession_stopplayback"
@@ -15711,7 +15940,7 @@
       "source_file": "Sources/LGwebOSCore/DLNATransport.swift",
       "source_location": "L70",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_dlnatransport_dlnatransport_command",
       "target": "sources_lgweboscore_dlnatransport_swift_string",
       "confidence_score": 1.0
@@ -15733,7 +15962,7 @@
       "source_file": "Sources/LGwebOSCore/DLNATransport.swift",
       "source_location": "L65",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_dlnatransport_dlnatransport_envelope",
       "target": "sources_lgweboscore_dlnatransport_swift_string",
       "confidence_score": 1.0
@@ -15744,7 +15973,7 @@
       "source_file": "Sources/LGwebOSCore/DLNATransport.swift",
       "source_location": "L52",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_dlnatransport_dlnatransport_escape",
       "target": "sources_lgweboscore_dlnatransport_swift_string",
       "confidence_score": 1.0
@@ -15755,7 +15984,7 @@
       "source_file": "Sources/LGwebOSCore/DLNATransport.swift",
       "source_location": "L60",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_dlnatransport_dlnatransport_metadata",
       "target": "sources_lgweboscore_dlnatransport_swift_string",
       "confidence_score": 1.0
@@ -16022,7 +16251,7 @@
       "source_file": "Sources/LGwebOSCore/HomeNavigation.swift",
       "source_location": "L4",
       "weight": 1.0,
-      "context": "generic_arg",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_homenavigation_homenavigation_shouldclose",
       "target": "sources_lgweboscore_homenavigation_swift_string",
       "confidence_score": 1.0
@@ -16223,10 +16452,20 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/HostAddress.swift",
-      "source_location": "L11",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "sources_lgweboscore_hostaddress_hostaddress",
       "target": "sources_lgweboscore_hostaddress_hostaddress_islocalipv4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_hostaddress_hostaddress",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_ismac",
       "confidence_score": 1.0
     },
     {
@@ -16240,11 +16479,21 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_hostaddress_hostaddress",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/HostAddress.swift",
-      "source_location": "L12",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "sources_lgweboscore_hostaddress_hostaddress_islocalipv4",
       "target": "sources_lgweboscore_hostaddress_hostaddress_isvalidipv4",
@@ -16287,7 +16536,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/HostAddress.swift",
-      "source_location": "L11",
+      "source_location": "L33",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_hostaddress_hostaddress_islocalipv4",
@@ -16300,10 +16549,76 @@
       "source_file": "Sources/LGwebOSCore/HostAddress.swift",
       "source_location": "L11",
       "weight": 1.0,
+      "context": "parameter_type",
+      "source": "sources_lgweboscore_hostaddress_hostaddress_ismac",
+      "target": "sources_lgweboscore_hostaddress_swift_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac",
+      "target": "sources_lgweboscore_hostaddress_swift_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L33",
+      "weight": 1.0,
       "context": "return_type",
       "source": "sources_lgweboscore_hostaddress_hostaddress_islocalipv4",
       "target": "sources_lgweboscore_hostaddress_swift_bool",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "sources_lgweboscore_hostaddress_hostaddress_ismac",
+      "target": "sources_lgweboscore_hostaddress_swift_bool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/HostAddress.swift",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_ismac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Sources/LGwebOSCore/TVDiscovery.swift",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvdiscovery_tvdiscovery_wake",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_ismac"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_savewakeaddress",
+      "target": "sources_lgweboscore_hostaddress_hostaddress_normalizedmac"
     },
     {
       "relation": "calls",
@@ -16333,7 +16648,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L58",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_hostaddress_hostaddress_islocalipv4"
@@ -16458,7 +16773,7 @@
       "source_file": "Sources/LGwebOSCore/Keychain.swift",
       "source_location": "L5",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_keychain_pairingkey_query",
       "target": "sources_lgweboscore_keychain_swift_string",
       "confidence_score": 1.0
@@ -16491,7 +16806,7 @@
       "source_file": "Sources/LGwebOSCore/Keychain.swift",
       "source_location": "L9",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_keychain_pairingkey_read",
       "target": "sources_lgweboscore_keychain_swift_string",
       "confidence_score": 1.0
@@ -16524,7 +16839,7 @@
       "source_file": "Sources/LGwebOSCore/Keychain.swift",
       "source_location": "L55",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_keychain_tvcertificatepin_query",
       "target": "sources_lgweboscore_keychain_swift_string",
       "confidence_score": 1.0
@@ -16535,7 +16850,7 @@
       "source_file": "Sources/LGwebOSCore/Keychain.swift",
       "source_location": "L63",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_keychain_tvcertificatepin_read",
       "target": "sources_lgweboscore_keychain_swift_string",
       "confidence_score": 1.0
@@ -16676,17 +16991,6 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L124",
-      "weight": 1.0,
-      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_setadvancedcontrols",
-      "target": "sources_lgweboscore_keychain_pairingkey_deletekey"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/Keychain.swift",
       "source_location": "L46",
       "weight": 1.0,
@@ -16711,7 +17015,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L142",
+      "source_location": "L147",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_forgetpairing",
       "target": "sources_lgweboscore_keychain_pairingkey_delete"
@@ -17438,7 +17742,7 @@
     },
     {
       "relation": "references",
-      "context": "return_type",
+      "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/MediaHTTP.swift",
       "source_location": "L5",
@@ -17464,7 +17768,7 @@
       "source_file": "Sources/LGwebOSCore/MediaHTTP.swift",
       "source_location": "L26",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_mediahttp_mediahttp_localaddress",
       "target": "sources_lgweboscore_mediahttp_swift_string",
       "confidence_score": 1.0
@@ -17555,7 +17859,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L66",
+      "source_location": "L81",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
@@ -17581,6 +17885,17 @@
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvcatalog_tvcatalog_init",
+      "target": "sources_lgweboscore_models_tvapp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVCatalog.swift",
+      "source_location": "L84",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "sources_lgweboscore_tvcatalog_tvcatalog_knownapp",
       "target": "sources_lgweboscore_models_tvapp",
       "confidence_score": 1.0
     },
@@ -17623,7 +17938,7 @@
       "source_file": "Sources/LGwebOSCore/UsageTracker.swift",
       "source_location": "L30",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_usagetracker_usagetracker_mostused",
       "target": "sources_lgweboscore_models_tvapp",
       "confidence_score": 1.0
@@ -17772,7 +18087,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L65",
+      "source_location": "L80",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
@@ -17924,7 +18239,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L84",
+      "source_location": "L99",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_select",
@@ -18041,7 +18356,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L21",
+      "source_location": "L28",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -18052,7 +18367,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
@@ -18555,7 +18870,7 @@
       "source_file": "Sources/LGwebOSCore/PointerChannel.swift",
       "source_location": "L45",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_pointerchannel_pointermessage_button",
       "target": "sources_lgweboscore_pointerchannel_swift_string",
       "confidence_score": 1.0
@@ -19326,17 +19641,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L145",
-      "weight": 1.0,
-      "source": "sources_lgweboscore_tvsession_tvsession_connect",
-      "target": "sources_lgweboscore_registrationmanifest_registrationmanifest_isblacklistedcertificate"
-    },
-    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RegistrationManifest.swift",
@@ -19600,7 +19904,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L20",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -19611,7 +19915,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
@@ -19712,7 +20016,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L70",
+      "source_location": "L81",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_dismisshome"
@@ -19723,7 +20027,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L178",
+      "source_location": "L209",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_dismisshome"
@@ -19998,7 +20302,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L227",
+      "source_location": "L258",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_applyforeground",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_noteforeground"
@@ -20020,7 +20324,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L73",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_markpointer"
@@ -20031,7 +20335,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L172",
+      "source_location": "L203",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_markpointer"
@@ -20042,7 +20346,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L176",
+      "source_location": "L207",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_clearforeground"
@@ -20053,7 +20357,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L93",
+      "source_location": "L104",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_cancelpointer"
@@ -20064,7 +20368,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L162",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_remotecontroller_remotecontroller_cancelpointer"
@@ -20083,7 +20387,17 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L68",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_beginwake",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L83",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect",
@@ -20093,7 +20407,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L69",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect",
@@ -20103,7 +20417,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L71",
+      "source_location": "L86",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_discover",
@@ -20113,7 +20427,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L137",
+      "source_location": "L142",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_forgetpairing",
@@ -20133,7 +20447,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L150",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_pauseforbackground",
@@ -20143,7 +20457,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L98",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_power",
@@ -20153,7 +20467,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L93",
+      "source_location": "L108",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_refresh",
@@ -20163,7 +20477,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L152",
+      "source_location": "L157",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_resumeafterforeground",
@@ -20173,27 +20487,27 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L84",
+      "source_location": "L135",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
-      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_select",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_savewakeaddress",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L115",
+      "source_location": "L99",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
-      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_setadvancedcontrols",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_select",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L50",
+      "source_location": "L60",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
@@ -20204,7 +20518,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L60",
+      "source_location": "L73",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator",
@@ -20358,7 +20672,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L68",
+      "source_location": "L83",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect",
@@ -20369,11 +20683,22 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L115",
+      "source_location": "L135",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_savewakeaddress",
+      "target": "sources_lgweboscore_remotecoordinator_swift_bool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L135",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_setadvancedcontrols",
-      "target": "sources_lgweboscore_remotecoordinator_swift_bool",
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_savewakeaddress",
+      "target": "sources_lgweboscore_remotecoordinator_swift_string",
       "confidence_score": 1.0
     },
     {
@@ -20381,7 +20706,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L154",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_beginwake",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L160",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_resumeafterforeground",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect",
@@ -20392,7 +20728,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L90",
+      "source_location": "L105",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_select",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect",
@@ -20403,18 +20739,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L134",
-      "weight": 1.0,
-      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_setadvancedcontrols",
-      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_connect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L140",
+      "source_location": "L145",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_forgetpairing",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect",
@@ -20425,18 +20750,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L102",
-      "weight": 1.0,
-      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_power",
-      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L85",
+      "source_location": "L100",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_select",
       "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect",
@@ -20446,20 +20760,9 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L122",
-      "weight": 1.0,
-      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_setadvancedcontrols",
-      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_disconnect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L76",
+      "source_location": "L91",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_discover",
       "target": "sources_lgweboscore_tvdiscovery_tvdiscovery_search"
@@ -20468,11 +20771,44 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L107",
+      "source_location": "L120",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_power",
+      "target": "sources_lgweboscore_remotecoordinator_remotecoordinator_beginwake",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_power",
+      "target": "sources_lgweboscore_tvsession_tvsession_markturnedoff"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_power",
+      "target": "sources_lgweboscore_tvsession_tvsession_perform"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_beginwake",
       "target": "sources_lgweboscore_tvdiscovery_tvdiscovery_wake"
     },
     {
@@ -20481,10 +20817,10 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L100",
+      "source_location": "L131",
       "weight": 1.0,
-      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_power",
-      "target": "sources_lgweboscore_tvsession_tvsession_perform"
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_beginwake",
+      "target": "sources_lgweboscore_tvsession_tvsession_beginwaitingforwake"
     },
     {
       "relation": "calls",
@@ -20492,9 +20828,9 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L119",
+      "source_location": "L138",
       "weight": 1.0,
-      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_setadvancedcontrols",
+      "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_savewakeaddress",
       "target": "sources_lgweboscore_tvidentity_tvidentity_save"
     },
     {
@@ -20503,7 +20839,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/RemoteCoordinator.swift",
-      "source_location": "L150",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "sources_lgweboscore_remotecoordinator_remotecoordinator_pauseforbackground",
       "target": "sources_lgweboscore_tvsession_tvsession_pauseusage"
@@ -20772,7 +21108,7 @@
       "source_file": "Sources/LGwebOSCore/SSAP.swift",
       "source_location": "L42",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_ssap_mediacontrols_uri",
       "target": "sources_lgweboscore_ssap_swift_string",
       "confidence_score": 1.0
@@ -20816,7 +21152,7 @@
       "source_file": "Sources/LGwebOSCore/SSAP.swift",
       "source_location": "L104",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_ssap_ssappayload_foregroundappid",
       "target": "sources_lgweboscore_ssap_swift_string",
       "confidence_score": 1.0
@@ -20827,7 +21163,7 @@
       "source_file": "Sources/LGwebOSCore/SSAP.swift",
       "source_location": "L108",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_ssap_ssappayload_foregroundtitle",
       "target": "sources_lgweboscore_ssap_swift_string",
       "confidence_score": 1.0
@@ -20849,7 +21185,7 @@
       "source_file": "Sources/LGwebOSCore/SSAP.swift",
       "source_location": "L112",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_ssap_ssappayload_modelname",
       "target": "sources_lgweboscore_ssap_swift_string",
       "confidence_score": 1.0
@@ -20860,7 +21196,7 @@
       "source_file": "Sources/LGwebOSCore/SSAP.swift",
       "source_location": "L95",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_ssap_ssappayload_picture",
       "target": "sources_lgweboscore_ssap_swift_string",
       "confidence_score": 1.0
@@ -20882,7 +21218,7 @@
       "source_file": "Sources/LGwebOSCore/SSAP.swift",
       "source_location": "L116",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_ssap_ssappayload_software",
       "target": "sources_lgweboscore_ssap_swift_string",
       "confidence_score": 1.0
@@ -21289,7 +21625,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L112",
+      "source_location": "L126",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_ssap_ssappayload_modelname"
@@ -21300,7 +21636,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L120",
+      "source_location": "L134",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_ssap_ssappayload_software"
@@ -21322,7 +21658,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L190",
+      "source_location": "L221",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_refreshstate",
       "target": "sources_lgweboscore_ssap_ssappayload_powerisactive"
@@ -21385,7 +21721,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVCatalog.swift",
-      "source_location": "L84",
+      "source_location": "L95",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvcatalog_tvcatalog",
       "target": "sources_lgweboscore_tvcatalog_tvcatalog_clearlivedata",
@@ -21399,6 +21735,16 @@
       "weight": 1.0,
       "source": "sources_lgweboscore_tvcatalog_tvcatalog",
       "target": "sources_lgweboscore_tvcatalog_tvcatalog_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVCatalog.swift",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvcatalog_tvcatalog",
+      "target": "sources_lgweboscore_tvcatalog_tvcatalog_knownapp",
       "confidence_score": 1.0
     },
     {
@@ -21466,7 +21812,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L18",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -21477,11 +21823,22 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
       "target": "sources_lgweboscore_tvcatalog_tvcatalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVCatalog.swift",
+      "source_location": "L84",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "sources_lgweboscore_tvcatalog_tvcatalog_knownapp",
+      "target": "sources_lgweboscore_tvcatalog_swift_string",
       "confidence_score": 1.0
     },
     {
@@ -21551,6 +21908,17 @@
       "target": "sources_lgweboscore_webosconnection_webosconnection_request"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVCatalog.swift",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvcatalog_tvcatalog_reload",
+      "target": "sources_lgweboscore_tvcatalog_tvcatalog_knownapp",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "call",
       "confidence": "INFERRED",
@@ -21589,7 +21957,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L183",
+      "source_location": "L214",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_refresh",
       "target": "sources_lgweboscore_tvcatalog_tvcatalog_reload"
@@ -21600,7 +21968,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L177",
+      "source_location": "L208",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_tvcatalog_tvcatalog_clearlivedata"
@@ -22188,7 +22556,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L19",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvconfiguration",
       "target": "sources_lgweboscore_tvconfiguration_appsupport",
@@ -22208,17 +22576,6 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L9",
-      "weight": 1.0,
-      "context": "field",
-      "source": "sources_lgweboscore_tvconfiguration_tvconfiguration",
-      "target": "sources_lgweboscore_tvconfiguration_swift_bool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
       "source_location": "L8",
       "weight": 1.0,
       "context": "field",
@@ -22230,7 +22587,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvconfiguration_tvconfiguration",
       "target": "sources_lgweboscore_tvconfiguration_tvconfiguration_init",
@@ -22242,7 +22599,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvidentity_tvidentity_init",
       "target": "sources_lgweboscore_tvconfiguration_tvconfiguration"
@@ -22251,7 +22608,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvconfiguration_tvconfiguration_init",
@@ -22262,7 +22619,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L20",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvconfiguration_appsupport",
       "target": "sources_lgweboscore_tvconfiguration_appsupport_directory",
@@ -22272,7 +22629,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVConfiguration.swift",
-      "source_location": "L20",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "return_type",
       "source": "sources_lgweboscore_tvconfiguration_appsupport_directory",
@@ -22537,7 +22894,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L4",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvidentity_tvcommanding",
@@ -22591,17 +22948,6 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L24",
-      "weight": 1.0,
-      "context": "field",
-      "source": "sources_lgweboscore_tvidentity_tvidentity",
-      "target": "sources_lgweboscore_tvidentity_swift_bool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
       "source_location": "L23",
       "weight": 1.0,
       "context": "field",
@@ -22613,7 +22959,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvidentity_tvidentity",
@@ -22624,7 +22970,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L27",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvidentity_tvidentity",
       "target": "sources_lgweboscore_tvidentity_tvidentity_init",
@@ -22634,7 +22980,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L37",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvidentity_tvidentity",
       "target": "sources_lgweboscore_tvidentity_tvidentity_save",
@@ -22644,7 +22990,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L17",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22655,7 +23001,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
@@ -22666,7 +23012,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVIdentity.swift",
-      "source_location": "L27",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvidentity_tvidentity_init",
@@ -22679,7 +23025,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L115",
+      "source_location": "L129",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvidentity_tvidentity_save"
@@ -22691,14 +23037,65 @@
       "source_location": "L4",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession",
+      "target": "sources_lgweboscore_tvsession_tvreach",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvreach",
+      "target": "sources_lgweboscore_tvsession_tvreach_off",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvreach",
+      "target": "sources_lgweboscore_tvsession_tvreach_unknown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvreach",
+      "target": "sources_lgweboscore_tvsession_tvreach_waking",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L14",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "field",
+      "source": "sources_lgweboscore_tvsession_tvsession",
+      "target": "sources_lgweboscore_tvsession_tvreach",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22709,7 +23106,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L32",
+      "source_location": "L41",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22720,7 +23117,18 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L14",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "field",
+      "source": "sources_lgweboscore_tvsession_tvsession",
+      "target": "sources_lgweboscore_tvsession_swift_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22731,7 +23139,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L28",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22742,7 +23150,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L34",
+      "source_location": "L43",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22753,7 +23161,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L28",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22764,7 +23172,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L28",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22775,7 +23183,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L226",
+      "source_location": "L257",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_applyforeground",
@@ -22785,7 +23193,17 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L222",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession",
+      "target": "sources_lgweboscore_tvsession_tvsession_beginwaitingforwake",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L253",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_clearerror",
@@ -22795,7 +23213,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L56",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_connect",
@@ -22805,7 +23223,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L160",
+      "source_location": "L187",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_disconnect",
@@ -22815,7 +23233,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_init",
@@ -22825,7 +23243,17 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L224",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession",
+      "target": "sources_lgweboscore_tvsession_tvsession_isunreachable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L255",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_log",
@@ -22835,7 +23263,27 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L199",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession",
+      "target": "sources_lgweboscore_tvsession_tvsession_markturnedoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L263",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession",
+      "target": "sources_lgweboscore_tvsession_tvsession_noteunreachable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L230",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_pauseusage",
@@ -22845,7 +23293,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L209",
+      "source_location": "L240",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_perform",
@@ -22855,7 +23303,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L181",
+      "source_location": "L212",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_refresh",
@@ -22865,7 +23313,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L187",
+      "source_location": "L218",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_refreshstate",
@@ -22875,7 +23323,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L221",
+      "source_location": "L252",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_reporterror",
@@ -22885,7 +23333,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L223",
+      "source_location": "L254",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_reportnotice",
@@ -22895,7 +23343,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L204",
+      "source_location": "L235",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_resetsoftwareidentity",
@@ -22905,7 +23353,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L232",
+      "source_location": "L296",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession",
       "target": "sources_lgweboscore_tvsession_tvsession_schedulereconnect",
@@ -22915,7 +23363,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L23",
+      "source_location": "L30",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22926,7 +23374,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L19",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22937,7 +23385,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L33",
+      "source_location": "L42",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgweboscore_tvsession_tvsession",
@@ -22948,7 +23396,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L226",
+      "source_location": "L257",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_applyforeground",
@@ -22959,7 +23407,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L224",
+      "source_location": "L255",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_log",
@@ -22970,7 +23418,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L221",
+      "source_location": "L252",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_reporterror",
@@ -22981,7 +23429,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L223",
+      "source_location": "L254",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_reportnotice",
@@ -22992,7 +23440,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L56",
+      "source_location": "L65",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
@@ -23003,10 +23451,21 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L160",
+      "source_location": "L187",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
+      "target": "sources_lgweboscore_tvsession_swift_bool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L280",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "sources_lgweboscore_tvsession_tvsession_isunreachable",
       "target": "sources_lgweboscore_tvsession_swift_bool",
       "confidence_score": 1.0
     },
@@ -23015,7 +23474,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L102",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvsession_swift_task",
@@ -23026,7 +23485,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L212",
+      "source_location": "L243",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_perform",
       "target": "sources_lgweboscore_tvsession_swift_task",
@@ -23037,7 +23496,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L236",
+      "source_location": "L300",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_schedulereconnect",
       "target": "sources_lgweboscore_tvsession_swift_task",
@@ -23047,7 +23506,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L209",
+      "source_location": "L240",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_perform",
@@ -23058,7 +23517,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
@@ -23069,7 +23528,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L36",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_init",
@@ -23081,7 +23540,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L118",
+      "source_location": "L132",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvsession_tvsession_applyforeground",
@@ -23092,7 +23551,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L60",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession_connect",
+      "target": "sources_lgweboscore_tvsession_tvsession_isunreachable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L71",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvsession_tvsession_log",
@@ -23103,7 +23573,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L69",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession_connect",
+      "target": "sources_lgweboscore_tvsession_tvsession_noteunreachable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L80",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvsession_tvsession_pauseusage",
@@ -23114,7 +23595,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L116",
+      "source_location": "L130",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvsession_tvsession_refresh",
@@ -23125,7 +23606,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L135",
+      "source_location": "L149",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvsession_tvsession_refreshstate",
@@ -23136,7 +23617,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L99",
+      "source_location": "L110",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_tvsession_tvsession_schedulereconnect",
@@ -23148,7 +23629,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L117",
+      "source_location": "L131",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_volumecontroller_volumecontroller_apply"
@@ -23159,7 +23640,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L92",
+      "source_location": "L103",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_volumecontroller_volumecontroller_reset"
@@ -23169,7 +23650,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L74",
+      "source_location": "L85",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_webosconnection_webosconnection",
@@ -23181,7 +23662,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L126",
+      "source_location": "L140",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_webosconnection_webosconnection_checkpointer"
@@ -23192,7 +23673,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L71",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_webosconnection_webosconnection_close"
@@ -23203,7 +23684,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L112",
+      "source_location": "L126",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_webosconnection_webosconnection_request"
@@ -23214,7 +23695,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L117",
+      "source_location": "L131",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_connect",
       "target": "sources_lgweboscore_webosconnection_webosconnection_subscribe"
@@ -23224,7 +23705,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L161",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession_markturnedoff",
+      "target": "sources_lgweboscore_tvsession_tvsession_disconnect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L192",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_tvsession_tvsession_pauseusage",
@@ -23236,7 +23728,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L168",
+      "source_location": "L199",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_volumecontroller_volumecontroller_cancelpending"
@@ -23247,7 +23739,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L175",
+      "source_location": "L206",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_volumecontroller_volumecontroller_reset"
@@ -23258,7 +23750,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L169",
+      "source_location": "L200",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_disconnect",
       "target": "sources_lgweboscore_webosconnection_webosconnection_close"
@@ -23268,7 +23760,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L184",
+      "source_location": "L215",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_refresh",
       "target": "sources_lgweboscore_tvsession_tvsession_refreshstate",
@@ -23279,7 +23771,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L196",
+      "source_location": "L227",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_refreshstate",
       "target": "sources_lgweboscore_tvsession_tvsession_applyforeground",
@@ -23290,7 +23782,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L193",
+      "source_location": "L224",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_refreshstate",
       "target": "sources_lgweboscore_tvsession_tvsession_pauseusage",
@@ -23302,7 +23794,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L195",
+      "source_location": "L226",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_refreshstate",
       "target": "sources_lgweboscore_volumecontroller_volumecontroller_apply"
@@ -23313,7 +23805,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L189",
+      "source_location": "L220",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_refreshstate",
       "target": "sources_lgweboscore_webosconnection_webosconnection_request"
@@ -23323,7 +23815,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L228",
+      "source_location": "L259",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_applyforeground",
       "target": "sources_lgweboscore_tvsession_tvsession_pauseusage",
@@ -23335,7 +23827,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L200",
+      "source_location": "L231",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_pauseusage",
       "target": "sources_lgweboscore_usagetracker_usagetracker_pause"
@@ -23345,7 +23837,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L216",
+      "source_location": "L247",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_perform",
       "target": "sources_lgweboscore_tvsession_tvsession_log",
@@ -23355,7 +23847,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L209",
+      "source_location": "L240",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_perform",
@@ -23367,7 +23859,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L234",
+      "source_location": "L298",
       "weight": 1.0,
       "source": "sources_lgweboscore_tvsession_tvsession_schedulereconnect",
       "target": "sources_lgweboscore_tvsession_tvsession_log",
@@ -23377,11 +23869,33 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSCore/TVSession.swift",
-      "source_location": "L226",
+      "source_location": "L257",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "sources_lgweboscore_tvsession_tvsession_applyforeground",
       "target": "sources_lgweboscore_tvsession_swift_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "sources_lgweboscore_tvsession_tvsession_noteunreachable",
+      "target": "sources_lgweboscore_tvsession_tvsession_schedulereconnect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSCore/TVSession.swift",
+      "source_location": "L280",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "sources_lgweboscore_tvsession_tvsession_isunreachable",
+      "target": "sources_lgweboscore_tvsession_swift_error",
       "confidence_score": 1.0
     },
     {
@@ -24408,7 +24922,7 @@
       "source_file": "Sources/LGwebOSCore/WebOSConnection.swift",
       "source_location": "L155",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_webosconnection_webosconnection_exchange",
       "target": "sources_lgweboscore_webosconnection_swift_string",
       "confidence_score": 1.0
@@ -24452,7 +24966,7 @@
       "source_file": "Sources/LGwebOSCore/WebOSConnection.swift",
       "source_location": "L172",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_webosconnection_webosconnection_request",
       "target": "sources_lgweboscore_webosconnection_swift_string",
       "confidence_score": 1.0
@@ -24529,7 +25043,7 @@
       "source_file": "Sources/LGwebOSCore/WebOSConnection.swift",
       "source_location": "L155",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_webosconnection_webosconnection_exchange",
       "target": "sources_lgweboscore_webosconnection_swift_any",
       "confidence_score": 1.0
@@ -24551,7 +25065,7 @@
       "source_file": "Sources/LGwebOSCore/WebOSConnection.swift",
       "source_location": "L172",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgweboscore_webosconnection_webosconnection_request",
       "target": "sources_lgweboscore_webosconnection_swift_any",
       "confidence_score": 1.0
@@ -25343,72 +25857,9 @@
       "source_file": "Sources/LGwebOSUI/BrandTheme.swift",
       "source_location": "L80",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "parameter_type",
       "source": "sources_lgwebosui_brandtheme_logosampler_hsb",
       "target": "sources_lgwebosui_brandtheme_swift_cgfloat",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "sources_lgwebosui_controlaccess",
-      "target": "sources_lgwebosui_controlaccess_controlaccess",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "sources_lgwebosui_controlaccess",
-      "target": "sources_lgwebosui_controlaccess_controlaccessnote",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "sources_lgwebosui_controlaccess_controlaccessnote",
-      "target": "sources_lgwebosui_controlaccess_controlaccessnote_init",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L9",
-      "weight": 1.0,
-      "context": "field",
-      "source": "sources_lgwebosui_controlaccess_controlaccessnote",
-      "target": "sources_lgwebosui_controlaccess_swift_bool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L11",
-      "weight": 1.0,
-      "context": "field",
-      "source": "sources_lgwebosui_controlaccess_controlaccessnote",
-      "target": "sources_lgwebosui_remotechrome_view",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "Sources/LGwebOSUI/ControlAccess.swift",
-      "source_location": "L10",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "sources_lgwebosui_controlaccess_controlaccessnote_init",
-      "target": "sources_lgwebosui_controlaccess_swift_bool",
       "confidence_score": 1.0
     },
     {
@@ -26086,7 +26537,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "Sources/LGwebOSUI/RemoteChrome.swift",
-      "source_location": "L99",
+      "source_location": "L100",
       "weight": 1.0,
       "context": "field",
       "source": "sources_lgwebosui_remotechrome_remotesection",
@@ -26302,6 +26753,16 @@
       "weight": 1.0,
       "source": "sources_lgwebosui_remotechrome_remotesection",
       "target": "sources_lgwebosui_remotechrome_remotesection_usage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "Sources/LGwebOSUI/RemoteChrome.swift",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "sources_lgwebosui_remotechrome_remotesection",
+      "target": "sources_lgwebosui_remotechrome_remotesection_wake",
       "confidence_score": 1.0
     },
     {
@@ -27042,7 +27503,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L155",
+      "source_location": "L152",
       "weight": 1.0,
       "source": "readme",
       "target": "third_party_notices",
@@ -27052,17 +27513,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "source": "readme_lgwebos_menubar",
-      "target": "readme_basic_and_full_control",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_build_and_run",
@@ -27072,7 +27523,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L96",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_compatibility_and_limits",
@@ -27082,7 +27533,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L85",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_connect_your_tv",
@@ -27092,7 +27543,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L140",
+      "source_location": "L137",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_contributing",
@@ -27102,7 +27553,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L128",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "readme_lgwebos_menubar",
+      "target": "readme_controls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L125",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_diagnostics",
@@ -27112,7 +27573,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L77",
+      "source_location": "L74",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_find_your_tv",
@@ -27122,7 +27583,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_ios",
@@ -27132,7 +27593,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L153",
+      "source_location": "L150",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_license",
@@ -27142,7 +27603,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L116",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_offline_checks",
@@ -27152,7 +27613,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L110",
+      "source_location": "L107",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_privacy_and_local_storage",
@@ -27162,7 +27623,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_quick_start_with_claude",
@@ -27172,7 +27633,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "readme_lgwebos_menubar",
       "target": "readme_requirements",
@@ -27230,5 +27691,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b3ebd189479d9c72ee1635f4b3b0cbf548a5dd7f"
+  "built_at_commit": "a17fc5a1b0894c08833c7a86ea58ccd3d82db0b8"
 }

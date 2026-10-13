@@ -107,20 +107,20 @@ public enum FeatureChecks {
         try equal(fresh.name, "LG TV")
         try equal(fresh.model, "")
         try equal(fresh.mac, "")
-        try truth(!fresh.advancedControls)
+        try truth(HostAddress.normalizedMAC("aa-bb-cc-dd-ee-ff") == "AA:BB:CC:DD:EE:FF")
+        try truth(HostAddress.normalizedMAC("aabbccddeeff") == "AA:BB:CC:DD:EE:FF")
+        try truth(HostAddress.normalizedMAC("not-a-mac") == nil)
         let address = "203.0.113.10"
         let mac = ["00", "11", "22", "33", "44", "55"].joined(separator: ":")
         defaults.set(address, forKey: "tv.host")
         defaults.set("Test TV", forKey: "tv.name")
         defaults.set("Test model", forKey: "tv.model")
         defaults.set(mac, forKey: "tv.mac")
-        defaults.set(true, forKey: "tv.advancedControls")
         let configured = TVConfiguration(defaults: defaults)
         try equal(configured.host, address)
         try equal(configured.name, "Test TV")
         try equal(configured.model, "Test model")
         try equal(configured.mac, mac)
-        try truth(configured.advancedControls)
     }
 
     static func testUsageSurvivesRestartAndClipsMidnightWithoutCountingSleep() throws {

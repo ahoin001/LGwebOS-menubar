@@ -65,21 +65,23 @@ The app requires iOS 17. The first launch may ask you to trust the developer cer
 
 The control limits below apply to both apps. The tested-models table applies to both apps as well. Other TVs are still unverified.
 
-## Basic and full control
+From the repository root, this builds an unsigned IPA and writes it to the Desktop for Signulous:
 
-The default connection is the one to use on a current C2. It does not send LG’s sample certificate. Settings has an **Advanced controls** switch for older sets. It is off by default. Leave it off on a C2.
+```sh
+xcodebuild -workspace LGwebOS.xcworkspace -scheme LGwebOS -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath /tmp/lgios-ipa CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" build && rm -rf /tmp/Payload && mkdir -p /tmp/Payload && cp -R /tmp/lgios-ipa/Build/Products/Release-iphoneos/LGwebOS.app /tmp/Payload/ && cd /tmp && rm -f "$HOME/Desktop/LGwebOS-unsigned.ipa" && zip -r "$HOME/Desktop/LGwebOS-unsigned.ipa" Payload && echo "Wrote $HOME/Desktop/LGwebOS-unsigned.ipa"
+```
 
-After you tap **Allow** on the TV, that pairing requests apps, launches, inputs, the direction pad, pointer, Home, Back, text entry, and picture changes. Volume and power are included. On the tested C2, those controls work. Wake still needs the TV’s MAC address and Wi-Fi wake. A C2 does not show an **LG Connect Apps** switch; the Allow prompt is enough.
+## Controls
 
-**Advanced controls** sends the sample certificate bundled with the app. On the tested **webOS 5.0** set (LG 50UN7310PSC), that certificate can be accepted. Current C2 firmware rejects it with `403 Pairing rejected: blacklisted certificate detected`. LG does not publish a replacement key. The app turns the switch off. Turning it on again on a C2 retries the same certificate and gets the same rejection.
+The app pairs without LG’s sample certificate. After you tap **Allow** on the TV, that pairing includes apps, launches, inputs, the direction pad, pointer, Home, Back, text entry, and picture changes. Volume and power off are included. On the tested C2, those controls work. A C2 does not show an **LG Connect Apps** switch; the Allow prompt is enough.
 
-Switching the switch pairs again. The saved TV certificate pin stays. The pairing key for that address is replaced. Installing this version also drops a previously saved pairing key once, so the TV can show Allow for the new permission list.
+Turning the TV on uses a wake packet, not the remote connection. Enter the TV’s Wi-Fi MAC address. On a C2, also turn on **Turn on via Wi-Fi** under All Settings → General → Devices → External Devices → TV On With Mobile. Until the MAC address is saved, the iPhone **More** tab has a **Turn on** item for that setup. The phone disconnects when the TV turns off, then tries again when you open the app. While the app stays open it keeps trying quietly, without leaving an error on screen.
 
 ## Find your TV
 
 - **Model:** the model number is on the TV's info screen and on the label on the back of the TV.
 - **IP address:** the app can find the TV on your network, or you can enter its IPv4 address manually (it looks like `192.0.2.42`). Your router's list of connected devices also shows it. A fixed address from the router keeps it from changing.
-- **MAC address (optional):** only needed for Wake-on-LAN.
+- **MAC address:** needed to turn the TV on from the app. It is in the TV’s network details, next to the IP address.
 
 The app needs an IPv4 address. Hostnames and IPv6 addresses are not supported yet.
 
@@ -102,7 +104,7 @@ The project ships with no TV address, device name, model, MAC address, or pairin
 - **Screen time:** collected locally while the app is running, connected, and the Mac is awake. It cannot retrieve the TV's historical usage.
 - **Home status:** the TV may report the underlying app while its Home overlay is visible. Home presses from this app are tracked locally. Home presses from a physical remote may not be detectable.
 - **HDMI devices:** switching to a PlayStation or Chromecast switches the TV's input. It does not turn your Mac into a game controller.
-- **Picture settings:** picture changes are part of the default pairing. They work on the tested C2. See [Basic and full control](#basic-and-full-control).
+- **Picture settings:** picture changes are part of the default pairing. They work on the tested C2. See [Controls](#controls).
 - **Media casting:** playback depends on the TV's supported codecs and DLNA service. Only the selected file is served, through a temporary URL reachable from the TV and this Mac only. H.264 MP4, MP3, and JPEG are the safest choices.
 - **AirPlay:** the app shows guidance for macOS Screen Mirroring. It does not start mirroring itself, and it does not capture the TV screen on the Mac.
 - **Logs:** activity logs describe this app's connections and commands. Internal TV system logs and Developer Mode access are not included.

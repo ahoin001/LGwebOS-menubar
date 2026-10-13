@@ -1,6 +1,15 @@
 import Foundation
 import Observation
 
+public enum TVReach: Equatable {
+    case unknown
+    /// Saved pairing, TV is not answering. The phone did not drop the pairing.
+    case off
+    case waking
+    /// The user stopped controlling the TV. It may still be on.
+    case held
+}
+
 @MainActor
 @Observable
 public final class TVSession: TVCommanding {
@@ -11,6 +20,7 @@ public final class TVSession: TVCommanding {
     public var notice: String?
     public private(set) var firmware = ""
     public private(set) var webOS = ""
+    public private(set) var reach: TVReach = .unknown
     public var onCertificateTrust: (@MainActor (String, String) async -> Bool)?
     public var wantsReconnect: Bool { autoReconnect }
 
@@ -27,6 +37,8 @@ public final class TVSession: TVCommanding {
     private var reconnectTask: Task<Void, Never>?
     private var refreshTask: Task<Void, Never>?
     private var autoReconnect = false
+    private var retryUnreachable = true
+    private var wakeDeadline: Date?
     private var powerActive = false
 
     var isConnected: Bool { connected }
@@ -53,8 +65,10 @@ public final class TVSession: TVCommanding {
         self.activity = activity
     }
 
-    public func connect(allowFirstUseTrust: Bool = true) {
+    public func connect(allowFirstUseTrust: Bool = true, retryUnreachable: Bool = true) {
         guard !connecting else { return }
+        self.retryUnreachable = retryUnreachable
+        reconnectTask?.cancel()
         guard HostAddress.isLocalIPv4(identity.host) else {
             error = "Enter the TV's local IPv4 address or discover a TV on your network."
             log("Connection failed", identity.host.isEmpty
@@ -62,7 +76,7 @@ public final class TVSession: TVCommanding {
                 : "\(identity.host) is not a local IPv4 address. IPv6 addresses and hostnames are not accepted.")
             return
         }
-        autoReconnect = true
+        autoReconnect = retryUnreachable
         error = nil
         connecting = true
         pairing = false
@@ -94,19 +108,25 @@ public final class TVSession: TVCommanding {
             self.remote.dismissHome()
             self.pauseUsage()
             self.log("Connection lost", failure.localizedDescription)
-            if !self.connecting {
-                self.notice = "Connection lost. Reconnecting…"
+            if self.reach == .held { return }
+            let keepTrying = self.autoReconnect && self.reach != .off
+            if self.reach != .waking { self.reach = .off }
+            if !self.connecting, keepTrying {
+                self.notice = nil
                 self.scheduleReconnect()
             }
         }
         connectTask = Task { [weak self] in
             guard let self else { return }
             do {
-                try await client.connect(allowFirstUseTrust: allowFirstUseTrust, advancedControls: self.identity.advancedControls)
+                try await client.connect(allowFirstUseTrust: allowFirstUseTrust)
                 guard self.connection === client else { return }
                 self.connected = true
                 self.connecting = false
                 self.pairing = false
+                self.autoReconnect = true
+                self.reach = .unknown
+                self.wakeDeadline = nil
                 self.notice = nil
                 self.log("Connected", "\(self.identity.name) · \(self.identity.host)")
                 if let system = try? await client.request(SSAP.System.info), let detected = SSAPPayload.modelName(system) {
@@ -142,22 +162,42 @@ public final class TVSession: TVCommanding {
                 self.connecting = false
                 self.pairing = false
                 self.log("Connection failed", error.localizedDescription)
-                if RegistrationManifest.isBlacklistedCertificate(error.localizedDescription), self.identity.advancedControls {
-                    self.identity.advancedControls = false
-                    self.identity.save()
-                    self.autoReconnect = false
-                    self.notice = nil
-                    self.error = "This TV rejected the built-in sample certificate. Advanced controls are off. Connect again and tap Allow on the TV."
+                if Self.isUnreachable(error) {
+                    self.noteUnreachable()
                     return
                 }
-                self.error = "\(error.localizedDescription) Make sure the TV is on and on the same Wi-Fi network."
+                self.reach = .unknown
+                self.wakeDeadline = nil
+                self.error = error.localizedDescription
                 if allowFirstUseTrust { self.autoReconnect = false }
-                self.scheduleReconnect()
+                else if self.retryUnreachable { self.scheduleReconnect() }
             }
         }
     }
 
-    public func disconnect(stopReconnect: Bool = true) {
+    public func beginWaitingForWake() {
+        reach = .waking
+        wakeDeadline = Date().addingTimeInterval(60)
+        error = nil
+        notice = nil
+    }
+
+    public func markTurnedOff() {
+        reach = .off
+        wakeDeadline = nil
+        error = nil
+        notice = nil
+        disconnect(stopReconnect: true)
+    }
+
+    public func disconnect(stopReconnect: Bool = true, held: Bool = false) {
+        if held {
+            reach = .held
+            wakeDeadline = nil
+        } else if stopReconnect, reach == .waking {
+            reach = .off
+            wakeDeadline = nil
+        }
         pauseUsage()
         remote.cancelPointer()
         cast.stopPlayback()
@@ -227,6 +267,39 @@ public final class TVSession: TVCommanding {
         remote.noteForeground(payload, host: identity.host, powerActive: powerActive, connected: connected, usage: usage) { [weak self] in
             self?.pauseUsage()
         }
+    }
+
+    private func noteUnreachable() {
+        let wakeExpired = reach == .waking && (wakeDeadline.map { Date() >= $0 } ?? true)
+        if wakeExpired {
+            reach = .off
+            wakeDeadline = nil
+            autoReconnect = false
+            error = nil
+            notice = "The TV didn't answer. On the TV, turn on Turn on via Wi-Fi."
+            return
+        }
+        if reach != .waking { reach = .off }
+        error = nil
+        notice = nil
+        if retryUnreachable { scheduleReconnect() }
+        else { autoReconnect = false }
+    }
+
+    private static func isUnreachable(_ error: Error) -> Bool {
+        let ns = error as NSError
+        if ns.domain == NSURLErrorDomain {
+            return [
+                NSURLErrorTimedOut,
+                NSURLErrorCannotFindHost,
+                NSURLErrorCannotConnectToHost,
+                NSURLErrorNetworkConnectionLost,
+                NSURLErrorDNSLookupFailed,
+                NSURLErrorNotConnectedToInternet
+            ].contains(ns.code)
+        }
+        let lower = error.localizedDescription.lowercased()
+        return ["could not connect", "timed out", "connection refused", "offline", "network connection was lost", "host is down", "connection closed before it opened"].contains { lower.contains($0) }
     }
 
     private func scheduleReconnect() {

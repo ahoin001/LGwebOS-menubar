@@ -21,7 +21,6 @@ public final class TVIdentity {
     public var name: String
     public var model: String
     public var mac: String
-    public var advancedControls: Bool
     private let defaults: UserDefaults
 
     public init(defaults: UserDefaults = .standard) {
@@ -30,7 +29,6 @@ public final class TVIdentity {
         name = stored.name
         model = stored.model
         mac = stored.mac
-        advancedControls = stored.advancedControls
         self.defaults = defaults
     }
 
@@ -39,6 +37,5 @@ public final class TVIdentity {
         defaults.set(name, forKey: "tv.name")
         defaults.set(mac, forKey: "tv.mac")
         defaults.set(model, forKey: "tv.model")
-        defaults.set(advancedControls, forKey: "tv.advancedControls")
     }
 }

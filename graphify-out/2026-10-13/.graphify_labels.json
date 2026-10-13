@@ -16,17 +16,13 @@
   "14": "iOS home and remote",
   "15": "Remote chrome styling",
   "16": "TV session lifecycle",
-  "17": "Remote command controller",
   "18": "Shared remote pads",
   "19": "Usage journal persistence",
-  "20": "Volume controller",
   "21": "Usage tracker",
-  "22": "TV app catalog",
   "23": "Connection teardown",
   "24": "Now playing card",
   "25": "Picture controller",
   "26": "PointerMotion",
-  "27": "TV identity storage",
   "29": "Menu bar remote screen",
   "30": "iOS picture screen",
   "31": "Bundled image loader",
@@ -94,6 +90,5 @@
   "94": "TV hero illustration",
   "95": "Bundled app icons",
   "96": "Simple Icons",
-  "97": "tv-hero illustration",
-  "99": "TVIdentity"
+  "97": "tv-hero illustration"
 }

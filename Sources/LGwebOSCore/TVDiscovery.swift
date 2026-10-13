@@ -97,11 +97,8 @@ public enum TVDiscovery {
 
     public static func wake(mac: String, host: String) throws {
         guard HostAddress.isLocalIPv4(host) else { throw RemoteError.message("Enter the TV's local IPv4 address.") }
-        let parts = mac.split(separator: ":", omittingEmptySubsequences: false)
-        let bytes = parts.compactMap { UInt8($0, radix: 16) }
-        guard parts.count == 6, parts.allSatisfy({ $0.count == 2 }), bytes.count == 6 else {
-            throw RemoteError.message("Invalid MAC address.")
-        }
+        guard HostAddress.isMAC(mac) else { throw RemoteError.message("Invalid MAC address.") }
+        let bytes = mac.split(separator: ":").compactMap { UInt8($0, radix: 16) }
         let fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
         guard fd >= 0 else { throw RemoteError.message("Could not send the wake signal.") }
         defer { Darwin.close(fd) }

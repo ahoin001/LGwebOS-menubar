@@ -15,7 +15,7 @@ struct RootView: View {
             if sizeClass == .regular {
                 NavigationSplitView {
                     List(selection: $section) {
-                        ForEach(RemoteSection.allCases) { item in
+                        ForEach(sections) { item in
                             Label(item.rawValue, systemImage: item.symbol).tag(Optional(item))
                         }
                     }
@@ -25,7 +25,7 @@ struct RootView: View {
                 }
             } else {
                 TabView(selection: $section) {
-                    ForEach(RemoteSection.allCases) { item in
+                    ForEach(sections) { item in
                         NavigationStack { page(item).navigationTitle(item.rawValue).toolbar { toolbar } }
                             .tabItem { Label(item.rawValue, systemImage: item.symbol) }
                             .tag(Optional(item))
@@ -36,6 +36,9 @@ struct RootView: View {
         .sheet(isPresented: $settings) { SettingsScreen(model: model) }
         .sheet(isPresented: $setup) { SetupWizard(model: model, allowsDismiss: !model.identity.host.isEmpty) }
         .onAppear { if model.identity.host.isEmpty { setup = true } }
+        .onChange(of: model.canWake) { _, ready in
+            if ready, section == .wake { section = .home }
+        }
         .sheet(isPresented: certificatePresented) {
             if let prompt = approval.pending { CertificateSheet(prompt: prompt, resolve: approval.resolve) }
         }
@@ -49,9 +52,16 @@ struct RootView: View {
 
     @ToolbarContentBuilder private var toolbar: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
-            Button { model.power() } label: { Image(systemName: "power") }
-                .disabled(!model.session.connected && model.identity.mac.isEmpty)
-                .accessibilityLabel(model.session.connected ? "Turn TV off" : "Wake TV")
+            Button {
+                switch model.linkAction {
+                case .setUpWake: section = .wake
+                case .addTV: setup = true
+                default: model.performLinkAction()
+                }
+            } label: {
+                Text(model.powerTitle)
+            }
+            .disabled(model.session.reach == .waking)
         }
         ToolbarItem(placement: .navigationBarTrailing) {
             Button { settings = true } label: { Image(systemName: "slider.horizontal.3") }
@@ -69,8 +79,8 @@ struct RootView: View {
 
     private func screen(_ item: RemoteSection) -> some View {
         ScreenColumn {
-            if !model.session.connected {
-                ConnectionBanner(model: model) {
+            if !model.session.connected, item != .wake {
+                ConnectionBanner(model: model, setupWake: { section = .wake }) {
                     if model.identity.host.isEmpty { setup = true } else { settings = true }
                 }
             }
@@ -82,6 +92,7 @@ struct RootView: View {
             case .usage: ActivityScreen(model: model)
             case .info: PictureScreen(model: model)
             case .logs: EmptyView()
+            case .wake: WakeSetupScreen(model: model)
             }
             if let error = model.session.error {
                 RemoteCard {
@@ -114,20 +125,29 @@ struct ScreenColumn<Content: View>: View {
 
 struct ConnectionBanner: View {
     let model: RemoteCoordinator
+    let setupWake: () -> Void
     let openSettings: () -> Void
     var body: some View {
         RemoteCard {
             VStack(alignment: .leading, spacing: 10) {
-                Label(model.statusText, systemImage: model.session.pairing ? "checkmark.shield" : "wifi").fontWeight(.semibold)
-                Text(model.session.pairing ? "Accept “LG Remote App” on your TV." : "This device and your TV must be on the same network.")
+                Label(model.statusText, systemImage: model.linkSymbol).fontWeight(.semibold)
+                Text(model.connectionDetail)
                     .font(.subheadline).foregroundStyle(RemotePalette.muted)
-                Button(model.session.connecting ? "Cancel" : "Connect to TV") {
-                    if model.session.connecting { model.disconnect() }
-                    else if model.identity.host.isEmpty { openSettings() }
-                    else { model.connect() }
+                Button(model.linkActionTitle) {
+                    switch model.linkAction {
+                    case .setUpWake: setupWake()
+                    case .addTV: openSettings()
+                    default: model.performLinkAction()
+                    }
                 }
                 .buttonStyle(.borderedProminent)
             }
         }
+    }
+}
+
+private extension RootView {
+    var sections: [RemoteSection] {
+        RemoteSection.allCases.filter { $0 != .wake || !model.canWake }
     }
 }

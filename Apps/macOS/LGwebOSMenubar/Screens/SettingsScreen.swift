@@ -31,7 +31,7 @@ struct SettingsScreen: View {
                     TextField("Name", text: $draftName).textFieldStyle(.roundedBorder)
                     TextField("TV IP address", text: $draftHost).textFieldStyle(.roundedBorder)
                     TextField("Wi-Fi MAC address for wake", text: $draftMAC).textFieldStyle(.roundedBorder)
-                    Text("Optional: the MAC address is only needed to wake the TV.").font(.system(size: 10)).foregroundStyle(RemotePalette.muted)
+                    Text("The MAC address lets this Mac turn the TV on. Find it in the TV’s network details.").font(.system(size: 10)).foregroundStyle(RemotePalette.muted)
                     Button("Save and connect", action: save)
                         .disabled(!HostAddress.isLocalIPv4(draftHost.trimmingCharacters(in: .whitespacesAndNewlines)) || model.session.connecting)
                     if !model.identity.host.isEmpty {
@@ -50,14 +50,6 @@ struct SettingsScreen: View {
                         .buttonStyle(.plain)
                     }
                     Text("To wake your TV from your Mac, enable Wi-Fi wake in TV settings.").font(.system(size: 11)).foregroundStyle(RemotePalette.muted)
-                }
-            }
-            RemoteSectionTitle("CONTROL")
-            RemoteCard {
-                VStack(alignment: .leading, spacing: 8) {
-                    Toggle("Advanced controls", isOn: advancedBinding)
-                        .disabled(model.session.connecting)
-                    ControlAccessNote(advanced: model.identity.advancedControls)
                 }
             }
             DisclosureGroup("Event history", isExpanded: $showEvents) {
@@ -92,10 +84,6 @@ struct SettingsScreen: View {
         }
     }
 
-    private var advancedBinding: Binding<Bool> {
-        Binding(get: { model.identity.advancedControls }, set: { enabled in Task { await model.setAdvancedControls(enabled) } })
-    }
-
     private func save() {
         model.disconnect()
         model.identity.model = ""
@@ -103,7 +91,8 @@ struct SettingsScreen: View {
         model.identity.host = draftHost.trimmingCharacters(in: .whitespacesAndNewlines)
         let name = draftName.trimmingCharacters(in: .whitespacesAndNewlines)
         model.identity.name = name.isEmpty ? "LG TV" : name
-        model.identity.mac = draftMAC.trimmingCharacters(in: .whitespacesAndNewlines)
+        let mac = draftMAC.trimmingCharacters(in: .whitespacesAndNewlines)
+        model.identity.mac = HostAddress.normalizedMAC(mac) ?? mac
         model.connect()
         close()
     }

@@ -1,6 +1,15 @@
 import Foundation
 import Observation
 
+public enum TVLinkAction: Equatable {
+    case turnOff
+    case turnOn
+    case connect
+    case setUpWake
+    case cancel
+    case addTV
+}
+
 @MainActor
 @Observable
 public final class RemoteCoordinator {
@@ -57,16 +66,71 @@ public final class RemoteCoordinator {
         if !remote.foregroundName.isEmpty { return remote.foregroundName }
         return session.connected ? "TV is on" : ""
     }
+    public var canWake: Bool { HostAddress.isMAC(identity.mac) }
+    public var linkAction: TVLinkAction {
+        if session.connecting || session.reach == .waking { return .cancel }
+        if session.connected { return .turnOff }
+        if session.reach == .held { return .connect }
+        if session.reach == .off { return canWake ? .turnOn : .setUpWake }
+        if identity.host.isEmpty { return .addTV }
+        if canWake { return .turnOn }
+        return .connect
+    }
+    public var linkActionTitle: String {
+        switch linkAction {
+        case .turnOff: return "Turn off"
+        case .turnOn: return "Turn on"
+        case .connect: return "Connect"
+        case .setUpWake: return "Set up turn on"
+        case .cancel: return "Cancel"
+        case .addTV: return "Add a TV"
+        }
+    }
+    public var powerTitle: String { session.reach == .waking ? "Waiting" : linkActionTitle }
+    public var linkSymbol: String {
+        if session.pairing { return "checkmark.shield" }
+        if session.reach == .held { return "link" }
+        if session.reach == .off || session.reach == .waking || (!session.connected && canWake) { return "power" }
+        return "wifi"
+    }
+    public var connectionDetail: String {
+        if session.pairing { return "Accept “LG Remote App” on your TV." }
+        if session.reach == .waking { return "This can take a minute. Leave the app open." }
+        if session.error != nil, !session.connecting, !session.connected { return "The TV did not accept the connection." }
+        if session.reach == .held { return "The TV may still be on. Connect to use the remote." }
+        if identity.host.isEmpty { return "Add your TV to get started." }
+        if session.reach == .off || canWake {
+            return canWake
+                ? "This device is still paired. Turn the TV on to reconnect."
+                : "Turn the TV on with its remote, then connect. Or set up wake so this device can turn it on."
+        }
+        return "Connect when the TV is on."
+    }
     public var statusText: String {
         if session.pairing { return "Accept the connection on your TV" }
         if session.connecting { return "Connecting…" }
-        return session.connected ? "Connected" : "Disconnected"
+        if session.reach == .waking { return "Waiting for your TV" }
+        if session.connected { return "Connected" }
+        if session.error != nil { return "Couldn't connect" }
+        if identity.host.isEmpty { return "No TV yet" }
+        if session.reach == .held { return "Ready to reconnect" }
+        if session.reach == .off || canWake { return "TV is off" }
+        return "Ready when the TV is on"
+    }
+
+    public func performLinkAction() {
+        switch linkAction {
+        case .turnOff, .turnOn: power()
+        case .connect: connect()
+        case .cancel: disconnect(held: session.reach != .off && session.reach != .waking)
+        case .setUpWake, .addTV: break
+        }
     }
     public var orderedInputs: [TVInput] { catalog.orderedInputs(activeID: displayForegroundID) }
     public var mostUsedApps: [TVApp] { usage.mostUsed(apps: catalog.apps, host: identity.host) }
 
     public func connect(allowFirstUseTrust: Bool = true) { session.connect(allowFirstUseTrust: allowFirstUseTrust) }
-    public func disconnect() { session.disconnect() }
+    public func disconnect(held: Bool = false) { session.disconnect(stopReconnect: true, held: held) }
 
     public func discover() {
         guard !discovering else { return }
@@ -99,39 +163,31 @@ public final class RemoteCoordinator {
         if session.connected {
             session.perform { [weak self] client in
                 _ = try await client.request(SSAP.Power.turnOff)
-                self?.session.disconnect()
-                self?.session.notice = "TV turned off."
+                self?.session.markTurnedOff()
             }
-        } else {
-            do {
-                try TVDiscovery.wake(mac: identity.mac, host: identity.host)
-                session.notice = "Wake signal sent. Enable Wi-Fi wake on the TV first."
-            } catch {
-                session.error = error.localizedDescription
-            }
+        } else if session.reach == .held {
+            session.connect()
+        } else if canWake, session.reach != .waking {
+            beginWake()
         }
     }
 
-    public func setAdvancedControls(_ enabled: Bool) async {
-        guard identity.advancedControls != enabled else { return }
-        let previous = identity.advancedControls
-        identity.advancedControls = enabled
-        identity.save()
-        let host = identity.host
-        guard !host.isEmpty else { return }
-        session.disconnect()
+    public func beginWake() {
         do {
-            try await Task.detached(priority: .userInitiated) { try PairingKey.deleteKey(host) }.value
+            try TVDiscovery.wake(mac: identity.mac, host: identity.host)
         } catch {
-            identity.advancedControls = previous
-            identity.save()
-            session.error = "Could not update pairing: \(error.localizedDescription)"
+            session.error = error.localizedDescription
             return
         }
-        session.notice = enabled
-            ? "Advanced controls need a new pairing. Accept the prompt on the TV."
-            : "Basic control needs a new pairing. Accept the prompt on the TV."
-        session.connect()
+        session.beginWaitingForWake()
+        session.connect(allowFirstUseTrust: false)
+    }
+
+    public func saveWakeAddress(_ raw: String) -> Bool {
+        guard let mac = HostAddress.normalizedMAC(raw) else { return false }
+        identity.mac = mac
+        identity.save()
+        return true
     }
 
     public func forgetPairing() async {
@@ -150,7 +206,12 @@ public final class RemoteCoordinator {
     public func pauseForBackground() { session.pauseUsage() }
 
     public func resumeAfterForeground() {
-        guard session.wantsReconnect, !identity.host.isEmpty, !session.connecting, !session.connected else { return }
+        guard !identity.host.isEmpty, !session.connecting, !session.connected else { return }
+        if session.reach == .off {
+            session.connect(allowFirstUseTrust: false, retryUnreachable: false)
+            return
+        }
+        guard session.wantsReconnect else { return }
         session.connect(allowFirstUseTrust: false)
     }
 }

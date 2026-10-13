@@ -21,7 +21,7 @@ struct SettingsScreen: View {
                         .keyboardType(.numbersAndPunctuation)
                     TextField("Wi-Fi MAC address for wake", text: $draftMAC)
                         .textInputAutocapitalization(.never)
-                    Text("The MAC address is only needed to wake the TV.")
+                    Text("The MAC address lets this phone turn the TV on. Find it in the TV’s network details.")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
                 Section {
@@ -34,12 +34,6 @@ struct SettingsScreen: View {
                         Button("Forget pairing", role: .destructive) { confirmForget = true }
                             .disabled(model.session.connecting)
                     }
-                }
-                Section {
-                    Toggle("Advanced controls", isOn: advancedBinding)
-                        .disabled(model.session.connecting)
-                } footer: {
-                    Text(model.identity.advancedControls ? ControlAccess.advancedExplanation : ControlAccess.basicExplanation)
                 }
                 Section("This connection") {
                     LabeledContent("Model", value: model.identity.model.isEmpty ? "LG TV" : model.identity.model)
@@ -75,10 +69,6 @@ struct SettingsScreen: View {
         draftMAC = model.identity.mac
     }
 
-    private var advancedBinding: Binding<Bool> {
-        Binding(get: { model.identity.advancedControls }, set: { enabled in Task { await model.setAdvancedControls(enabled) } })
-    }
-
     private func save() {
         model.disconnect()
         model.identity.model = ""
@@ -86,7 +76,8 @@ struct SettingsScreen: View {
         model.identity.host = draftHost.trimmingCharacters(in: .whitespacesAndNewlines)
         let name = draftName.trimmingCharacters(in: .whitespacesAndNewlines)
         model.identity.name = name.isEmpty ? "LG TV" : name
-        model.identity.mac = draftMAC.trimmingCharacters(in: .whitespacesAndNewlines)
+        let mac = draftMAC.trimmingCharacters(in: .whitespacesAndNewlines)
+        model.identity.mac = HostAddress.normalizedMAC(mac) ?? mac
         model.connect()
         dismiss()
     }

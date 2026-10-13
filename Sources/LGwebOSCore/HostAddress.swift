@@ -8,6 +8,28 @@ public enum HostAddress {
         }
     }
 
+    public static func isMAC(_ mac: String) -> Bool {
+        let parts = mac.split(separator: ":", omittingEmptySubsequences: false)
+        return parts.count == 6 && parts.allSatisfy { part in
+            part.count == 2 && UInt8(part, radix: 16) != nil
+        }
+    }
+
+    /// Accepts `aa:bb:cc:dd:ee:ff`, dashed, or 12 hex digits, and returns colon form.
+    public static func normalizedMAC(_ raw: String) -> String? {
+        let hex = raw.uppercased().filter(\.isHexDigit)
+        guard hex.count == 12 else { return nil }
+        var pairs: [String] = []
+        var index = hex.startIndex
+        for _ in 0..<6 {
+            let next = hex.index(index, offsetBy: 2)
+            pairs.append(String(hex[index..<next]))
+            index = next
+        }
+        let formatted = pairs.joined(separator: ":")
+        return isMAC(formatted) ? formatted : nil
+    }
+
     public static func isLocalIPv4(_ host: String) -> Bool {
         guard isValidIPv4(host) else { return false }
         let octets = host.split(separator: ".").compactMap { Int($0) }

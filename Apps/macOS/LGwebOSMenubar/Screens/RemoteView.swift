@@ -63,7 +63,7 @@ struct RemoteView: View {
         case .media: CastScreen(model: model, accent: theme.color)
         case .info: PictureScreen(model: model, accent: theme.color, draft: $pictureDraft)
         case .usage: ActivityScreen(model: model, accent: theme.color)
-        case .logs: EmptyView()
+        case .logs, .wake: EmptyView()
         }
     }
 
@@ -77,8 +77,8 @@ struct RemoteView: View {
             Spacer()
             Menu {
                 Button("Refresh TV data") { Task { await model.refresh() } }
-                Button(model.session.connected ? "Disconnect" : "Connect") {
-                    if model.session.connected { model.disconnect() }
+                Button(model.session.connected ? "Stop controlling" : "Connect") {
+                    if model.session.connected { model.disconnect(held: true) }
                     else if model.identity.host.isEmpty { settings = true }
                     else { model.connect() }
                 }
@@ -89,21 +89,27 @@ struct RemoteView: View {
             }
             .menuStyle(.borderlessButton).menuIndicator(.hidden).fixedSize()
             Menu {
-                if model.session.connected { Button("Turn TV off") { model.power() } }
-                else { Button("Wake TV over Wi-Fi") { model.power() }.disabled(model.identity.mac.isEmpty) }
+                switch model.linkAction {
+                case .turnOff: Button("Turn off") { model.performLinkAction() }
+                case .turnOn: Button("Turn on") { model.performLinkAction() }
+                case .cancel: Button("Waiting for your TV") { model.performLinkAction() }
+                case .connect: Button("Connect") { model.performLinkAction() }
+                case .setUpWake: Button("Set up turning the TV on") { settings = true }
+                case .addTV: Button("Add a TV") { settings = true }
+                }
             } label: {
                 Image(systemName: "power").font(.system(size: 17))
-                    .foregroundStyle(model.session.connected ? .white : RemotePalette.muted)
+                    .foregroundStyle(model.linkAction == .turnOff || model.linkAction == .turnOn ? Color.white : RemotePalette.muted)
                     .frame(width: 34, height: 34)
                     .background(Circle().fill(Color.white.opacity(0.06)))
             }
-            .menuStyle(.borderlessButton).menuIndicator(.hidden).fixedSize().help("TV power")
+            .menuStyle(.borderlessButton).menuIndicator(.hidden).fixedSize().help(model.statusText)
         }
     }
 
     private var tabs: some View {
         HStack(spacing: 4) {
-            ForEach(RemoteSection.allCases.filter { $0 != .logs }) { item in
+            ForEach(RemoteSection.allCases.filter { $0 != .logs && $0 != .wake }) { item in
                 Button { tab = item; settings = false } label: {
                     Image(systemName: item.symbol).font(.system(size: 16, weight: .medium))
                         .foregroundStyle(tab == item && !settings ? theme.color : RemotePalette.muted)
@@ -122,13 +128,14 @@ struct RemoteView: View {
     private var connectionPanel: some View {
         RemoteCard {
             VStack(alignment: .leading, spacing: 10) {
-                Label(model.statusText, systemImage: model.session.pairing ? "checkmark.shield" : "wifi").fontWeight(.semibold)
-                Text(model.session.pairing ? "Accept “LG Remote App” on your TV." : "Your Mac and TV must be on the same network.")
+                Label(model.statusText, systemImage: model.linkSymbol).fontWeight(.semibold)
+                Text(model.connectionDetail)
                     .font(.system(size: 11)).foregroundStyle(RemotePalette.muted)
-                Button(model.session.connecting ? "Cancel" : "Connect to TV") {
-                    if model.session.connecting { model.disconnect() }
-                    else if model.identity.host.isEmpty { settings = true }
-                    else { model.connect() }
+                Button(model.linkActionTitle) {
+                    switch model.linkAction {
+                    case .setUpWake, .addTV: settings = true
+                    default: model.performLinkAction()
+                    }
                 }
             }
         }

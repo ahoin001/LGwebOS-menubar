@@ -39,7 +39,7 @@ public final class WebOSConnection {
         session = URLSession(configuration: configuration, delegate: trust, delegateQueue: nil)
     }
 
-    public func connect(allowFirstUseTrust: Bool = false, advancedControls: Bool = false) async throws {
+    public func connect(allowFirstUseTrust: Bool = false) async throws {
         guard Self.localHost(host), let url = URL(string: "wss://\(host):3001/") else {
             throw RemoteError.message("Enter the TV's local IPv4 address.")
         }
@@ -87,7 +87,7 @@ public final class WebOSConnection {
                 if !Task.isCancelled { self?.failed(error) }
             }
         }
-        var payload = try RegistrationManifest.payload(advanced: advancedControls)
+        var payload = try RegistrationManifest.payload(advanced: false)
         if let key = storedKey { payload["client-key"] = key }
         onEvent?("Register", storedKey == nil
             ? "Asking the TV to pair. Accept LG Remote App on the TV."
