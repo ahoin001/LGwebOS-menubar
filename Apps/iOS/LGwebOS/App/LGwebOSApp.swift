@@ -28,7 +28,7 @@ struct LGwebOSApp: App {
 }
 
 enum BrandAccent {
-    static func current(_ model: RemoteCoordinator) -> Color {
+    @MainActor static func current(_ model: RemoteCoordinator) -> Color {
         BrandTheme.forApp(model.displayForegroundID, title: model.currentInput?.label ?? model.currentAppTitle).color
     }
 }

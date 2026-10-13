@@ -12,7 +12,7 @@ public struct BrandTheme: Equatable {
         let identity = BrandIdentity.forApp(id, title: title)
         let sampled = identity.usesKnownColor ? nil : LogoSampler.colors[id]
         return BrandTheme(
-            color: sampled ?? Color(rgb: identity.color),
+            color: sampled ?? Color(webOS: identity.color),
             label: identity.label,
             tagline: identity.tagline
         )
@@ -20,7 +20,7 @@ public struct BrandTheme: Equatable {
 }
 
 extension Color {
-    init(rgb: RGBColor) {
+    init(webOS rgb: LGwebOSCore.RGBColor) {
         self.init(red: rgb.red, green: rgb.green, blue: rgb.blue)
     }
 }

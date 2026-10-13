@@ -15,6 +15,8 @@ bash scripts/build.sh
 
 The output is `dist/LGwebOS-menubar.app`. Do not commit the `dist/` folder.
 
+To run in Xcode, open `LGwebOS.xcworkspace`, select the **LGwebOS-menubar** scheme, and leave the destination on My Mac. That scheme is macOS-only. The **LGwebOS** scheme in the same workspace is the iPhone and iPad app.
+
 ## 3. Collect the TV details
 
 Ask the user for these:

@@ -23,10 +23,19 @@ The `CLAUDE.md` file in the root tells Claude how to build the app, find your TV
 ## Requirements
 
 - A Mac running macOS 14 or later.
-- Xcode Command Line Tools with Swift 5.9 or later. Install them with `xcode-select --install`.
+- Xcode 15 or later, with Swift 5.9 or later. Install the command line tools with `xcode-select --install` if `swift` is missing.
 - An LG TV with webOS, on the same Wi-Fi or Ethernet network as your Mac.
 
 ## Build and run
+
+Open `LGwebOS.xcworkspace` in Xcode.
+
+- **Mac menu bar:** select the **LGwebOS-menubar** scheme. The destination is My Mac. Press Run.
+- **iPhone and iPad:** select the **LGwebOS** scheme, then an iOS simulator or your device.
+
+The menu bar target is macOS-only, so AppKit is part of that scheme. Building it for an iPhone or iPad simulator fails with “no such module AppKit”.
+
+You can also build a local Mac app from the command line:
 
 ```sh
 bash scripts/build.sh
@@ -37,7 +46,7 @@ The script builds in a temporary directory, removes debug symbols, and creates a
 
 ## iOS
 
-The iPhone and iPad app lives in `Apps/iOS` and uses the same TV session, pairing, and visual language as the menu bar. Open `Apps/iOS/LGwebOS.xcodeproj` in Xcode 15 or later, select your team, and run the LGwebOS scheme. It requires iOS 17.
+The iPhone and iPad app lives in `Apps/iOS` and uses the same TV session, pairing, and visual language as the menu bar. From `LGwebOS.xcworkspace`, select the LGwebOS scheme. It requires iOS 17. On a physical device, select your team before you run it.
 
 - The iPhone uses a tab bar. The iPad uses a sidebar, with the remote kept to a readable width.
 - Pairing is stored in that device's Keychain. It is not shared with the Mac app.
