@@ -1,8 +1,8 @@
 import SwiftUI
 
 public enum ControlAccess {
-    public static let basicExplanation = "Basic control does not use the sample certificate, which is why pointer, text entry, and picture changes are unavailable."
-    public static let advancedExplanation = "This retries the certificate already built into the app. LG blacklisted that public sample key on webOS 22, including the C2, and does not offer a replacement. Older sets such as the tested UN7310 can still accept it. Enabling it pairs again with that certificate."
+    public static let basicExplanation = "Apps, inputs, the direction pad, pointer, and keyboard are included when you tap Allow on the TV. Leave this off on a C2. Picture changes can still be refused."
+    public static let advancedExplanation = "This sends the sample certificate built into the app. Older sets such as the tested UN7310 can accept it. A current C2 rejects it, and the app turns this switch back off."
 }
 
 public struct ControlAccessNote: View {

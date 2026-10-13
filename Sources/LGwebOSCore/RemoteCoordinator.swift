@@ -18,6 +18,7 @@ public final class RemoteCoordinator {
 
     public init(defaults: UserDefaults = .standard, supportDirectory: URL = AppSupport.directory()) {
         identity = TVIdentity(defaults: defaults)
+        RegistrationRepair.dropPreviousPairingIfNeeded(defaults: defaults, host: identity.host)
         activity = ActivityLog(directory: supportDirectory)
         usage = UsageTracker(directory: supportDirectory)
         catalog = TVCatalog(defaults: defaults)

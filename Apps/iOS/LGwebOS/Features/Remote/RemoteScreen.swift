@@ -22,13 +22,9 @@ struct RemoteScreen: View {
                 }
                 .disabled(!model.session.connected)
             }
-            if model.identity.advancedControls {
-                RemoteCard {
-                    PointerPad(accent: accent, height: RemoteMetrics.touch.pointerHeight, onMove: { model.remote.movePointer(dx: $0, dy: $1) }, onClick: model.remote.clickPointer)
-                        .disabled(!model.session.connected)
-                }
-            } else {
-                ControlAccessNote(advanced: false)
+            RemoteCard {
+                PointerPad(accent: accent, height: RemoteMetrics.touch.pointerHeight, onMove: { model.remote.movePointer(dx: $0, dy: $1) }, onClick: model.remote.clickPointer)
+                    .disabled(!model.session.connected)
             }
             VolumeCard(level: model.volume.level, muted: model.volume.muted, enabled: model.session.connected && model.volume.hasVolume, accent: accent, onChange: model.volume.change, onStep: { model.volume.step(up: $0) }, onToggleMute: model.volume.toggleMute)
             HStack(spacing: 8) {
@@ -36,18 +32,16 @@ struct RemoteScreen: View {
                 channel("CHANNELUP", "Channel +", "chevron.up")
             }
             .disabled(!model.session.connected)
-            if model.identity.advancedControls {
-                RemoteCard {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Label("Keyboard", systemImage: "keyboard").font(.headline)
-                        TextField("Type into the open field on your TV", text: $text).textFieldStyle(.roundedBorder).onSubmit(send)
-                        HStack {
-                            Button("Send", action: send).disabled(text.isEmpty)
-                            Button { model.remote.enterText() } label: { Image(systemName: "return").frame(width: 44, height: 44) }
-                        }
+            RemoteCard {
+                VStack(alignment: .leading, spacing: 12) {
+                    Label("Keyboard", systemImage: "keyboard").font(.headline)
+                    TextField("Type into the open field on your TV", text: $text).textFieldStyle(.roundedBorder).onSubmit(send)
+                    HStack {
+                        Button("Send", action: send).disabled(text.isEmpty)
+                        Button { model.remote.enterText() } label: { Image(systemName: "return").frame(width: 44, height: 44) }
                     }
-                    .disabled(!model.session.connected)
                 }
+                .disabled(!model.session.connected)
             }
             Text("Playback controls depend on the open app. Navigation controls the TV.")
                 .font(.footnote).foregroundStyle(RemotePalette.muted)

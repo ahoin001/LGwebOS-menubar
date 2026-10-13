@@ -8,8 +8,12 @@ struct AppsScreen: View {
     @State private var search = ""
 
     var body: some View {
+        appGrid
+    }
+
+    private var appGrid: some View {
         let apps = model.catalog.shortcuts.filter { search.isEmpty || $0.title.localizedCaseInsensitiveContains(search) }
-        VStack(spacing: 14) {
+        return VStack(spacing: 14) {
             HStack(spacing: 7) {
                 Image(systemName: "magnifyingglass").foregroundStyle(RemotePalette.muted)
                 TextField("Search \(model.catalog.apps.count) apps", text: $search).textFieldStyle(.plain)
@@ -98,12 +102,8 @@ struct PictureScreen: View {
     let accent: Color
     @Binding var draft: [String: Int]
     var body: some View {
-        if model.identity.advancedControls {
-            PictureEditor(values: model.picture.values, draft: $draft, applying: model.picture.applying, enabled: model.session.connected, accent: accent) {
-                model.picture.apply($0)
-            }
-        } else {
-            ControlAccessNote(advanced: false)
+        PictureEditor(values: model.picture.values, draft: $draft, applying: model.picture.applying, enabled: model.session.connected, accent: accent) {
+            model.picture.apply($0)
         }
     }
 }

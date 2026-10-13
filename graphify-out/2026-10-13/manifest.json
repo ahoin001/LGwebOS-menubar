@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "Apps/iOS/LGwebOS/App/RootView.swift": {
-    "mtime": 1791910615.7691898,
-    "ast_hash": "784a78f32ad3d6fbbb488cc160e153de",
+    "mtime": 1791916449.4599967,
+    "ast_hash": "a0b4148cb036c81d4d25fa96061cf188",
     "semantic_hash": ""
   },
   "Apps/iOS/LGwebOS/Assets.xcassets/Contents.json": {
@@ -60,9 +60,9 @@
     "semantic_hash": ""
   },
   "Sources/LGwebOSCore/ActivityLog.swift": {
-    "mtime": 1791907334.7827356,
-    "ast_hash": "14e4d9ae8860cb190bbf27ebc17dfcbe",
-    "semantic_hash": "14e4d9ae8860cb190bbf27ebc17dfcbe"
+    "mtime": 1791916423.515415,
+    "ast_hash": "3202b210c660e94c9a50696bc27e7809",
+    "semantic_hash": ""
   },
   "Sources/LGwebOSCore/AppResources.swift": {
     "mtime": 1791907334.800682,
@@ -180,9 +180,9 @@
     "semantic_hash": "f35561f1189a8d3f80ce2b4fbb0f230a"
   },
   "Sources/LGwebOSCore/TVSession.swift": {
-    "mtime": 1791907334.8071544,
-    "ast_hash": "a15f7d548bc9618ec44af54fc2ef7526",
-    "semantic_hash": "a15f7d548bc9618ec44af54fc2ef7526"
+    "mtime": 1791916427.1223364,
+    "ast_hash": "4e83149ed82060e5e372a94aae0aa342",
+    "semantic_hash": ""
   },
   "Sources/LGwebOSCore/UsageJournal.swift": {
     "mtime": 1791907334.8073792,
@@ -200,9 +200,9 @@
     "semantic_hash": "818ce16cd3a21829fe90cb6eb05c5f8f"
   },
   "Sources/LGwebOSCore/WebOSConnection.swift": {
-    "mtime": 1791907334.8081956,
-    "ast_hash": "1ee0fd1b4513a6c314b88c3222280a0b",
-    "semantic_hash": "1ee0fd1b4513a6c314b88c3222280a0b"
+    "mtime": 1791916425.3826368,
+    "ast_hash": "ef6a04c90e04aa9d7e9f6aba0151baca",
+    "semantic_hash": ""
   },
   "Sources/LGwebOSCore/app-catalog.json": {
     "mtime": 1791907334.8085418,
@@ -235,9 +235,9 @@
     "semantic_hash": "cb3c93ae421d423fe10bbcc8deb455f8"
   },
   "Sources/LGwebOSUI/RemoteChrome.swift": {
-    "mtime": 1791907334.813072,
-    "ast_hash": "c40f3ba73729332c98fdf65a9a88750a",
-    "semantic_hash": "c40f3ba73729332c98fdf65a9a88750a"
+    "mtime": 1791916428.330188,
+    "ast_hash": "667cb8662a5d2b15ff7f3b58b515793a",
+    "semantic_hash": ""
   },
   "Sources/LGwebOSUI/RemotePad.swift": {
     "mtime": 1791907334.8133414,
@@ -520,8 +520,8 @@
     "semantic_hash": ""
   },
   "Apps/macOS/LGwebOSMenubar/Screens/RemoteView.swift": {
-    "mtime": 1791907334.8111494,
-    "ast_hash": "1df42769f3f3875b9c794fb718069980",
+    "mtime": 1791916429.9416442,
+    "ast_hash": "f2dc6592eab0df4a707e230699e4921e",
     "semantic_hash": ""
   },
   "Apps/macOS/LGwebOSMenubar/Screens/SettingsScreen.swift": {
@@ -547,6 +547,11 @@
   "Apps/iOS/LGwebOS/Features/Settings/SetupWizard.swift": {
     "mtime": 1791910606.21332,
     "ast_hash": "2eae9b804d48993e1f7190c2facffc78",
+    "semantic_hash": ""
+  },
+  "Apps/iOS/LGwebOS/Features/Logs/LogsScreen.swift": {
+    "mtime": 1791916448.6534944,
+    "ast_hash": "d41a2dbd02d7809b62b69702118404cf",
     "semantic_hash": ""
   }
 }

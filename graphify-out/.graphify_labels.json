@@ -27,14 +27,12 @@
   "25": "Picture controller",
   "26": "PointerMotion",
   "27": "TV identity storage",
-  "28": "UsageTotal",
   "29": "Menu bar remote screen",
   "30": "iOS picture screen",
   "31": "Bundled image loader",
   "32": "Swift package manifest",
   "33": "Local build script",
   "34": "PyWebOSTV registration",
-  "35": ".usageIcon",
   "36": "README.md",
   "37": "Local build script",
   "38": "Do not guess TV identity",
@@ -97,8 +95,5 @@
   "95": "Bundled app icons",
   "96": "Simple Icons",
   "97": "tv-hero illustration",
-  "98": "PictureEditor",
-  "99": "TVIdentity",
-  "100": "VolumeCard",
-  "101": "MediaFileServer.swift"
+  "99": "TVIdentity"
 }

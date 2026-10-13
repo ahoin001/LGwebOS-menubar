@@ -7,8 +7,12 @@ struct AppsScreen: View {
     @State private var search = ""
 
     var body: some View {
+        appGrid
+    }
+
+    private var appGrid: some View {
         let apps = model.catalog.shortcuts.filter { search.isEmpty || $0.title.localizedCaseInsensitiveContains(search) }
-        VStack(spacing: 16) {
+        return VStack(spacing: 16) {
             HStack {
                 Image(systemName: "magnifyingglass").foregroundStyle(RemotePalette.muted)
                 TextField("Search \(model.catalog.apps.count) apps", text: $search)

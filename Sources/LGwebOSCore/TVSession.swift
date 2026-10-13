@@ -122,13 +122,11 @@ public final class TVSession: TVCommanding {
                     self.webOS = software.product
                 }
                 await self.picture.refresh(client)
-                if self.identity.advancedControls {
-                    do {
-                        try await client.checkPointer()
-                        self.log("Remote ready", "Navigation connection is ready and verified.")
-                    } catch {
-                        self.log("Remote unavailable", error.localizedDescription)
-                    }
+                do {
+                    try await client.checkPointer()
+                    self.log("Remote ready", "Navigation connection is ready and verified.")
+                } catch {
+                    self.log("Remote unavailable", error.localizedDescription)
                 }
                 self.refreshTask = Task { [weak self] in
                     while !Task.isCancelled {
@@ -149,7 +147,7 @@ public final class TVSession: TVCommanding {
                     self.identity.save()
                     self.autoReconnect = false
                     self.notice = nil
-                    self.error = "This TV rejected the built-in sample certificate. Advanced controls are off. Connect again for basic control."
+                    self.error = "This TV rejected the built-in sample certificate. Advanced controls are off. Connect again and tap Allow on the TV."
                     return
                 }
                 self.error = "\(error.localizedDescription) Make sure the TV is on and on the same Wi-Fi network."

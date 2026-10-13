@@ -41,7 +41,12 @@ public enum FeatureChecks {
         let basicManifest = basic["manifest"] as? [String: Any]
         try truth(basicManifest?["signatures"] == nil)
         try truth(basicManifest?["signed"] == nil)
-        try truth((basicManifest?["permissions"] as? [String])?.contains("LAUNCH") == true)
+        let basicPermissions = basicManifest?["permissions"] as? [String] ?? []
+        try truth(basicPermissions.contains("LAUNCH"))
+        for name in RegistrationManifest.grantedPermissions {
+            try truth(basicPermissions.contains(name))
+        }
+        try truth(!basicPermissions.contains("TEST_SECURE"))
         let advanced = try RegistrationManifest.payload(advanced: true)
         let advancedManifest = advanced["manifest"] as? [String: Any]
         let advancedSignatures = advancedManifest?["signatures"] as? [[String: Any]] ?? []
