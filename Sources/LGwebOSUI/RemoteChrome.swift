@@ -94,6 +94,7 @@ public enum RemoteSection: String, CaseIterable, Identifiable {
     case media = "Cast"
     case usage = "Activity"
     case info = "Picture"
+    case logs = "Logs"
     public var id: String { rawValue }
     public var symbol: String {
         switch self {
@@ -103,6 +104,7 @@ public enum RemoteSection: String, CaseIterable, Identifiable {
         case .media: return "airplay.video"
         case .info: return "slider.horizontal.3"
         case .usage: return "chart.bar.xaxis"
+        case .logs: return "list.bullet.rectangle"
         }
     }
 }

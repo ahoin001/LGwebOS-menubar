@@ -25,7 +25,9 @@
   "23": "Connection teardown",
   "24": "Now playing card",
   "25": "Picture controller",
+  "26": "PointerMotion",
   "27": "TV identity storage",
+  "28": "UsageTotal",
   "29": "Menu bar remote screen",
   "30": "iOS picture screen",
   "31": "Bundled image loader",
@@ -94,5 +96,9 @@
   "94": "TV hero illustration",
   "95": "Bundled app icons",
   "96": "Simple Icons",
-  "97": "tv-hero illustration"
+  "97": "tv-hero illustration",
+  "98": "PictureEditor",
+  "99": "TVIdentity",
+  "100": "VolumeCard",
+  "101": "MediaFileServer.swift"
 }

@@ -13,6 +13,16 @@ public final class ActivityLog {
         events = (try? JSONDecoder().decode([RemoteEvent].self, from: Data(contentsOf: file))) ?? []
     }
 
+    public func clear() {
+        events = []
+        do {
+            try FileManager.default.createDirectory(at: file.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try JSONEncoder().encode([RemoteEvent]()).write(to: file, options: .atomic)
+        } catch {
+            onFailure?("Could not clear the local event history.")
+        }
+    }
+
     public func log(_ title: String, _ detail: String) {
         events.insert(RemoteEvent(title: title, detail: detail), at: 0)
         if events.count > 200 { events.removeLast(events.count - 200) }

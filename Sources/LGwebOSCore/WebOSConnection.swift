@@ -50,9 +50,14 @@ public final class WebOSConnection {
         let storedKey = saved.0
         let storedPin = saved.1
         let confirmation = onCertificateTrust
+        onEvent?("Connecting", "Opening port 3001 at \(host). Saved pairing key: \(storedKey == nil ? "no" : "yes").")
         guard storedPin != nil || (allowFirstUseTrust && confirmation != nil) else {
+            onEvent?("Certificate", "No saved certificate, and this attempt cannot approve a new one.")
             throw RemoteError.message("This TV has no trusted certificate yet. Click Connect to confirm first-time pairing.")
         }
+        onEvent?("Certificate", storedPin == nil
+            ? "No saved certificate for this address. Approval is required before the connection continues."
+            : "Checking the TV certificate against the saved pin.")
         let approval: (@Sendable (String, String) async -> Bool)?
         if allowFirstUseTrust {
             approval = { host, fingerprint in await confirmation?(host, fingerprint) ?? false }
@@ -64,6 +69,7 @@ public final class WebOSConnection {
         let ws = session.webSocketTask(with: url)
         socket = ws
         try await trust.open(ws)
+        onEvent?("Socket open", "The TV accepted the secure connection.")
         receiver = Task { [weak self] in
             do {
                 while !Task.isCancelled {
@@ -86,6 +92,9 @@ public final class WebOSConnection {
             throw RemoteError.message("The pairing manifest is unavailable.")
         }
         if let key = storedKey { payload["client-key"] = key }
+        onEvent?("Register", storedKey == nil
+            ? "Asking the TV to pair. Accept LG Remote App on the TV."
+            : "Sending the saved pairing key.")
         let answer = try await exchange(["type": "register", "id": "register", "payload": payload], timeout: 90)
         try Task.checkCancellation()
         guard storedKey != nil || !(answer["client-key"] as? String ?? "").isEmpty else {
@@ -111,8 +120,9 @@ public final class WebOSConnection {
             return
         }
         if type == "error" {
-            onEvent?("Error", object["error"] as? String ?? "The TV rejected the command.")
-            waiters.removeValue(forKey: id)?.resume(throwing: RemoteError.message(object["error"] as? String ?? "The TV rejected the command."))
+            let message = object["error"] as? String ?? "The TV rejected the command."
+            onEvent?(id == "register" ? "Pairing rejected" : "Error", message)
+            waiters.removeValue(forKey: id)?.resume(throwing: RemoteError.message(message))
             return
         }
         if type == "registered" || type == "response" {

@@ -57,6 +57,9 @@ public final class TVSession: TVCommanding {
         guard !connecting else { return }
         guard HostAddress.isLocalIPv4(identity.host) else {
             error = "Enter the TV's local IPv4 address or discover a TV on your network."
+            log("Connection failed", identity.host.isEmpty
+                ? "No TV address is saved."
+                : "\(identity.host) is not a local IPv4 address. IPv6 addresses and hostnames are not accepted.")
             return
         }
         autoReconnect = true
@@ -73,7 +76,10 @@ public final class TVSession: TVCommanding {
         client.onCertificateTrust = { [weak self] host, fingerprint in
             await self?.onCertificateTrust?(host, fingerprint) ?? false
         }
-        client.onPairing = { [weak self] in self?.pairing = true }
+        client.onPairing = { [weak self] in
+            self?.pairing = true
+            self?.log("Pairing prompt", "The TV is asking you to accept LG Remote App.")
+        }
         client.onEvent = { [weak self] title, detail in self?.log(title, detail) }
         client.onPointerState = { [weak self, weak client] ready in
             guard let self, self.connection === client else { return }
@@ -217,6 +223,7 @@ public final class TVSession: TVCommanding {
 
     private func scheduleReconnect() {
         guard autoReconnect else { return }
+        log("Reconnecting", "Another attempt starts in 5 seconds. Repeated attempts can keep a pairing rejection in place.")
         reconnectTask?.cancel()
         reconnectTask = Task { [weak self] in
             try? await Task.sleep(nanoseconds: 5_000_000_000)

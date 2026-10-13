@@ -63,6 +63,7 @@ struct RemoteView: View {
         case .media: CastScreen(model: model, accent: theme.color)
         case .info: PictureScreen(model: model, accent: theme.color, draft: $pictureDraft)
         case .usage: ActivityScreen(model: model, accent: theme.color)
+        case .logs: EmptyView()
         }
     }
 
@@ -102,7 +103,7 @@ struct RemoteView: View {
 
     private var tabs: some View {
         HStack(spacing: 4) {
-            ForEach(RemoteSection.allCases) { item in
+            ForEach(RemoteSection.allCases.filter { $0 != .logs }) { item in
                 Button { tab = item; settings = false } label: {
                     Image(systemName: item.symbol).font(.system(size: 16, weight: .medium))
                         .foregroundStyle(tab == item && !settings ? theme.color : RemotePalette.muted)

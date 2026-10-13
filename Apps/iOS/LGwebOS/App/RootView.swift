@@ -59,7 +59,15 @@ struct RootView: View {
         }
     }
 
-    private func page(_ item: RemoteSection) -> some View {
+    @ViewBuilder private func page(_ item: RemoteSection) -> some View {
+        if item == .logs {
+            LogsScreen(model: model)
+        } else {
+            screen(item)
+        }
+    }
+
+    private func screen(_ item: RemoteSection) -> some View {
         ScreenColumn {
             if !model.session.connected {
                 ConnectionBanner(model: model) {
@@ -73,6 +81,7 @@ struct RootView: View {
             case .media: CastScreen(model: model)
             case .usage: ActivityScreen(model: model)
             case .info: PictureScreen(model: model)
+            case .logs: EmptyView()
             }
             if let error = model.session.error {
                 RemoteCard {

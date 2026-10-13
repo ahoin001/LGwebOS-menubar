@@ -18,6 +18,7 @@
 		B10000000000000000000008 /* CastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000008 /* CastScreen.swift */; };
 		B10000000000000000000009 /* ActivityScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000009 /* ActivityScreen.swift */; };
 		B1000000000000000000000A /* PictureScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000A /* PictureScreen.swift */; };
+		B10000000000000000000011 /* LogsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000011 /* LogsScreen.swift */; };
 		B1000000000000000000000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000B /* Assets.xcassets */; };
 		B1000000000000000000000C /* LGwebOSCore in Frameworks */ = {isa = PBXBuildFile; productRef = D10000000000000000000001 /* LGwebOSCore */; };
 		B1000000000000000000000D /* LGwebOSUI in Frameworks */ = {isa = PBXBuildFile; productRef = D10000000000000000000002 /* LGwebOSUI */; };
@@ -35,6 +36,7 @@
 		F10000000000000000000008 /* CastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastScreen.swift; sourceTree = "<group>"; };
 		F10000000000000000000009 /* ActivityScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScreen.swift; sourceTree = "<group>"; };
 		F1000000000000000000000A /* PictureScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000011 /* LogsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsScreen.swift; sourceTree = "<group>"; };
 		F1000000000000000000000B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1000000000000000000000C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1000000000000000000000D /* LGwebOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LGwebOS.entitlements; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				G10000000000000000000008 /* Cast */,
 				G10000000000000000000009 /* Activity */,
 				G1000000000000000000000A /* Picture */,
+				G1000000000000000000000C /* Logs */,
 				G1000000000000000000000B /* Settings */,
 			);
 			path = Features;
@@ -143,6 +146,14 @@
 				F1000000000000000000000A /* PictureScreen.swift */,
 			);
 			path = Picture;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000C /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000011 /* LogsScreen.swift */,
+			);
+			path = Logs;
 			sourceTree = "<group>";
 		};
 		G1000000000000000000000B /* Settings */ = {
@@ -249,6 +260,7 @@
 				B10000000000000000000008 /* CastScreen.swift in Sources */,
 				B10000000000000000000009 /* ActivityScreen.swift in Sources */,
 				B1000000000000000000000A /* PictureScreen.swift in Sources */,
+				B10000000000000000000011 /* LogsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
