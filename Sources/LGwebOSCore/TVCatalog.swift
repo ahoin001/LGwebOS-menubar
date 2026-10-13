@@ -70,7 +70,7 @@ public final class TVCatalog {
             var seen = Set<String>()
             apps = SSAPPayload.launchPoints(result).compactMap { point in
                 guard seen.insert(point.id).inserted else { return nil }
-                let known = knownApps.first { $0.id == point.id }
+                let known = knownApp(id: point.id, title: point.title)
                 return TVApp(id: point.id, title: known?.title ?? point.title, icon: known?.icon)
             }
         } catch {
@@ -78,6 +78,17 @@ public final class TVCatalog {
         }
         if let result = try? await client.request(SSAP.Inputs.list) {
             inputs = SSAPPayload.externalInputs(result)
+        }
+    }
+
+    private func knownApp(id: String, title: String) -> TVApp? {
+        if let exact = knownApps.first(where: { $0.id == id }) { return exact }
+        let foldedTitle = title.folding(options: [.caseInsensitive, .diacriticInsensitive], locale: .current)
+        return knownApps.first { known in
+            let folded = known.title.folding(options: [.caseInsensitive, .diacriticInsensitive], locale: .current)
+            if folded == foldedTitle { return true }
+            if folded.count >= 6, foldedTitle.contains(folded) { return true }
+            return known.id.count >= 6 && id.localizedCaseInsensitiveContains(known.id)
         }
     }
 

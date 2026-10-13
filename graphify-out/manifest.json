@@ -150,9 +150,9 @@
     "semantic_hash": "634e251c7e50e3670afb9da27b16563f"
   },
   "Sources/LGwebOSCore/TVCatalog.swift": {
-    "mtime": 1791907334.8057249,
-    "ast_hash": "6847cb1908fac3033eeec534e9a35b6c",
-    "semantic_hash": "6847cb1908fac3033eeec534e9a35b6c"
+    "mtime": 1791925843.2463827,
+    "ast_hash": "1b3648a44aa054aa7f4b260a54d7ef1a",
+    "semantic_hash": ""
   },
   "Sources/LGwebOSCore/TVCertificatePolicy.swift": {
     "mtime": 1791907334.8059392,
@@ -205,9 +205,9 @@
     "semantic_hash": ""
   },
   "Sources/LGwebOSCore/app-catalog.json": {
-    "mtime": 1791907334.8085418,
-    "ast_hash": "9e6677ebe6019ca70e0e61dd558e91d0",
-    "semantic_hash": "9e6677ebe6019ca70e0e61dd558e91d0"
+    "mtime": 1791925843.5329297,
+    "ast_hash": "ba12fa9b1f33985a7386a2c6131fe5c2",
+    "semantic_hash": ""
   },
   "Sources/LGwebOSCore/registration.json": {
     "mtime": 1791907334.808723,
@@ -270,13 +270,13 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1791925054.6339397,
-    "ast_hash": "c90f20b08374ed1bbb10fe6926e077c7",
+    "mtime": 1791925849.4575114,
+    "ast_hash": "75b32d8963e62a90a9aa19839de4fc07",
     "semantic_hash": ""
   },
   "THIRD_PARTY_NOTICES.md": {
-    "mtime": 1791908808.0577118,
-    "ast_hash": "742d3d886e9e2598f8d45c8ae6b46be9",
+    "mtime": 1791925850.9094484,
+    "ast_hash": "1d655bef0f9dc08edf3c5941ad10c005",
     "semantic_hash": ""
   },
   "Sources/LGwebOSCore/AppAssets/03eaf5a591c43139f8.png": {
@@ -560,8 +560,23 @@
     "semantic_hash": ""
   },
   "Sources/LGwebOSUI/ControlAccess.swift": {
-    "mtime": 1791925050.3375077,
-    "ast_hash": "86ea7b99fd4c582e09a17d710a009705",
+    "mtime": 1791925844.0756717,
+    "ast_hash": "21069dd827fe99ac6dcbe59952f35da1",
+    "semantic_hash": ""
+  },
+  "Apps/iOS/LGwebOS/Assets.xcassets/AppIcon.appiconset/Contents.json": {
+    "mtime": 1791925951.7610009,
+    "ast_hash": "67425efba4ad62a4368a0fc76becea74",
+    "semantic_hash": ""
+  },
+  "Apps/iOS/LGwebOS/Assets.xcassets/AppIcon.appiconset/AppIcon.png": {
+    "mtime": 1791925948.604912,
+    "ast_hash": "7bdb98b3f83ca35c0db1bd3c1b2e17a3",
+    "semantic_hash": ""
+  },
+  "Sources/LGwebOSCore/AppAssets/stremio.png": {
+    "mtime": 1791925948.227958,
+    "ast_hash": "5ce12fd6492fac7746dfa6e466ed0d0b",
     "semantic_hash": ""
   }
 }

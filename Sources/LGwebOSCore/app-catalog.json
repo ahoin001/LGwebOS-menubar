@@ -170,6 +170,11 @@
     "icon": "3823c0359f3bb213c2.png"
   },
   {
+    "id": "stremio",
+    "title": "Stremio",
+    "icon": "stremio.png"
+  },
+  {
     "id": "tv.twitch.tv.starshot.lg",
     "title": "Twitch",
     "icon": "ac82491cfde1417113.png"

@@ -1,16 +1,17 @@
 # LGwebOS-menubar
 
-A native macOS menu bar remote for LG webOS TVs, with an iPhone and iPad app in the same workspace. After you tap Allow on the TV, volume, power, apps, inputs, and the remote are available. Picture changes can still be refused on a current C2.
+A native macOS menu bar remote for LG webOS TVs, with an iPhone and iPad app in the same workspace. The default connection does not send LG’s sample certificate. After you tap Allow on the TV, volume, power, apps, inputs, the remote, and picture controls are available.
 
 The app is called **LGwebOS-menubar**. This is a community project, independent of LG.
 
-> **Compatibility:** the app has been tested on an **LG 50UN7310PSC**. Other models and webOS versions are not verified. If you try another TV, say so in your issue or pull request, including the model number and the exact webOS version.
+> **Compatibility:** the app has been tested on an **LG 50UN7310PSC** and an **LG C2**. Other models and webOS versions are not verified. If you try another TV, say so in your issue or pull request, including the model number and the exact webOS version.
 
 ## Tested models
 
 | Model | webOS version | Status |
 | --- | --- | --- |
 | LG 50UN7310PSC | 5.0 | Works: discovery, pairing, remote control |
+| LG C2 | current firmware | Works: pairing without the sample certificate, remote, apps, inputs, picture |
 
 ## Quick start with Claude
 
@@ -66,9 +67,9 @@ The control limits below apply to both apps. The tested-models table applies to 
 
 ## Basic and full control
 
-Settings has an **Advanced controls** switch. It is off by default. Leave it off on a C2.
+The default connection is the one to use on a current C2. It does not send LG’s sample certificate. Settings has an **Advanced controls** switch for older sets. It is off by default. Leave it off on a C2.
 
-The default connection does not send LG’s sample certificate. After you tap **Allow** on the TV, that pairing requests apps, launches, inputs, the direction pad, pointer, Home, Back, and text entry. Volume and power are included. Wake still needs the TV’s MAC address and Wi-Fi wake. Picture changes are requested as well; a current C2 can still answer `401` for those writes, and the control stays on screen with that error.
+After you tap **Allow** on the TV, that pairing requests apps, launches, inputs, the direction pad, pointer, Home, Back, text entry, and picture changes. Volume and power are included. On the tested C2, those controls work. Wake still needs the TV’s MAC address and Wi-Fi wake. A C2 does not show an **LG Connect Apps** switch; the Allow prompt is enough.
 
 **Advanced controls** sends the sample certificate bundled with the app. On the tested **webOS 5.0** set (LG 50UN7310PSC), that certificate can be accepted. Current C2 firmware rejects it with `403 Pairing rejected: blacklisted certificate detected`. LG does not publish a replacement key. The app turns the switch off. Turning it on again on a C2 retries the same certificate and gets the same rejection.
 
@@ -101,7 +102,7 @@ The project ships with no TV address, device name, model, MAC address, or pairin
 - **Screen time:** collected locally while the app is running, connected, and the Mac is awake. It cannot retrieve the TV's historical usage.
 - **Home status:** the TV may report the underlying app while its Home overlay is visible. Home presses from this app are tracked locally. Home presses from a physical remote may not be detectable.
 - **HDMI devices:** switching to a PlayStation or Chromecast switches the TV's input. It does not turn your Mac into a game controller.
-- **Picture settings:** picture changes are requested with the default pairing. A current C2 can still answer `401`. See [Basic and full control](#basic-and-full-control).
+- **Picture settings:** picture changes are part of the default pairing. They work on the tested C2. See [Basic and full control](#basic-and-full-control).
 - **Media casting:** playback depends on the TV's supported codecs and DLNA service. Only the selected file is served, through a temporary URL reachable from the TV and this Mac only. H.264 MP4, MP3, and JPEG are the safest choices.
 - **AirPlay:** the app shows guidance for macOS Screen Mirroring. It does not start mirroring itself, and it does not capture the TV screen on the Mac.
 - **Logs:** activity logs describe this app's connections and commands. Internal TV system logs and Developer Mode access are not included.

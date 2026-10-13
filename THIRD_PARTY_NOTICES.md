@@ -32,7 +32,7 @@ SOFTWARE.
 
 ## Icons and brand assets
 
-The LG, PlayStation, and Google Cast symbol assets were rendered from [Simple Icons](https://simpleicons.org/), whose artwork is distributed under [CC0 1.0](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md). CC0 does not grant trademark rights.
+The LG, PlayStation, Google Cast, and Stremio symbol assets were rendered from [Simple Icons](https://simpleicons.org/), whose artwork is distributed under [CC0 1.0](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md). CC0 does not grant trademark rights. The iPhone home-screen icon is an original illustration for this project.
 
 Other bundled app icons are third-party branding supplied through the LG app launcher. Their respective owners retain rights to their artwork and trademarks. The project's MIT license does not relicense those assets or imply endorsement by LG, Sony, Google, or other app vendors.
 

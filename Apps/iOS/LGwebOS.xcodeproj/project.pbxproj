@@ -304,6 +304,7 @@
 		C10000000000000000000013 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
 				CODE_SIGN_ENTITLEMENTS = LGwebOS/LGwebOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +329,7 @@
 		C10000000000000000000014 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
 				CODE_SIGN_ENTITLEMENTS = LGwebOS/LGwebOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;

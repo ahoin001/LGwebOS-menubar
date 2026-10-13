@@ -1,7 +1,7 @@
 import SwiftUI
 
 public enum ControlAccess {
-    public static let basicExplanation = "Apps, inputs, the direction pad, pointer, and keyboard are included when you tap Allow on the TV. Leave this off on a C2. Picture changes can still be refused."
+    public static let basicExplanation = "Apps, inputs, the direction pad, pointer, keyboard, and picture are included when you tap Allow on the TV. Leave this off on a C2."
     public static let advancedExplanation = "This sends the sample certificate built into the app. Older sets such as the tested UN7310 can accept it. A current C2 rejects it, and the app turns this switch back off."
 }
 
