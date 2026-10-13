@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Apps/iOS/LGwebOS.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Package.swift">
+   </FileRef>
 </Workspace>
