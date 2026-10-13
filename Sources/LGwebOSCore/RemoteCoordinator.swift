@@ -111,6 +111,28 @@ public final class RemoteCoordinator {
         }
     }
 
+    public func setAdvancedControls(_ enabled: Bool) async {
+        guard identity.advancedControls != enabled else { return }
+        let previous = identity.advancedControls
+        identity.advancedControls = enabled
+        identity.save()
+        let host = identity.host
+        guard !host.isEmpty else { return }
+        session.disconnect()
+        do {
+            try await Task.detached(priority: .userInitiated) { try PairingKey.deleteKey(host) }.value
+        } catch {
+            identity.advancedControls = previous
+            identity.save()
+            session.error = "Could not update pairing: \(error.localizedDescription)"
+            return
+        }
+        session.notice = enabled
+            ? "Advanced controls need a new pairing. Accept the prompt on the TV."
+            : "Basic control needs a new pairing. Accept the prompt on the TV."
+        session.connect()
+    }
+
     public func forgetPairing() async {
         guard !identity.host.isEmpty else { return }
         let pairingHost = identity.host

@@ -31,12 +31,18 @@ public enum PairingKey {
         }
     }
 
-    public static func delete(_ host: String) throws {
+    /// Removes the pairing key and leaves the TV certificate pin in place.
+    public static func deleteKey(_ host: String) throws {
         let status = SecItemDelete(query(host) as CFDictionary)
-        var failures: [String] = []
-        if status != errSecSuccess && status != errSecItemNotFound {
-            failures.append("Keychain refused to remove the pairing key (\(status)).")
+        guard status == errSecSuccess || status == errSecItemNotFound else {
+            throw RemoteError.message("Keychain refused to remove the pairing key (\(status)).")
         }
+    }
+
+    public static func delete(_ host: String) throws {
+        var failures: [String] = []
+        do { try deleteKey(host) }
+        catch { failures.append(error.localizedDescription) }
         do { try TVCertificatePin.delete(host) }
         catch { failures.append(error.localizedDescription) }
         if !failures.isEmpty { throw RemoteError.message(failures.joined(separator: " ")) }

@@ -22,9 +22,13 @@ struct RemoteControlScreen: View {
                 }
                 .disabled(!model.session.connected)
             }
-            RemoteCard {
-                PointerPad(accent: accent, onMove: { model.remote.movePointer(dx: $0, dy: $1) }, onClick: { model.remote.clickPointer() })
-                    .disabled(!model.session.connected)
+            if model.identity.advancedControls {
+                RemoteCard {
+                    PointerPad(accent: accent, onMove: { model.remote.movePointer(dx: $0, dy: $1) }, onClick: { model.remote.clickPointer() })
+                        .disabled(!model.session.connected)
+                }
+            } else {
+                ControlAccessNote(advanced: false)
             }
             VolumeCard(
                 level: model.volume.level,
@@ -40,18 +44,20 @@ struct RemoteControlScreen: View {
                 channel("CHANNELUP", "Channel +", "chevron.up")
             }
             .disabled(!model.session.connected)
-            RemoteCard {
-                VStack(alignment: .leading, spacing: 10) {
-                    Label("Keyboard", systemImage: "keyboard").fontWeight(.semibold)
-                    TextField("Type into the open field on your TV", text: $text).textFieldStyle(.roundedBorder).onSubmit(sendText)
-                    HStack {
-                        Text("Open a text field on your TV.").font(.system(size: 10)).foregroundStyle(RemotePalette.muted)
-                        Spacer()
-                        Button("Send", action: sendText).disabled(text.isEmpty)
-                        Button { model.remote.enterText() } label: { Image(systemName: "return") }.help("Confirm text on TV")
+            if model.identity.advancedControls {
+                RemoteCard {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Label("Keyboard", systemImage: "keyboard").fontWeight(.semibold)
+                        TextField("Type into the open field on your TV", text: $text).textFieldStyle(.roundedBorder).onSubmit(sendText)
+                        HStack {
+                            Text("Open a text field on your TV.").font(.system(size: 10)).foregroundStyle(RemotePalette.muted)
+                            Spacer()
+                            Button("Send", action: sendText).disabled(text.isEmpty)
+                            Button { model.remote.enterText() } label: { Image(systemName: "return") }.help("Confirm text on TV")
+                        }
                     }
+                    .disabled(!model.session.connected)
                 }
-                .disabled(!model.session.connected)
             }
             RemoteCard {
                 VStack(spacing: 10) {

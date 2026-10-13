@@ -102,7 +102,7 @@ public final class TVSession: TVCommanding {
         connectTask = Task { [weak self] in
             guard let self else { return }
             do {
-                try await client.connect(allowFirstUseTrust: allowFirstUseTrust)
+                try await client.connect(allowFirstUseTrust: allowFirstUseTrust, advancedControls: self.identity.advancedControls)
                 guard self.connection === client else { return }
                 self.connected = true
                 self.connecting = false
@@ -122,11 +122,13 @@ public final class TVSession: TVCommanding {
                     self.webOS = software.product
                 }
                 await self.picture.refresh(client)
-                do {
-                    try await client.checkPointer()
-                    self.log("Remote ready", "Navigation connection is ready and verified.")
-                } catch {
-                    self.log("Remote unavailable", error.localizedDescription)
+                if self.identity.advancedControls {
+                    do {
+                        try await client.checkPointer()
+                        self.log("Remote ready", "Navigation connection is ready and verified.")
+                    } catch {
+                        self.log("Remote unavailable", error.localizedDescription)
+                    }
                 }
                 self.refreshTask = Task { [weak self] in
                     while !Task.isCancelled {
@@ -141,8 +143,16 @@ public final class TVSession: TVCommanding {
                 self.connected = false
                 self.connecting = false
                 self.pairing = false
-                self.error = "\(error.localizedDescription) Make sure the TV is on and on the same Wi-Fi network."
                 self.log("Connection failed", error.localizedDescription)
+                if RegistrationManifest.isBlacklistedCertificate(error.localizedDescription), self.identity.advancedControls {
+                    self.identity.advancedControls = false
+                    self.identity.save()
+                    self.autoReconnect = false
+                    self.notice = nil
+                    self.error = "This TV rejected the built-in sample certificate. Advanced controls are off. Connect again for basic control."
+                    return
+                }
+                self.error = "\(error.localizedDescription) Make sure the TV is on and on the same Wi-Fi network."
                 if allowFirstUseTrust { self.autoReconnect = false }
                 self.scheduleReconnect()
             }

@@ -98,8 +98,12 @@ struct PictureScreen: View {
     let accent: Color
     @Binding var draft: [String: Int]
     var body: some View {
-        PictureEditor(values: model.picture.values, draft: $draft, applying: model.picture.applying, enabled: model.session.connected, accent: accent) {
-            model.picture.apply($0)
+        if model.identity.advancedControls {
+            PictureEditor(values: model.picture.values, draft: $draft, applying: model.picture.applying, enabled: model.session.connected, accent: accent) {
+                model.picture.apply($0)
+            }
+        } else {
+            ControlAccessNote(advanced: false)
         }
     }
 }

@@ -52,6 +52,14 @@ struct SettingsScreen: View {
                     Text("To wake your TV from your Mac, enable Wi-Fi wake in TV settings.").font(.system(size: 11)).foregroundStyle(RemotePalette.muted)
                 }
             }
+            RemoteSectionTitle("CONTROL")
+            RemoteCard {
+                VStack(alignment: .leading, spacing: 8) {
+                    Toggle("Advanced controls", isOn: advancedBinding)
+                        .disabled(model.session.connecting)
+                    ControlAccessNote(advanced: model.identity.advancedControls)
+                }
+            }
             DisclosureGroup("Event history", isExpanded: $showEvents) {
                 VStack(alignment: .leading, spacing: 12) {
                     Text("LGwebOS-menubar connections and actions saved on this Mac. Internal TV logs require developer mode.")
@@ -82,6 +90,10 @@ struct SettingsScreen: View {
             draftName = model.identity.name
             draftMAC = model.identity.mac
         }
+    }
+
+    private var advancedBinding: Binding<Bool> {
+        Binding(get: { model.identity.advancedControls }, set: { enabled in Task { await model.setAdvancedControls(enabled) } })
     }
 
     private func save() {

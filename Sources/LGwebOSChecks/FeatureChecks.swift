@@ -22,7 +22,7 @@ public enum FeatureChecks {
         try testConnectionAcceptsOnlyLocalIPv4Addresses()
         try testCertificateTrustRequiresApprovalAndRejectsChangedPins()
         try testFreshConfigurationHasNoDeviceIdentityAndLoadsCustomParameters()
-        print("PASS: packaged registration, catalog and images; usage persistence, midnight clipping, sleep exclusion; HTTP GET/HEAD/Range/404/416; XML escaping; pointer ordering, closure/reconnection, preflight recovery, cancellation, no duplicate clicks, full drag motion; Home closes user apps once, preserves HDMI/system apps, respects cancellation; Home presentation survives polling and clears on navigation/app changes; local IPv4 boundaries, certificate trust, fresh configuration and custom parameters.")
+        print("PASS: packaged registration, catalog and images; basic and advanced pairing manifests; usage persistence, midnight clipping, sleep exclusion; HTTP GET/HEAD/Range/404/416; XML escaping; pointer ordering, closure/reconnection, preflight recovery, cancellation, no duplicate clicks, full drag motion; Home closes user apps once, preserves HDMI/system apps, respects cancellation; Home presentation survives polling and clears on navigation/app changes; local IPv4 boundaries, certificate trust, fresh configuration and custom parameters.")
     }
 
     static func testPackagedResourcesLoadWithoutDeviceConfiguration() throws {
@@ -37,6 +37,16 @@ public enum FeatureChecks {
         try truth(registration["client-key"] == nil)
         try truth(permissions.contains("LAUNCH"))
         try truth(signatures.contains { !($0["signature"] as? String ?? "").isEmpty })
+        let basic = try RegistrationManifest.payload(advanced: false)
+        let basicManifest = basic["manifest"] as? [String: Any]
+        try truth(basicManifest?["signatures"] == nil)
+        try truth(basicManifest?["signed"] == nil)
+        try truth((basicManifest?["permissions"] as? [String])?.contains("LAUNCH") == true)
+        let advanced = try RegistrationManifest.payload(advanced: true)
+        let advancedManifest = advanced["manifest"] as? [String: Any]
+        let advancedSignatures = advancedManifest?["signatures"] as? [[String: Any]] ?? []
+        try truth(advancedSignatures.contains { signatureNamesTestCertificate($0["signature"] as? String ?? "") })
+        try truth(advancedManifest?["signed"] != nil)
         guard let catalogURL = AppResources.bundle.url(forResource: "app-catalog", withExtension: "json") else {
             throw RemoteError.message("The packaged app catalog is missing")
         }
@@ -57,6 +67,14 @@ public enum FeatureChecks {
                 throw RemoteError.message("A packaged brand image is missing or invalid")
             }
         }
+    }
+
+    static func signatureNamesTestCertificate(_ signature: String) -> Bool {
+        let header = String(signature.split(separator: ".").first ?? "")
+        let remainder = header.count % 4
+        let padded = remainder == 0 ? header : header + String(repeating: "=", count: 4 - remainder)
+        guard let data = Data(base64Encoded: padded), let text = String(data: data, encoding: .utf8) else { return false }
+        return text.contains("test-signing-cert")
     }
 
     static func testConnectionAcceptsOnlyLocalIPv4Addresses() throws {
@@ -84,17 +102,20 @@ public enum FeatureChecks {
         try equal(fresh.name, "LG TV")
         try equal(fresh.model, "")
         try equal(fresh.mac, "")
+        try truth(!fresh.advancedControls)
         let address = "203.0.113.10"
         let mac = ["00", "11", "22", "33", "44", "55"].joined(separator: ":")
         defaults.set(address, forKey: "tv.host")
         defaults.set("Test TV", forKey: "tv.name")
         defaults.set("Test model", forKey: "tv.model")
         defaults.set(mac, forKey: "tv.mac")
+        defaults.set(true, forKey: "tv.advancedControls")
         let configured = TVConfiguration(defaults: defaults)
         try equal(configured.host, address)
         try equal(configured.name, "Test TV")
         try equal(configured.model, "Test model")
         try equal(configured.mac, mac)
+        try truth(configured.advancedControls)
     }
 
     static func testUsageSurvivesRestartAndClipsMidnightWithoutCountingSleep() throws {

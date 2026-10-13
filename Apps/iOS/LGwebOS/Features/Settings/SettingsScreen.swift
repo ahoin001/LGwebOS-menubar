@@ -35,6 +35,12 @@ struct SettingsScreen: View {
                             .disabled(model.session.connecting)
                     }
                 }
+                Section {
+                    Toggle("Advanced controls", isOn: advancedBinding)
+                        .disabled(model.session.connecting)
+                } footer: {
+                    Text(model.identity.advancedControls ? ControlAccess.advancedExplanation : ControlAccess.basicExplanation)
+                }
                 Section("This connection") {
                     LabeledContent("Model", value: model.identity.model.isEmpty ? "LG TV" : model.identity.model)
                     LabeledContent("webOS", value: [model.session.webOS, model.session.firmware].filter { !$0.isEmpty }.joined(separator: " · "))
@@ -67,6 +73,10 @@ struct SettingsScreen: View {
         draftHost = model.identity.host
         draftName = model.identity.name
         draftMAC = model.identity.mac
+    }
+
+    private var advancedBinding: Binding<Bool> {
+        Binding(get: { model.identity.advancedControls }, set: { enabled in Task { await model.setAdvancedControls(enabled) } })
     }
 
     private func save() {

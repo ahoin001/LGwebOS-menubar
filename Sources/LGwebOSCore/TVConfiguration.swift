@@ -6,11 +6,13 @@ public struct TVConfiguration: Equatable {
     public let name: String
     public let model: String
     public let mac: String
+    public let advancedControls: Bool
     public init(defaults: UserDefaults = .standard) {
         host = defaults.string(forKey: "tv.host") ?? ""
         name = defaults.string(forKey: "tv.name") ?? "LG TV"
         model = defaults.string(forKey: "tv.model") ?? ""
         mac = defaults.string(forKey: "tv.mac") ?? ""
+        advancedControls = defaults.bool(forKey: "tv.advancedControls")
     }
 }
 
